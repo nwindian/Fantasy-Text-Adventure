@@ -35,6 +35,7 @@ class Player
         void setStrength(int strr);
         void setMagic(int magg);
         void setHealth(int deff);
+        int setDamage(Player &, Weapon &);
         string getName();
         void displayLevel( int str, int spd, int def, int mag, int lvl);
         void setWeapon(Weapon &);
@@ -127,7 +128,15 @@ void Player::setMagic(int magg)
 {
     magic = magg;
 }
-
+//Set the total damage for the level
+int Player::setDamage(Player & play, Weapon & weap)
+{
+    int playerStrength = play.getStrength();
+    int weapDamage = weap.getDmg();
+    double div = playerStrength / 2;
+    return (playerStrength + weapDamage + div) * 2;
+}
+//Displays the players level with his stats
 void Player::displayLevel( int str, int spd, int def, int mag, int lvl)
 {
     bool repeat = false;
@@ -149,39 +158,38 @@ void Player::displayLevel( int str, int spd, int def, int mag, int lvl)
         {
             cout << "Please choose stat to level up. " << endl;
             cin >> statup;
-        if (cin.fail() || statup > 4 || statup < 1)
-        {
-            repeat = false;
-            cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            cout << endl << "Come on, just pick a valid stat. " << endl;
-        }
-        else
-        {
-
-            switch (statup)
+            if (cin.fail() || statup > 4 || statup < 1)
             {
-                case 1: ++str;
-                        cout << "You have leveled up strength." << endl;
-                        break;
-                case 2: ++spd;
-                        cout << "You have leveled up speed." << endl;
-                        break;
-                case 3: ++def;
-                        cout << "You have leveled up Health." << endl;
-                        break;
-                case 4: ++mag;
-                        cout << "You have leveled up magic." << endl;
-                        break;
+                repeat = false;
+                cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                cout << endl << "Come on, just pick a valid stat. " << endl;
             }
-            ++counter;
-            if (counter == 3)
+            else
             {
-                break;
+                switch (statup)
+                {
+                    case 1: ++str;
+                            cout << "You have leveled up strength." << endl;
+                            break;
+                    case 2: ++spd;
+                            cout << "You have leveled up speed." << endl;
+                            break;
+                    case 3: ++def;
+                            cout << "You have leveled up Health." << endl;
+                            break;
+                    case 4: ++mag;
+                            cout << "You have leveled up magic." << endl;
+                            break;
+                }
+                ++counter;
+                if (counter == 3)
+                {
+                    break;
+                }
             }
-        }
 
-    }
+        }
         //set everything to new stats
         Player::setHealth(def);
         Player::setMagic(mag);
@@ -195,12 +203,14 @@ void Player::displayLevel( int str, int spd, int def, int mag, int lvl)
         cout << "Press literally anything to continue your adventure. Just not the power button." << endl;
         cin.ignore();
         cin.get();
-}
+    }
 }
 //Member function to set weapon of the player
 void Player::setWeapon(Weapon & weap)
 {
     weapon = weap;
 }
+
+//Now create copy constructor
 
 #endif // PLAYERCLASS_H_INCLUDED
