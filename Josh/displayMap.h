@@ -1,9 +1,14 @@
 #ifndef DISPLAYMAP
 #define DISPLAYMAP
 
+
+
 void displayMap(char map[][MAPSIZEX])
 {
-    cout << string(100, '\n');
+    CursorPosition.X = 0;
+    CursorPosition.Y = 0;
+    SetConsoleCursorPosition(console,CursorPosition);
+    //system ("CLS");
     for (int i = 0; i < MAPSIZEY ; ++i)
     {
         for (int j = 0;  j < MAPSIZEX; ++j)

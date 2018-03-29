@@ -1,29 +1,13 @@
 #ifndef CAVE
 #define CAVE
-
-class cavePiece
-{
-    private:
-        int heat = 0;
-        string message = "You enter the cave and slowly your eyes adjust.";
-        bool gold = false;
-        bool weapon = false;
-        bool food = false;
-        bool waterSkin = false;
-        bool scroll = false;
-    public:
-        cavePiece();
-        cavePiece(int, string);
-        pieceDisplay();
+#include "displayMap.h"
 
 
-
-};
 
 void cave(Biome& biome, int y, int x)
 {
     char response = ' ';
-    cout << string(100, '\n');
+    system ("CLS");
     cout << "        ___..-.             " << endl
          << "     ._/  __ \\_\\-._        " << endl
          << "     / .'/##\\_ -.  \\    " << endl
@@ -34,13 +18,20 @@ void cave(Biome& biome, int y, int x)
     cout << endl << "Would you like to enter the cave? (Y)es (N)o: ";
     cin >> response;
     if (response == 'y' || response == 'Y')
-        cout << endl << "cave" << endl;
+    {
+        int num = biome.entityMap[y][x].number;
+        cout << endl << num << endl;
+        biome.caves[num].display();
+        displayMap(biome.map);
+    }
     else
     {
         cout << endl << "Chicken!" << endl;
+        cin.get();
+        cin.ignore();
+        displayMap(biome.map);
     }
-    cin.ignore();
-    cin.get();
+
 }
 
 #endif // CAVE
