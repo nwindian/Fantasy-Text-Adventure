@@ -4,6 +4,10 @@
 #include <iostream>
 #include <limits>
 #include "Weapon_Class.h"
+#include  <conio.h>
+#include <vector>
+#include "MovesClass.hpp"
+
 using std::cout;
 using std::string;
 using std::endl;
@@ -20,11 +24,17 @@ class Player
         string name;
 
     public:
+        //holds moves and adds moves when you level up
+        std::vector<Moves> moveList;
+        //create list or map for moves
         int xLocation, yLocation;
+        Player(string);
         Player();
         Player(string namee,int strengthh, int speedd, int defensee, int xLocationn, int yLocationn, int magicc, int thirstt, int levell);
         void setLevel(int levelll);
-        void LevelUP();
+        void LevelUP(Player &);
+        //function to add moves to vector
+        void checkMoveList(Player&);
         //getters and setters
         int getStrength();
         int getSpeed();
@@ -37,7 +47,7 @@ class Player
         void setHealth(int deff);
         int setDamage(Player &, Weapon &);
         string getName();
-        void displayLevel( int str, int spd, int def, int mag, int lvl);
+        void displayLevel(Player &, int str, int spd, int def, int mag, int lvl);
         void setWeapon(Weapon &);
 };
 //Default struct for Player Class
@@ -67,6 +77,18 @@ Player::Player(string namee,int strengthh, int speedd, int defensee, int xLocati
     level = levell;
 
 }
+Player::Player(string namee)
+{
+    name = namee;
+    strength = 0;
+    speed = 0;
+    health = 0;
+    xLocation = 0;
+    yLocation = 0;
+    magic = 0;
+    thirst = 0;
+    level = 1;
+}
 string Player::getName()
 {
     return name;
@@ -77,11 +99,14 @@ void Player::setLevel(int levelll)
     level = levelll;
 }
 //Level
-void Player::LevelUP()
+void Player::LevelUP(Player & player)
 {
     Player::setLevel(++level);
     std::cout << Player::getName() << " is now level " << Player::getLevel() << "! " << endl;
-    Player::displayLevel(Player::getStrength(),Player::getSpeed(),Player::getHealth(),Player::getMagic(),Player::getLevel());
+    Player::displayLevel(player, Player::getStrength(),Player::getSpeed(),Player::getHealth(),Player::getMagic(),Player::getLevel());
+    cin.ignore();
+    cin.get();
+    checkMoveList(player);
  }
 //Getters and Setters
 int Player::getHealth()
@@ -137,14 +162,14 @@ int Player::setDamage(Player & play, Weapon & weap)
     return (playerStrength + weapDamage + div) * 2;
 }
 //Displays the players level with his stats
-void Player::displayLevel( int str, int spd, int def, int mag, int lvl)
+void Player::displayLevel( Player & player, int str, int spd, int def, int mag, int lvl)
 {
     bool repeat = false;
     int counter = 0;
     //variable for player to choose which stat to level up
     int statup;
     //Prints current stats
-    cout << "Awesome Adventurer: " << Player::getName() << endl << "Level: " << lvl << endl
+    cout << "Awesome Adventurer: " << player.getName() << endl << "Level: " << lvl << endl
         << "Current Stats: " << endl << "Strength: " << str << endl << "Speed: "
         << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
 
@@ -191,10 +216,10 @@ void Player::displayLevel( int str, int spd, int def, int mag, int lvl)
 
         }
         //set everything to new stats
-        Player::setHealth(def);
-        Player::setMagic(mag);
-        Player::setStrength(str);
-        Player::setSpeed(spd);
+        player.setHealth(def);
+        player.setMagic(mag);
+        player.setStrength(str);
+        player.setSpeed(spd);
 
         cout << "Your new stats: " << endl << "Strength: " << str << endl << "Speed: "
         << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
@@ -212,5 +237,16 @@ void Player::setWeapon(Weapon & weap)
 }
 
 //Now create copy constructor
+
+//Check the move list to add moves if levelled up.
+void Player::checkMoveList(Player & player)
+{
+    if (player.getLevel() == 2)
+    {
+        Moves move("Fury", 10);
+        moveList.push_back(move);
+        cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << endl;
+    }
+}
 
 #endif // PLAYERCLASS_H_INCLUDED

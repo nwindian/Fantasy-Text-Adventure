@@ -1,6 +1,7 @@
 #ifndef COMBAT_EVENT_HPP_INCLUDED
 #define COMBAT_EVENT_HPP_INCLUDED
 #include <iostream>
+#include <conio.h>
 #include "PlayerClass.h"
 #include "Weapon_Class.h"
 
@@ -31,7 +32,7 @@ bool whosQuicker(Player & frnd, Player & enem)
 //Players battle phase
 int playerBP(Player & play, Player & enem)
 {
-    play.setDamage(play);
+    play.setDamage(play.);
     bool repeat = false;
 
 }

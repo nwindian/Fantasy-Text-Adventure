@@ -9,7 +9,13 @@ private:
     int dmg;
     char type;
 public:
-    Weapon();
+    Weapon()
+    {
+        sword = true;
+        axe = true;
+        dmg = 1;
+        type = 'N';//for nothing
+    }
     Weapon(bool , bool, int, char);
     int set_damage_Output(Weapon &, char);
     bool getSword();
@@ -38,7 +44,7 @@ bool Weapon::getAxe()
 {
     return axe;
 }
-void Weapon::set_damage_Output(Weapon & weapon, char typeWpn)//MAY NEED TO INCLUDE MONSTER OBJECT TO CHECK RESISTANCES
+int Weapon::set_damage_Output(Weapon & weapon, char typeWpn)//MAY NEED TO INCLUDE MONSTER OBJECT TO CHECK RESISTANCES
 {
     int damage = weapon.getDmg();
     if (typeWpn == 'p')
