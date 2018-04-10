@@ -11,5 +11,4 @@ int main()
 {
     Player Joe("Joe");
     Joe.LevelUP(Joe);
-
 }

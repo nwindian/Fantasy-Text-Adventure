@@ -170,7 +170,7 @@ void Player::displayLevel( Player & player, int str, int spd, int def, int mag, 
         << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
 
     cout << endl << "--You have 3 points to put in your stats." << endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
-        << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of Achimel, so if you don't have any, we'd recommend not upgrading this stat." << endl <<
+        << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of \n--Achimel, so if you don't have any, we'd recommend not upgrading this stat." << endl <<
             "--Pretty simple, especially for the likes of you." << endl;
     //Loop through to ask and assign stats to new stats
     for (int i = 0; i < 3; i++)
