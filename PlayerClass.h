@@ -22,6 +22,7 @@ class Player
         int exp_To_lvl = 100;
         int current_exp = 0;
         int strength, speed, magic, thirst, level;
+
         string name;
     public:
         Player(string);
