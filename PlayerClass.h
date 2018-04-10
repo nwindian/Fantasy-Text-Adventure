@@ -7,6 +7,8 @@
 #include  <conio.h>
 #include <vector>
 #include "MovesClass.hpp"
+#include "Weapon_Class.h"
+#include "Weapon_objects.hpp"
 
 using std::cout;
 using std::string;
@@ -16,25 +18,26 @@ using std::cin;
 class Player
 {
     private:
-        Weapon weapon;
         int health;
         int exp_To_lvl = 100;
         int current_exp = 0;
         int strength, speed, magic, thirst, level;
         string name;
-
     public:
-        //holds moves and adds moves when you level up
-        std::vector<Moves> moveList;
-        //create list or map for moves
-        int xLocation, yLocation;
         Player(string);
         Player();
-        Player(string namee,int strengthh, int speedd, int defensee, int xLocationn, int yLocationn, int magicc, int thirstt, int levell);
+        Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell);
         void setLevel(int levelll);
         void LevelUP(Player &);
+        Weapon weapon;
+        //holds moves and adds moves when you level up
+        std::vector<Moves> moveList;
+        //Create something to hold items
         //function to add moves to vector
         void checkMoveList(Player&);
+        //To display level during level up
+        void displayLevel(Player &, int str, int spd, int def, int mag, int lvl);
+        //Player & operator=(Weapon &)
         //getters and setters
         int getStrength();
         int getSpeed();
@@ -45,33 +48,27 @@ class Player
         void setStrength(int strr);
         void setMagic(int magg);
         void setHealth(int deff);
-        int setDamage(Player &, Weapon &);
+        int setDamage();
         string getName();
-        void displayLevel(Player &, int str, int spd, int def, int mag, int lvl);
-        void setWeapon(Weapon &);
 };
 //Default struct for Player Class
 Player::Player()
 {
-    name = "Billiard";
+    name = "Michael";
     strength = 0;
     speed = 0;
     health = 0;
-    xLocation = 0;
-    yLocation = 0;
     magic = 0;
     thirst = 0;
     level = 1;
 }
 //Overloaded struct for Player class
-Player::Player(string namee,int strengthh, int speedd, int defensee, int xLocationn, int yLocationn, int magicc, int thirstt, int levell)
+Player::Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
 {
     name = namee;
     strength = strengthh;
     speed = speedd;
     health = defensee;
-    xLocation = xLocationn;
-    yLocation = yLocationn;
     magic = magicc;
     thirst = thirstt;
     level = levell;
@@ -83,8 +80,6 @@ Player::Player(string namee)
     strength = 0;
     speed = 0;
     health = 0;
-    xLocation = 0;
-    yLocation = 0;
     magic = 0;
     thirst = 0;
     level = 1;
@@ -154,10 +149,10 @@ void Player::setMagic(int magg)
     magic = magg;
 }
 //Set the total damage for the level
-int Player::setDamage(Player & play, Weapon & weap)
+int Player::setDamage()
 {
-    int playerStrength = play.getStrength();
-    int weapDamage = weap.getDmg();
+    int playerStrength = Player::getStrength();
+    int weapDamage = Player::weapon.getDmg();
     double div = playerStrength / 2;
     return (playerStrength + weapDamage + div) * 2;
 }
@@ -230,12 +225,6 @@ void Player::displayLevel( Player & player, int str, int spd, int def, int mag, 
         cin.get();
     }
 }
-//Member function to set weapon of the player
-void Player::setWeapon(Weapon & weap)
-{
-    weapon = weap;
-}
-
 //Now create copy constructor
 
 //Check the move list to add moves if levelled up.
@@ -245,7 +234,7 @@ void Player::checkMoveList(Player & player)
     {
         Moves move("Fury", 10);
         moveList.push_back(move);
-        cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << endl;
+        cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << " damage!" << endl;
     }
 }
 

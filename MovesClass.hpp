@@ -14,7 +14,6 @@ class Moves
         {
             return damage;
         }
-
 };
 
 Moves::Moves(std::string nameO, int damageO)
