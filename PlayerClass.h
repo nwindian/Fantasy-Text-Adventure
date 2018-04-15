@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include <limits>
-#include "Weapon_Class.h"
-#include  <conio.h>
+#include <conio.h>
 #include <vector>
+#include "Weapon_Class.h"
 #include "MovesClass.hpp"
 #include "Weapon_Class.h"
 #include "Weapon_objects.hpp"
+#include "Armor_Class.h"
 
 using std::cout;
 using std::string;
@@ -31,6 +32,7 @@ class Player
         void setLevel(int levelll);
         void LevelUP(Player &);
         Weapon weapon;
+        Armor armor;
         //holds moves and adds moves when you level up
         std::vector<Moves> moveList;
         //Create something to hold items

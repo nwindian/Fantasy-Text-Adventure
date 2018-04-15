@@ -50,7 +50,7 @@ void combat(Player & play, Player & enem)
     {
         if (whosQuicker(play, enem))
         {
-
+            m
         }
     }
 }
