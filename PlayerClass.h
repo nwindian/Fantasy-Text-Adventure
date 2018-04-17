@@ -24,7 +24,6 @@ class Player
         int exp_To_lvl = 100;
         int current_exp = 0;
         int strength, speed, magic, thirst, level;
-
         string name;
     public:
         Player(string);
@@ -32,12 +31,13 @@ class Player
         Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell);
         void setLevel(int levelll);
         void LevelUP(Player &);
-        Armor armor;
+        int gold = 0;
+        //Armor armor;
         //holds moves and adds moves when you level up
         std::vector<Moves> moveList;
         std::vector<Weapon> weaponInventory;
-       // std::vector<T> inventory;
-        //Create something to hold items
+        std::vector<Armor> armorInventory;
+       // std::vector<food> inventory;
         //function to add moves to vector
         void checkMoveList(Player&);
         //To display level during level up
