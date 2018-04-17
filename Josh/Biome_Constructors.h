@@ -82,35 +82,44 @@ Biome::Biome(int temp, char type) : heat(temp), biome(type)
 void Biome::entityMapPop(int Size)
 {
     srand(time(0));
+    entityMap[13][23].type = '|';
+    entityMap[13][25].type = '|';
+    entityMap[14][23].type = '|';
+    entityMap[14][25].type = '|';
+    entityMap[12][24].type = '_';
+    entityMap[14][24].type = '_';
+    entityMap[13][24].type = 'I';
     char types[] = {'C', 'T', 'V', 'M', '\''};
-    int typeCount[] = {0, 0, 0, 0,};
-    int num = 0;
-    for (int i = 0; i < Size; ++i)
+    int total = 4, counts[] = {Size, (rand() % 10 + 20), 3, 50};
+    for (int i = 0; i < total; ++i)
     {
-        int y = rand() % 25;
-        int x = rand() % 50;
-        entityMap[y][x].type = '\'';
-
-    }
-    for (int i = 0; i < MAPSIZEY; ++i)
-    {
-        for (int j = 0; j < MAPSIZEX; ++j)
+        for (int j = 0; j < counts[i];)
         {
-            if ((rand() % 10) == 0)
-                num = (rand() % 4);
-            else
-                num = 4;
-            entityMap[i][j].type = types[num];
-            entityMap[i][j].number = typeCount[num];
-            ++typeCount[num];
+            int num = 0;
+            int y = rand() % 23 + 1;
+            int x = rand() % 48 + 1;
+            if (entityMap[y][x].type == '\'')
+            {
+                    num = i;
+                    if (entityMap[y+1][x].type != '\'' ||
+                        entityMap[y-1][x].type != '\'' ||
+                        entityMap[y][x+1].type != '\'' ||
+                        entityMap[y][x-1].type != '\'')
+                    {
+                        num = 3;
+                    }
+                    else
+                    {
+                        ++j;
+                    }
+                entityMap[y][x].type = types[num];
+                //entityMap[y][x].number = typeCount[num];
+            }
+
         }
     }
 }
 
-int Biome::accessStatic()
-{
-
-}
 char Biome::getEntity(int y, int x)
 {
     char entity;

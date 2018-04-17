@@ -7,13 +7,11 @@
 #define KEY_LEFT 75
 #define KEY_RIGHT 77
 
-void moving(int& x, int& y, int biome)
+void moving(int& x, int& y, int biome, Biome& map)
 {
-    char direction = ' ';
     int allowed[4] = {0};
     moveOptions(x, y, biome, allowed);
     cin.clear();
-    //cin.ignore(numeric_limits<streamsize>::max(), '\n');
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
     getch();
     switch (getch())
@@ -24,7 +22,12 @@ void moving(int& x, int& y, int biome)
             else
             {
                 cout << "You can't go here...";
-                cin.get();
+                Sleep(500);
+                for (int i = 0; i < 14; ++i)
+                {
+                    cout << map.map[y + 1][x + i] << " ";
+                }
+
             }
             break;
         case KEY_RIGHT:
@@ -33,7 +36,12 @@ void moving(int& x, int& y, int biome)
             else
             {
                 cout << "You can't go here...";
-                cin.get();
+                Sleep(500);
+                for (int i = 0; i < 14; ++i)
+                {
+                    cout << map.map[y + 1][x + i] << " ";
+                }
+
             }
             break;
         case KEY_UP:
@@ -42,7 +50,12 @@ void moving(int& x, int& y, int biome)
             else
             {
                 cout << "You can't go here...";
-                cin.get();
+                Sleep(500);
+                for (int i = 0; i < 14; ++i)
+                {
+                    cout << map.map[y + 1][x + i] << " ";
+                }
+
             }
             break;
         case KEY_DOWN:
@@ -51,7 +64,12 @@ void moving(int& x, int& y, int biome)
             else
             {
                 cout << "You can't go here...";
-                cin.get();
+                Sleep(500);
+                for (int i = 0; i < 14; ++i)
+                {
+                    cout << map.map[y + 1][x + i] << " ";
+                }
+
             };
             break;
     }

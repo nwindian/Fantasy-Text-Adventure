@@ -56,6 +56,9 @@
 		<Unit filename="Josh/displayMap.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Josh/map.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Josh/moveOptions.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

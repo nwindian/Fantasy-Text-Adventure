@@ -1,9 +1,6 @@
 #ifndef BIOME_CLASS
 #define BIOME_CLASS
 
-
-
-
 class Biome
 {
     private:
@@ -27,7 +24,6 @@ class Biome
         Biome(int, char);
         char map[MAPSIZEY][MAPSIZEX];
         Entities entityMap[MAPSIZEY][MAPSIZEX];
-        int accessStatic();
         vector<Cave> caves;
         char getEntity(int, int);
         void entityMapPop(int);
