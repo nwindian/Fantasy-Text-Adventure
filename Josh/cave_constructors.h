@@ -1,5 +1,6 @@
 #ifndef CAVE_CONSTRUCTORS
 #define CAVE_CONSTRUCTORS
+#include <conio.h>
 
 Cave::Cave()
 {
@@ -46,10 +47,15 @@ void Cave::display()
         CursorPosition.X = 0;
         CursorPosition.Y = 1;
         SetConsoleCursorPosition(console,CursorPosition);
-        cout << theCave[i].message << endl
-             << "Would you like to continue? (Y)es (N)o: ";
-        cin.ignore();
-        cin.get(response);
+        cout << "There is " << theCave[i].loot << " on the ground." << endl;
+        if (theCave[i].loot != "nothing")
+        {
+            cout << "Would you like to pick it up? (Y)es (N)o: ";
+            getch();
+        }
+        cout << endl << "Would you like to continue? (Y)es (N)o: ";
+        //cin.ignore();
+        response = getch();
 
         if (response == 'y' || response == 'Y')
         {
