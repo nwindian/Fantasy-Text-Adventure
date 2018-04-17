@@ -16,6 +16,7 @@ using std::string;
 using std::endl;
 using std::cin;
 //Class for all Players
+
 class Player
 {
     private:
@@ -31,10 +32,11 @@ class Player
         Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell);
         void setLevel(int levelll);
         void LevelUP(Player &);
-        Weapon weapon;
         Armor armor;
         //holds moves and adds moves when you level up
         std::vector<Moves> moveList;
+        std::vector<Weapon> weaponInventory;
+       // std::vector<T> inventory;
         //Create something to hold items
         //function to add moves to vector
         void checkMoveList(Player&);
@@ -66,6 +68,7 @@ Player::Player()
     level = 1;
 }
 //Overloaded struct for Player class
+
 Player::Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
 {
     name = namee;
@@ -111,54 +114,46 @@ int Player::getHealth()
 {
     return health;
 }
-
 int Player::getLevel()
 {
     return level;
 }
-
 int Player::getMagic()
 {
     return magic;
 }
-
 int Player::getStrength()
 {
     return strength;
 }
-
 int Player::getSpeed()
 {
     return speed;
 }
-
 void Player::setHealth(int deff)
 {
     health = deff;
 }
-
 void Player::setStrength(int strr)
 {
     strength = strr;
 }
-
 void Player::setSpeed(int spdd)
 {
     speed = spdd;
 }
-
 void Player::setMagic(int magg)
 {
     magic = magg;
 }
 //Set the total damage for the level
-int Player::setDamage()
-{
-    int playerStrength = Player::getStrength();
-    int weapDamage = Player::weapon.getDmg();
-    double div = playerStrength / 2;
-    return (playerStrength + weapDamage + div) * 2;
-}
+//int Player::setDamage()
+//{
+//    int playerStrength = Player::getStrength();
+//    int weapDamage = Player::weapon.getDmg();
+//    double div = playerStrength / 2;
+//    return (playerStrength + weapDamage + div) * 2;
+//}
 //Displays the players level with his stats
 void Player::displayLevel( Player & player, int str, int spd, int def, int mag, int lvl)
 {
@@ -229,7 +224,6 @@ void Player::displayLevel( Player & player, int str, int spd, int def, int mag, 
     }
 }
 //Now create copy constructor
-
 //Check the move list to add moves if levelled up.
 void Player::checkMoveList(Player & player)
 {
@@ -240,5 +234,4 @@ void Player::checkMoveList(Player & player)
         cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << " damage!" << endl;
     }
 }
-
 #endif // PLAYERCLASS_H_INCLUDED

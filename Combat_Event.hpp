@@ -32,8 +32,7 @@ bool whosQuicker(Player & frnd, Player & enem)
 //Players battle phase
 int playerBP(Player & play, Player & enem)
 {
-    play.setDamage(play.);
-    bool repeat = false;
+    cout << "Choose a weapon my loser:" << endl;
 
 }
 
@@ -50,7 +49,7 @@ void combat(Player & play, Player & enem)
     {
         if (whosQuicker(play, enem))
         {
-            m
+
         }
     }
 }
