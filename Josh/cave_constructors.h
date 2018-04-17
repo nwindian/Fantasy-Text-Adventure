@@ -50,8 +50,18 @@ void Cave::display()
         cout << "There is " << theCave[i].loot << " on the ground." << endl;
         if (theCave[i].loot != "nothing")
         {
+            char i = " ";
             cout << "Would you like to pick it up? (Y)es (N)o: ";
-            getch();
+            i = getch();
+            switch (i)
+            {
+                case 'Y':
+                    theCave[i].add();
+                    break;
+                case 'y':
+                    theCave[i].add();
+                    break;
+            }
         }
         cout << endl << "Would you like to continue? (Y)es (N)o: ";
         //cin.ignore();
