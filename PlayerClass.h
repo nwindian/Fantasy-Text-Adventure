@@ -36,8 +36,7 @@ class Player
         //holds moves and adds moves when you level up
         std::vector<Moves> moveList;
         std::vector<Weapon> weaponInventory;
-       // std::vector<T> inventory;
-        //Create something to hold items
+        std::vector<Armor> armorInventory;
         //function to add moves to vector
         void checkMoveList(Player&);
         //To display level during level up
