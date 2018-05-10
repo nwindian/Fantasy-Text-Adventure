@@ -1,46 +1,50 @@
 #ifndef CAVE_CLASS
 #define CAVE_CLASS
-struct food
+using namespace playerSpace;
+struct Food
 {
     int recover = 0;
     string foodName;
-    food()
+    Food()
     {
         if (rand() % 10 > 5)
         {
-            recover = (player.getHealth() * 25)) / 100;
-            foodName = "Bread";
+            recover = (Joe.getHealth() * 25) / 100;
+            foodName = "is bread";
         }
         else if (rand() % 10 > 6)
         {
-            recover = (player.getHealth() * 30)) / 100;
-            foodName = "Eggs";
+            recover = (Joe.getHealth() * 30) / 100;
+            foodName = "are eggs";
         }
         else if (rand() % 10 > 7)
         {
-            recover = (player.getHealth() * 40)) / 100;
-            foodName = "Chicken";
+            recover = (Joe.getHealth() * 40) / 100;
+            foodName = "is cooked chicken";
         }
         else if (rand() % 10 > 8)
         {
-            recover = (player.getHealth() * 50)) / 100;
-            foodName = "Steak";
+            recover = (Joe.getHealth() * 50) / 100;
+            foodName = "is cooked steak";
         }
         else if (rand() % 10 > 8)
         {
-            recover = (player.getHealth() * 75)) / 100;
-            foodName = "Ribs";
+            recover = (Joe.getHealth() * 75) / 100;
+            foodName = "are cooked ribs";
         }
         else
         {
-            recover = (player.getHealth() * 20)) / 100;
-            foodName = "Grapes";
+            recover = (Joe.getHealth() * 20) / 100;
+            foodName = "are grapes";
         }
     }
 };
 
 
+class Monster
+{
 
+};
 
 class Cave
 {
@@ -55,41 +59,46 @@ class Cave
             int goldNum = 0;
             bool weapon = false;
             bool food = false;
-            food* foodObj;
+            std::unique_ptr<Food> foodObj;
+            Monster* entity;
             //bool waterSkin = false;
             bool scroll = false;
             bool armor = false;
             cavePiece()
             {
-                int num = rand() % 100;
-                if (num < 50)
+                int num = rand() % 1121;
+                if (num > 599)
                 {
-                    if (num > 29)
+                    if (num < 840)
                     {
                         food = true;
-                        foodObj = new food();
+                        foodObj = std::unique_ptr<Food>(new Food());
                         loot = foodObj->foodName;
                     }
-                    else if (num > 14)
+                    else if (num < 960)
                     {
                         gold = true;
                         goldNum = (rand() % 20 + 30);
-                        loot = "gold";
+                        loot = "is gold";
                     }
-                    else if (num > 9)
+                    else if (num < 1000)
                     {
                         weapon = true;
-                        loot = "a weapon";
+                        loot = "is a weapon";
                     }
-                    else if (num > 4)
+                    else if (num < 1080)
                     {
                         scroll = true;
-                        loot = "a scroll";
+                        loot = "is a scroll";
+                    }
+                    else if (num == 1120)
+                    {
+                        //caveIn
                     }
                     else
                     {
                         armor = true;
-                        loot = "armor";
+                        loot = "is armor";
                     }
                 }
                 else
@@ -99,41 +108,48 @@ class Cave
             }
             cavePiece(string& msg) : message(msg)
             {
-                int num = rand() % 100;
-                if (num < 50)
+                int num = rand() % 1121;
+                if (num > 599)
                 {
-                    if (num > 29)
+                    if (num < 840)
                     {
                         food = true;
-                        foodNum = (rand() % 20 + 10);
-                        loot = "food";
+                        foodObj = std::unique_ptr<Food>(new Food());
+                        loot = foodObj->foodName;
                     }
-                    else if (num > 14)
+                    else if (num < 960)
                     {
                         gold = true;
                         goldNum = (rand() % 20 + 30);
-                        loot = "gold";
+                        loot = "is gold";
                     }
-                    else if (num > 9)
+                    else if (num < 1000)
                     {
                         weapon = true;
-                        loot = "a weapon";
+                        loot = "is a weapon";
                     }
-                    else if (num > 4)
+                    else if (num < 1080)
                     {
                         scroll = true;
-                        loot = "a scroll";
+                        loot = "is a scroll";
+                    }
+                    else if (num == 1120)
+                    {
+                        //caveIn
                     }
                     else
                     {
                         armor = true;
-                        loot = "armor";
+                        loot = "is armor";
                     }
                 }
                 else
                 {
                     loot = "nothing";
                 }
+            }
+            cavePiece(Monster& ent) : entity(&ent)
+            {
             }
         };
         cavePiece* theCave;
