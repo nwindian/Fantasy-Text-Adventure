@@ -10,51 +10,12 @@
 #include "Weapon_Class.h"
 #include "Weapon_objects.hpp"
 #include "Armor_Class.h"
+#include "Player_Class_Interface.h"
 
 using std::cout;
 using std::string;
 using std::endl;
 using std::cin;
-//Class for all Players
-
-class Player
-{
-    private:
-        int health;
-        int exp_To_lvl = 100;
-        int current_exp = 0;
-        int strength, speed, magic, thirst, level;
-
-        string name;
-    public:
-        Player(string);
-        Player();
-        Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell);
-        void setLevel(int levelll);
-        void LevelUP(Player &);
-        Armor armor;
-        //holds moves and adds moves when you level up
-        std::vector<Moves> moveList;
-        std::vector<Weapon> weaponInventory;
-        std::vector<Armor> armorInventory;
-        //function to add moves to vector
-        void checkMoveList(Player&);
-        //To display level during level up
-        void displayLevel(Player &, int str, int spd, int def, int mag, int lvl);
-        //Player & operator=(Weapon &)
-        //getters and setters
-        int getStrength();
-        int getSpeed();
-        int getHealth();
-        int getMagic();
-        int getLevel();
-        void setSpeed(int spdd);
-        void setStrength(int strr);
-        void setMagic(int magg);
-        void setHealth(int deff);
-        int setDamage();
-        string getName();
-};
 //Default struct for Player Class
 Player::Player()
 {
@@ -150,6 +111,7 @@ void Player::setMagic(int magg)
 //{
 //    int playerStrength = Player::getStrength();
 //    int weapDamage = Player::weapon.getDmg();
+//    char type =
 //    double div = playerStrength / 2;
 //    return (playerStrength + weapDamage + div) * 2;
 //}
