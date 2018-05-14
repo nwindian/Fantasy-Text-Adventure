@@ -75,13 +75,13 @@
 
 1523999800 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\biome_class.h
 
-1526318860 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\prototypes.h
+1526331008 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\prototypes.h
 
 1523999800 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\biome_constructors.h
 
 1526314420 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\displaymap.h
 
-1526329727 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\moving.h
+1526331218 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\moving.h
 	<conio.h>
 	<iomanip>
 
@@ -92,7 +92,7 @@
 1523999800 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cave.h
 	"displayMap.h"
 
-1526329277 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\map.h
+1526331218 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\map.h
 
 1526318839 source:c:\users\jmfos\documents\github\fantasy-text-adventure\josh\stamina.cpp
 	<iostream>

@@ -25,27 +25,69 @@ void startMap()
                 while (biome == 0)
                 {
                     playerView(maps[biome], x, y, stamina);
-                    moving(x, y, biome, maps[biome], stamina);
-                    if (x == 50 && biomeRestrict[0] == 1)
+                    moving(x, y, biome, maps[biome], stamina, biomeRestrict);
+                    if (x == 50)
                     {
-                        maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);
-                        biome = 2;
-                        x = 0;
-                        displayMap(maps[biome].map);
+                        if (biomeRestrict[0] != 1)
+                        {
+                            cursorSet(0, 25);
+                            cout << "Story stuff, you shall not pass!";
+                            Sleep(1000);
+                            cursorSet(0, 25);
+                            cout << setw(50) << " ";
+                            --x;
+                            stamina.increase();
+                        }
+                        else
+                        {
+                            maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);
+                            biome = 2;
+                            x = 0;
+                            displayMap(maps[biome].map);
+                        }
+
                     }
-                    if (y == 25 && biomeRestrict[1] == 1)
+                    if (y == 25)
                     {
-                        maps[biome].map[y-1][x] =  maps[biome].getEntity(y-1, x);
-                        biome = 1;
-                        y = 0;
-                        displayMap(maps[biome].map);
+                        if (biomeRestrict[1] != 1)
+                        {
+                            cursorSet(0, 25);
+                            cout << "Story stuff, you shall not pass!";
+                            Sleep(1000);
+                            cursorSet(0, 25);
+                            cout << setw(50) << " ";
+                            --y;
+                            stamina.increase();
+                        }
+                        else
+                        {
+                            maps[biome].map[y-1][x] =  maps[biome].getEntity(y-1, x);
+                            biome = 1;
+                            y = 0;
+                            displayMap(maps[biome].map);
+                        }
+
                     }
-                    if (x == -1 && biomeRestrict[2] == 1)
+                    if (x == -1)
                     {
-                        maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
-                        biome = 3;
-                        x = 49;
-                        displayMap(maps[biome].map);
+                        if (biomeRestrict[2] != 1)
+                        {
+                            cursorSet(0, 25);
+                            cout << "Story stuff, you shall not pass!";
+                            Sleep(1000);
+                            cursorSet(0, 25);
+                            cout << setw(50) << " ";
+                            ++x;
+                            stamina.increase();
+                        }
+                        else
+                        {
+                            maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
+                            biome = 3;
+                            x = 49;
+                            displayMap(maps[biome].map);
+                        }
+
                     }
                     if (maps[biome].getEntity(y, x) == 'C')
                     {
@@ -57,7 +99,7 @@ void startMap()
                 while (biome == 1)
                 {
                     playerView(maps[biome], x, y, stamina);
-                    moving(x, y, biome, maps[biome], stamina);
+                    moving(x, y, biome, maps[biome], stamina, biomeRestrict);
                     if (y == -1)
                     {
                         maps[biome].map[y+1][x] = maps[biome].getEntity(y+1, x);
@@ -75,7 +117,7 @@ void startMap()
                 while (biome == 2)
                 {
                     playerView(maps[biome], x, y, stamina);
-                    moving(x, y, biome, maps[biome], stamina);
+                    moving(x, y, biome, maps[biome], stamina, biomeRestrict);
                     if (x == -1)
                     {
                         maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
@@ -93,7 +135,7 @@ void startMap()
                 while (biome == 3)
                 {
                     playerView(maps[biome], x, y, stamina);
-                    moving(x, y, biome, maps[biome], stamina);;
+                    moving(x, y, biome, maps[biome], stamina, biomeRestrict);;
                     if (x == 50)
                     {
                         maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);

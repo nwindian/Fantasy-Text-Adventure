@@ -10,18 +10,26 @@
 
 
 
-void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
+void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRestrict[])
 {
     int allowed[4] = {0};
     moveOptions(x, y, biome, allowed);
     cin.clear();
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
-    if (getch() == 'r' )
+    char obj = getch();
+    if (obj == 'r' )
     {
         cursorSet(0, 26);
         cout << setw(50) <<  " ";
         Sleep(500);
         stamina.increase();
+    }
+    else if (obj == 'p')
+    {
+        for (int i = 0; i < 3; ++i)
+        {
+            biomeRestrict[i] = 1;
+        }
     }
     else
     {
@@ -41,13 +49,11 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
                 }
                 else
                 {
+                    cursorSet(0, 25);
                     cout << "You can't go here...";
-                    Sleep(500);
-                    for (int i = 0; i < 14; ++i)
-                    {
-                        cout << map.map[y + 1][x + i] << " ";
-                    }
-
+                    Sleep(1000);
+                    cursorSet(0, 25);
+                    cout << setw(50) << " ";
                 }
                 break;
             case KEY_RIGHT:
@@ -58,13 +64,11 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
                 }
                 else
                 {
+                    cursorSet(0, 25);
                     cout << "You can't go here...";
-                    Sleep(500);
-                    for (int i = 0; i < 14; ++i)
-                    {
-                        cout << map.map[y + 1][x + i] << " ";
-                    }
-
+                    Sleep(1000);
+                    cursorSet(0, 25);
+                    cout << setw(50) << " ";
                 }
                 break;
             case KEY_UP:
@@ -75,13 +79,11 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
                 }
                 else
                 {
+                    cursorSet(0, 25);
                     cout << "You can't go here...";
-                    Sleep(500);
-                    for (int i = 0; i < 14; ++i)
-                    {
-                        cout << map.map[y + 1][x + i] << " ";
-                    }
-
+                    Sleep(1000);
+                    cursorSet(0, 25);
+                    cout << setw(50) << " ";
                 }
                 break;
             case KEY_DOWN:
@@ -92,13 +94,11 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
                 }
                 else
                 {
+                    cursorSet(0, 25);
                     cout << "You can't go here...";
-                    Sleep(500);
-                    for (int i = 0; i < 14; ++i)
-                    {
-                        cout << map.map[y + 1][x + i] << " ";
-                    }
-
+                    Sleep(1000);
+                    cursorSet(0, 25);
+                    cout << setw(50) << " ";
                 }
                 break;
         }
