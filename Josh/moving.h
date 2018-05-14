@@ -2,6 +2,7 @@
 #define MOVING
 
 #include <conio.h>
+#include <iomanip>
 #define KEY_UP 72
 #define KEY_DOWN 80
 #define KEY_LEFT 75
@@ -17,6 +18,8 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina)
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
     if (getch() == 'r' )
     {
+        cursorSet(0, 26);
+        cout << setw(50) <<  " ";
         Sleep(500);
         stamina.increase();
     }
