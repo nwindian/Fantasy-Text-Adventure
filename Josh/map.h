@@ -26,21 +26,21 @@ void startMap()
                 {
                     playerView(maps[biome], x, y, stamina);
                     moving(x, y, biome, maps[biome], stamina);
-                    if (x == 50 && boimeRestrict[0] == 1)
+                    if (x == 50 && biomeRestrict[0] == 1)
                     {
                         maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);
                         biome = 2;
                         x = 0;
                         displayMap(maps[biome].map);
                     }
-                    if (y == 25 && boimeRestrict[1] == 1)
+                    if (y == 25 && biomeRestrict[1] == 1)
                     {
                         maps[biome].map[y-1][x] =  maps[biome].getEntity(y-1, x);
                         biome = 1;
                         y = 0;
                         displayMap(maps[biome].map);
                     }
-                    if (x == -1 && boimeRestrict[2] == 1)
+                    if (x == -1 && biomeRestrict[2] == 1)
                     {
                         maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
                         biome = 3;
