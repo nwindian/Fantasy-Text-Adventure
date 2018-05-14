@@ -7,6 +7,8 @@
 #include "PlayerClass.h"
 #include "Weapon_Class.h"
 #include "Combat_Event_Prototypes.h"
+#include "Damage_Calculator.hpp"
+#include "Chance_Calc.hpp"
 
 
 using std::cout;
@@ -15,7 +17,7 @@ using std::endl;
 
 Weapon getWeapon(Player & play)
 {
-    cout << "Choose a weapon my loser:" << endl;
+    cout << "Choose a weapon my Player:" << endl;
     bool repeat = false;
     int choice;
     int count = 0;
@@ -117,8 +119,15 @@ int playerBP(Player & play, Player & enem)
                 repeatChoice = false;
             }
         }
+        //Check if move hits
+        if (!chance(play, play.moveList[moveChoice-1]))
+        {
+            cout << play.getName() << " has missed!" << endl;
+            return 0;
+        }
         cout << play.getName() << " has used " << play.moveList[moveChoice - 1] << " to " << enem.getName() << "!" << endl;
         //Damage calculator
+        damage = dmg_calc(play, enem, currentWeapon);
 
 
 

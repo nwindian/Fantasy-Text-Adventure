@@ -8,17 +8,23 @@ class Moves
         int damage;
         std::string name;
         char type;
+        int evasiveness;
     public:
-        Moves(std::string , int );
+        Moves(std::string , int, int);
         int getDamage()
         {
             return damage;
         }
+        int getEvasive()
+        {
+            return evasiveness;
+        }
 };
 
-Moves::Moves(std::string nameO, int damageO)
+Moves::Moves(std::string nameO, int damageO, int evasivenesss)
 {
     damage = damageO;
     name = nameO;
+    evasiveness = evasivenesss;
 }
 #endif // MOVESCLASS_HPP_INCLUDED

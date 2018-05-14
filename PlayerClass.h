@@ -191,7 +191,7 @@ void Player::checkMoveList(Player & player)
 {
     if (player.getLevel() == 2)
     {
-        Moves move("Fury", 10);
+        Moves move("Fury", 10, 90);
         moveList.push_back(move);
         cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << " damage!" << endl;
     }
