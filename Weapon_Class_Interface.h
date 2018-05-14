@@ -28,11 +28,20 @@ public:
         type = t;
         name = n;
     }
+    Weapon(const Weapon &obj)
+    {
+        sword = obj.getSword();
+        axe = obj.getAxe();
+        dmg = obj.getDmg();
+        type = obj.getType();
+        name = obj.getName();
+    }
     int set_damage_Output(Weapon &, char);
-    bool getSword();
-    bool getAxe();
-    int getDmg();
-    std::string getName();
+    bool getSword() const;
+    bool getAxe() const;
+    int getDmg() const;
+    char getType() const;
+    std::string getName() const;
     void setDmg(int);
 };
 

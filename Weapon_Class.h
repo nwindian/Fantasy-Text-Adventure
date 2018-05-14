@@ -5,13 +5,13 @@
 #include <string>
 #include "Weapon_Class_Interface.h"
 //To get name of weapon
-std::string Weapon::getName()
+std::string Weapon::getName() const
 {
     return name;
 }
 
 //Getter method to get damage int value from class Weapon
-int Weapon::getDmg()
+int Weapon::getDmg() const
 {
     return dmg;
 }
@@ -21,14 +21,19 @@ void Weapon::setDmg(int oldDmg)
     dmg = oldDmg;
 }
 //Getter method to get sword bool value from class Weapon
-bool Weapon::getSword()
+bool Weapon::getSword() const
 {
     return sword;
 }
 //Getter method to get axe bool value from class Weapon
-bool Weapon::getAxe()
+bool Weapon::getAxe() const
 {
     return axe;
+}
+//getter for type
+char Weapon::getType() const
+{
+    return type;
 }
 int Weapon::set_damage_Output(Weapon & weapon, char typeWpn)//MAY NEED TO INCLUDE MONSTER OBJECT TO CHECK RESISTANCES
 {

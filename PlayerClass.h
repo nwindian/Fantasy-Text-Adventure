@@ -26,6 +26,7 @@ Player::Player()
     magic = 0;
     thirst = 0;
     level = 1;
+    resistance = '0';
 }
 //Overloaded struct for Player class
 

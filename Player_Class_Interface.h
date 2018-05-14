@@ -7,6 +7,7 @@ using std::string;
 class Player
 {
     private:
+        char resistance;
         int health;
         int exp_To_lvl = 100;
         int current_exp = 0;
