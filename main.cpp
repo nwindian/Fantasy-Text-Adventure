@@ -10,13 +10,13 @@
 
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 COORD CursorPosition;
-#include "PlayerClass.h"
+//#include "PlayerClass.h"
 namespace playerSpace
 {
-    Player Joe("Joe");
+    //Player Joe("Joe");
 }
+#include "Josh/Stamina.h"
 #include "Josh/Globals.h"
-
 #include "Josh/cave_class.h"
 #include "Josh/cave_constructors.h"
 #include "Josh/Biome_Class.h"
