@@ -1,6 +1,6 @@
 #ifndef MAP
 #define MAP
-void cursorSet(int, int);
+
 void startMap()
 {
     CONSOLE_CURSOR_INFO lpCursor;

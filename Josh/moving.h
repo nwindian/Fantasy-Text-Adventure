@@ -31,7 +31,7 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
             biomeRestrict[i] = 1;
         }
     }
-    else
+    else if (obj == -0x20) //'à')
     {
         if (!stamina.check())
         {
@@ -101,6 +101,8 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cout << setw(50) << " ";
                 }
                 break;
+            //case default:
+
         }
     }
     return;
