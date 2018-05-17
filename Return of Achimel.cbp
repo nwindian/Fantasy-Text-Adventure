@@ -60,6 +60,9 @@
 		<Unit filename="Josh/displayMap.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Josh/entityCheck.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Josh/map.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

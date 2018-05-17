@@ -89,10 +89,8 @@ void startMap()
                         }
 
                     }
-                    if (maps[biome].getEntity(y, x) == 'C')
-                    {
-                       cave(maps[biome], y, x);
-                    }
+                    playerView(maps[biome], x, y, stamina);
+                    entityCheck(maps[biome], x, y);
                 }
                 break;
             case 1:
@@ -107,10 +105,8 @@ void startMap()
                         y = 24;
                         displayMap(maps[biome].map);
                     }
-                    if (maps[biome].getEntity(y, x) == 'C')
-                    {
-                       cave(maps[biome], y, x);
-                    }
+                    playerView(maps[biome], x, y, stamina);
+                    entityCheck(maps[biome], x, y);
                 }
                 break;
             case 2:
@@ -125,10 +121,8 @@ void startMap()
                         x = 49;
                         displayMap(maps[biome].map);
                     }
-                    if (maps[biome].getEntity(y, x) == 'C')
-                    {
-                       cave(maps[biome], y, x);
-                    }
+                    playerView(maps[biome], x, y, stamina);
+                    entityCheck(maps[biome], x, y);
                 }
                 break;
             case 3:
@@ -143,15 +137,119 @@ void startMap()
                         x = 0;
                         displayMap(maps[biome].map);
                     }
-                    if (maps[biome].getEntity(y, x) == 'C')
-                    {
-                       cave(maps[biome], y, x);
-                    }
+                    playerView(maps[biome], x, y, stamina);
+                    entityCheck(maps[biome], x, y);
                 }
                 break;
         }
 
     }
 }
+
+char entityCheck(Biome& biome, int x, int y)
+{
+    switch (biome.getEntity(y, x))
+    {
+        case 'C':
+            cave(biome, y, x);
+            break;
+        case 'T':
+            //getTreasure();
+            break;
+        case 'M':
+            //monster stuff
+            break;
+        case 'V':
+            village();
+            for (int i = 0; i < 6; ++i)
+            {
+                cursorSet(0, 25 + i);
+                cout << setw(50) << " ";
+            }
+            break;
+    }
+}
+
+void village()
+{
+    cursorSet(0, 27);
+    cout << setw(50) << " ";
+    cursorSet(0, 28);
+    cout << setw(50) << " ";
+    cursorSet(0, 25);
+    cout << "Would you like to enter the village? (Y)es (N)o";
+    do
+    {
+        char responce = getch();
+        if (responce == 'y')
+        {
+            cursorSet(0, 25);
+            cout << setw(50) << " ";
+            cursorSet(0, 25);
+            cout << "Where would you like to go?";
+            cursorSet(0, 26);
+            cout << "(1) Weapon and Armor Smith\n"
+                 << "(2) Food Shop\n"
+                 << "(3) Scroll shop\n"
+                 << "(4) Explore\n"
+                 << "(5) Leave";
+                 cin.get();
+                 return;
+
+        }
+        else if (responce == 'n')
+        {
+            cursorSet(0, 26);
+            cout << setw(30) << left << "Very well";
+            cin.get();
+            return;
+        }
+    } while (true);
+}
+
+void getTreasure()
+{
+    string loot;
+    int goldCount = 0;
+    int num = rand() % 1121;
+    if (num > 599)
+    {
+        if (num < 840)
+        {
+            //foodObj = std::unique_ptr<Food>(new Food());
+            //loot = foodObj->foodName;
+        }
+        else if (num < 960)
+        {
+
+            //goldNum = (rand() % 20 + 30);
+            loot = "is gold";
+        }
+        else if (num < 1000)
+        {
+
+            loot = "is a weapon";
+        }
+        else if (num < 1080)
+        {
+
+            loot = "is a scroll";
+        }
+        else if (num == 1120)
+        {
+            //caveIn
+        }
+        else
+        {
+
+            loot = "is armor";
+        }
+    }
+    else
+    {
+        loot = "nothing";
+    }
+}
+
 
 #endif // MAP

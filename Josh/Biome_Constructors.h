@@ -106,7 +106,7 @@ void Biome::entityMapPop(int Size)
                         entityMap[y][x+1].type != '\'' ||
                         entityMap[y][x-1].type != '\'')
                     {
-                        num = 3;
+                        num = 4;
                     }
                     else
                     {
@@ -118,13 +118,14 @@ void Biome::entityMapPop(int Size)
 
         }
     }
+    entityMap[0][1].type = 'V';
 }
 
 char Biome::getEntity(int y, int x)
 {
     char entity;
     entity = entityMap[y][x].type;
-    if (entity == 'M')
+    if (entity == 'T' && (rand() % 2) == 0)
         entity = '\'';
     return entity;
 }

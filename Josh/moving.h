@@ -3,10 +3,10 @@
 
 #include <conio.h>
 #include <iomanip>
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
+#define KEY_UP 'w'
+#define KEY_DOWN 's'
+#define KEY_LEFT 'a'
+#define KEY_RIGHT 'd'
 
 
 
@@ -17,31 +17,16 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
     cin.clear();
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
     char obj = getch();
-    if (obj == 'r' )
-    {
-        cursorSet(0, 26);
-        cout << setw(50) <<  " ";
-        Sleep(500);
-        stamina.increase();
-    }
-    else if (obj == 'p')
-    {
-        for (int i = 0; i < 3; ++i)
+
+        switch (obj)
         {
-            biomeRestrict[i] = 1;
-        }
-    }
-    else if (obj == -0x20) //'à')
-    {
-        if (!stamina.check())
-        {
-            cursorSet(0, 26);
-            cout << "You are out of stamina. Press R to rest.";
-            return;
-        }
-        switch (getch())
-        {
-            case KEY_LEFT:
+            case 'a':
+                if (!stamina.check())
+                {
+                    cursorSet(0, 26);
+                    cout << "You are out of stamina. Press R to rest.";
+                    return;
+                }
                 if (allowed[0] == 1)
                 {
                     --x;
@@ -56,7 +41,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cout << setw(50) << " ";
                 }
                 break;
-            case KEY_RIGHT:
+            case 'd':
+                if (!stamina.check())
+                {
+                    cursorSet(0, 26);
+                    cout << "You are out of stamina. Press R to rest.";
+                    return;
+                }
                 if (allowed[1] == 1)
                 {
                     ++x;
@@ -71,7 +62,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cout << setw(50) << " ";
                 }
                 break;
-            case KEY_UP:
+            case 'w':
+                if (!stamina.check())
+                {
+                    cursorSet(0, 26);
+                    cout << "You are out of stamina. Press R to rest.";
+                    return;
+                }
                 if (allowed[2] == 1)
                 {
                     --y;
@@ -86,7 +83,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cout << setw(50) << " ";
                 }
                 break;
-            case KEY_DOWN:
+            case 's':
+                if (!stamina.check())
+                {
+                    cursorSet(0, 26);
+                    cout << "You are out of stamina. Press R to rest.";
+                    return;
+                }
                 if (allowed[3] == 1)
                 {
                     ++y;
@@ -101,10 +104,28 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cout << setw(50) << " ";
                 }
                 break;
-            //case default:
+            case 'r':
+                cursorSet(0, 26);
+                cout << setw(50) <<  " ";
+                Sleep(450);
+                stamina.increase();
+                break;
+            case 'p':
+                for (int i = 0; i < 3; ++i)
+                {
+                    biomeRestrict[i] = 1;
+                }
+                break;
+            default:
+                cursorSet(0, 25);
+                cout << "Invalid Key";
+                Sleep(500);
+                cursorSet(0, 25);
+                cout << setw(50) << " ";
+                break;
 
         }
-    }
+
     return;
 }
 

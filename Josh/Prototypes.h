@@ -10,5 +10,7 @@ void entityMapGen(char map[][MAPSIZEY][MAPSIZEX]);
 void cave(Biome&, int, int);
 void startMap();
 void cursorSet(int, int);
+char entityCheck(Biome&, int, int);
+void village();
 
 #endif // PROTOTYPES
