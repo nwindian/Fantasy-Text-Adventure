@@ -1,23 +1,21 @@
-#ifndef PLAYERCLASS_H_INCLUDED
-#define PLAYERCLASS_H_INCLUDED
-
 #include <iostream>
 #include <limits>
 #include <conio.h>
 #include <vector>
-#include "Weapon_Class.h"
-#include "MovesClass.hpp"
-#include "Weapon_Class.h"
-#include "Weapon_objects.hpp"
+#include "Moves_Class.h"
 #include "Armor_Class.h"
-#include "Player_Class_Interface.h"
+#include "Weapon_Class.h"
+#include "Player_Class.h"
+//#include "Weapon_objects.hpp"
+
 
 using std::cout;
 using std::string;
 using std::endl;
 using std::cin;
+
 //Default struct for Player Class
-Player::Player()
+Player_Class::Player_Class()
 {
     name = "Michael";
     strength = 0;
@@ -30,7 +28,7 @@ Player::Player()
 }
 //Overloaded struct for Player class
 
-Player::Player(string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
+Player_Class::Player_Class(std::string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
 {
     name = namee;
     strength = strengthh;
@@ -41,7 +39,7 @@ Player::Player(string namee,int strengthh, int speedd, int defensee, int magicc,
     level = levell;
 
 }
-Player::Player(string namee)
+Player_Class::Player_Class(std::string namee)
 {
     name = namee;
     strength = 0;
@@ -51,115 +49,115 @@ Player::Player(string namee)
     thirst = 0;
     level = 1;
 }
-string Player::getName()
+std::string Player_Class::getName()
 {
     return name;
 }
 // Mutator method for level in Player Class
-void Player::setLevel(int levelll)
+void Player_Class::setLevel(int levelll)
 {
     level = levelll;
 }
 //Level
-void Player::LevelUP(Player & player)
+void Player_Class::LevelUP(Player_Class & player)
 {
-    Player::setLevel(++level);
-    std::cout << Player::getName() << " is now level " << Player::getLevel() << "! " << endl;
-    Player::displayLevel(player, Player::getStrength(),Player::getSpeed(),Player::getHealth(),Player::getMagic(),Player::getLevel());
-    cin.ignore();
-    cin.get();
+    Player_Class::setLevel(++level);
+    std::cout << Player_Class::getName() << " is now level " << Player_Class::getLevel() << "! " << endl;
+    Player_Class::displayLevel(player, player.getStrength(),player.getSpeed(),player.getHealth(),player.getMagic(),player.getLevel());
+    std::cin.ignore();
+    std::cin.get();
     checkMoveList(player);
  }
 //Getters and Setters
-int Player::getHealth()
+int Player_Class::getHealth()
 {
     return health;
 }
-int Player::getLevel()
+int Player_Class::getLevel()
 {
     return level;
 }
-int Player::getMagic()
+int Player_Class::getMagic()
 {
     return magic;
 }
-int Player::getStrength()
+int Player_Class::getStrength()
 {
     return strength;
 }
-int Player::getSpeed()
+int Player_Class::getSpeed()
 {
     return speed;
 }
-void Player::setHealth(int deff)
+void Player_Class::setHealth(int deff)
 {
     health = deff;
 }
-void Player::setStrength(int strr)
+void Player_Class::setStrength(int strr)
 {
     strength = strr;
 }
-void Player::setSpeed(int spdd)
+void Player_Class::setSpeed(int spdd)
 {
     speed = spdd;
 }
-void Player::setMagic(int magg)
+void Player_Class::setMagic(int magg)
 {
     magic = magg;
 }
 //Set the total damage for the level
-//int Player::setDamage()
-//{
-//    int playerStrength = Player::getStrength();
-//    int weapDamage = Player::weapon.getDmg();
-//    char type =
-//    double div = playerStrength / 2;
-//    return (playerStrength + weapDamage + div) * 2;
-//}
+int Player_Class::setDamage()
+{
+    int playerStrength = Player_Class::getStrength();
+    //int weapDamage = Player_Class::weapon.getDmg();
+    //char type =
+    double div = playerStrength / 2;
+    return (playerStrength  + div) * 2;
+}
 //Displays the players level with his stats
-void Player::displayLevel( Player & player, int str, int spd, int def, int mag, int lvl)
+void Player_Class::displayLevel( Player_Class & player, int str, int spd, int def, int mag, int lvl)
 {
     bool repeat = false;
     int counter = 0;
     //variable for player to choose which stat to level up
     int statup;
     //Prints current stats
-    cout << "Awesome Adventurer: " << player.getName() << endl << "Level: " << lvl << endl
+    std::cout << "Awesome Adventurer: " << player.getName() << std::endl << "Level: " << lvl << std::endl
         << "Current Stats: " << endl << "Strength: " << str << endl << "Speed: "
-        << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
+        << spd << std::endl << "Health: " << def << std::endl << "Magic: " << mag << std::endl;
 
-    cout << endl << "--You have 3 points to put in your stats." << endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
+    std::cout << std::endl << "--You have 3 points to put in your stats." << std::endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
         << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of \n--Achimel, so if you don't have any, we'd recommend not upgrading this stat." << endl <<
-            "--Pretty simple, especially for the likes of you." << endl;
+            "--Pretty simple, especially for the likes of you." << std::endl;
     //Loop through to ask and assign stats to new stats
     for (int i = 0; i < 3; i++)
     {
         while (repeat == false)
         {
-            cout << "Please choose stat to level up. " << endl;
-            cin >> statup;
-            if (cin.fail() || statup > 4 || statup < 1)
+            std::cout << "Please choose stat to level up. " << std::endl;
+            std::cin >> statup;
+            if (std::cin.fail() || statup > 4 || statup < 1)
             {
                 repeat = false;
-                cin.clear();
+                std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                cout << endl << "Come on, just pick a valid stat. " << endl;
+                std::cout << std::endl << "Come on, just pick a valid stat. " << std::endl;
             }
             else
             {
                 switch (statup)
                 {
                     case 1: ++str;
-                            cout << "You have leveled up strength." << endl;
+                            std::cout << "You have leveled up strength." << std::endl;
                             break;
                     case 2: ++spd;
-                            cout << "You have leveled up speed." << endl;
+                            std::cout << "You have leveled up speed." << std::endl;
                             break;
                     case 3: ++def;
-                            cout << "You have leveled up Health." << endl;
+                            std::cout << "You have leveled up Health." << std::endl;
                             break;
                     case 4: ++mag;
-                            cout << "You have leveled up magic." << endl;
+                            std::cout << "You have leveled up magic." << std::endl;
                             break;
                 }
                 ++counter;
@@ -187,13 +185,12 @@ void Player::displayLevel( Player & player, int str, int spd, int def, int mag, 
 }
 //Now create copy constructor
 //Check the move list to add moves if levelled up.
-void Player::checkMoveList(Player & player)
+void Player_Class::checkMoveList(Player_Class & player)
 {
     if (player.getLevel() == 2)
     {
-        Moves move("Fury", 10, 90);
+        Moves_Class move("Fury", 10, 90);
         moveList.push_back(move);
         cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << " damage!" << endl;
     }
 }
-#endif // PLAYERCLASS_H_INCLUDED

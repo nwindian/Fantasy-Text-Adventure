@@ -1,23 +1,19 @@
-#ifndef COMBAT_EVENT_HPP_INCLUDED
-#define COMBAT_EVENT_HPP_INCLUDED
 #include <iostream>
 #include <conio.h>
 #include <iomanip>
 #include <limits>
-#include "PlayerClass.h"
+#include <windows.h>
+#include "Player_Class.h"
+#include "Chance_Calc_Interface.h"
+#include "Damage_Calculator.h"
+#include "Chance_Calc_Interface.h"
 #include "Weapon_Class.h"
-#include "Combat_Event_Prototypes.h"
-#include "Damage_Calculator.hpp"
-#include "Chance_Calc.hpp"
 
 
-using std::cout;
-using std::cin;
-using std::endl;
 
-Weapon getWeapon(Player & play)
+Weapon_Class getWeapon(Player_Class & play)
 {
-    cout << "Choose a weapon my Player:" << endl;
+    std::cout << "Choose a weapon my Player:" << std::endl;
     bool repeat = false;
     int choice;
     int count = 0;
@@ -25,20 +21,20 @@ Weapon getWeapon(Player & play)
     {
         if (count == 5)
         {
-            cout << endl;
+            std::cout << std::endl;
             count = 0;
         }
         else
         {
-            cout << i+1 << ": " << play.weaponInventory[i].getName() << " || ";
+            std::cout << i+1 << ": " << play.weaponInventory[i].getName() << " || ";
         }
     }
-    cout << endl;
+    std::cout << std::endl;
     while(repeat == false)
     {
         try
         {
-            cin >> choice;
+            std::cin >> choice;
             throw choice;
         }
         catch(int choiceof)
@@ -56,7 +52,7 @@ Weapon getWeapon(Player & play)
     return play.weaponInventory[choice -1];
 }
 //To check who is faster
-bool whosQuicker(Player & frnd, Player & enem)
+bool whosQuicker(Player_Class & frnd, Player_Class & enem)
 {
     if (frnd.getSpeed() > enem.getSpeed())
     {
@@ -73,25 +69,24 @@ bool whosQuicker(Player & frnd, Player & enem)
     }
 }
 //Players battle phase
-int playerBP(Player & play, Player & enem)
+int playerBP(Player_Class & play, Player_Class & enem)
 {
-    int damage;
     int count = 0;
     int moveChoice = 0;
     bool repeatChoice = true;
     bool repeat = true;
     int choice;
-    Weapon currentWeapon = getWeapon(play);
-    cout << "What would you like to do? " << endl;
-    cout << "1) Fight" << std::setw(5) << "2) Inventory" << std::setw(5) << "3) Attempt to Run" << " 4) Check Environment" <<  endl;
+    Weapon_Class currentWeapon = getWeapon(play);
+    std::cout << "What would you like to do? " << std::endl;
+    std::cout << "1) Fight" << std::setw(5) << "2) Inventory" << std::setw(5) << "3) Attempt to Run" << " 4) Check Environment" <<  std::endl;
     while(repeat == true)
     {
-        cin >> choice;
+        std::cin >> choice;
         if (choice  < 1 || choice > 4)
         {
-            cin.clear();
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n')
-            cout << "Wrong choice doggo." << endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Wrong choice doggo." << std::endl;
         }
         else
         {
@@ -102,17 +97,17 @@ int playerBP(Player & play, Player & enem)
     {
         while(count < play.moveList.size())
         {
-            cout << count + 1 << ") " << play.moveList[count] << endl;
+            std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl;
         }
         while(repeatChoice == true)
         {
-            cout << "Choice: ";
-            cin >> moveChoice;
+            std::cout << "Choice: ";
+            std::cin >> moveChoice;
             if (moveChoice < 1 || moveChoice > play.moveList.size()+1)
             {
-                cin.clear();
-                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                cout << "Not in the range doggo." << endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Not in the range doggo." << std::endl;
             }
             else
             {
@@ -122,15 +117,12 @@ int playerBP(Player & play, Player & enem)
         //Check if move hits
         if (!chance(play, play.moveList[moveChoice-1]))
         {
-            cout << play.getName() << " has missed!" << endl;
+            std::cout << play.getName() << " has missed!" << std::endl;
             return 0;
         }
-        cout << play.getName() << " has used " << play.moveList[moveChoice - 1] << " to " << enem.getName() << "!" << endl;
+        std::cout << play.getName() << " has used " << play.moveList[moveChoice - 1].getName() << " to " << enem.getName() << "!" << std::endl;
         //Damage calculator
-        damage = dmg_calc(play, enem, currentWeapon);
-
-
-
+        return dmg_calc(play, enem, currentWeapon);
     }
     else if(choice == 2)
     {
@@ -144,23 +136,21 @@ int playerBP(Player & play, Player & enem)
 
 }
 //Main function for Combat.
-void combat(Player & play,Player & enem)
+void combat(Player_Class & play,Player_Class & enem)
 {
+    int damage;
     int playerHealth = play.getHealth();
     int enemyHealth = enem.getHealth();
     //health after the battle phase.
     int newPlayerHealth;
     int newEnemyHealth;
-    cout << "You have entered combat with " << enem.getName() << "!!" << endl;
+    std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //loop through battle until someone has 0 health (dies)
     while (play.getHealth() > 0 && enem.getHealth() > 0)
     {
         if (whosQuicker(play, enem))
         {
-
+            damage = playerBP(play, enem);
         }
     }
 }
-
-
-#endif // COMBAT_EVENT_HPP_INCLUDED
