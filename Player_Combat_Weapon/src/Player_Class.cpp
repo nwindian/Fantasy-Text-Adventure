@@ -6,6 +6,7 @@
 #include "Armor_Class.h"
 #include "Weapon_Class.h"
 #include "Player_Class.h"
+#include "rlutil.h"
 //#include "Weapon_objects.hpp"
 
 
@@ -117,71 +118,118 @@ int Player_Class::setDamage()
 //Displays the players level with his stats
 void Player_Class::displayLevel( Player_Class & player, int str, int spd, int def, int mag, int lvl)
 {
+    int x = 93;
+    int y = 5;
     bool repeat = false;
     int counter = 0;
     //variable for player to choose which stat to level up
     int statup;
     //Prints current stats
-    std::cout << "Awesome Adventurer: " << player.getName() << std::endl << "Level: " << lvl << std::endl
-        << "Current Stats: " << endl << "Strength: " << str << endl << "Speed: "
-        << spd << std::endl << "Health: " << def << std::endl << "Magic: " << mag << std::endl;
-
-    std::cout << std::endl << "--You have 3 points to put in your stats." << std::endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
+    rlutil::setColor(3);
+    rlutil::locate(0,0); std::cout << "Awesome Adventurer: " << player.getName();
+    rlutil::locate(80, 2); std::cout << "Level: " << lvl;
+    rlutil::locate(80,4); std::cout<< "Current Stats: ";
+    rlutil::locate(80,5); std::cout << "Strength: " << str;
+    rlutil::locate(80,7); std::cout << "Speed: " << spd;
+    rlutil::locate(80,9); std::cout << "Health: " << def;
+    rlutil::locate(80,11); std::cout << "Magic: " << mag;
+    rlutil::resetColor();
+    rlutil::setColor(2);
+    rlutil::locate(1,3); std::cout << "--You have 3 points to put in your stats." << std::endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
         << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of \n--Achimel, so if you don't have any, we'd recommend not upgrading this stat." << endl <<
             "--Pretty simple, especially for the likes of you." << std::endl;
     //Loop through to ask and assign stats to new stats
-    for (int i = 0; i < 3; i++)
+    std::cout << "--Please choose stat to level up. Press the space bar to\n--finalize your decision. " << std::endl;
+    while (counter < 3)
     {
-        while (repeat == false)
+        while (true)
         {
-            std::cout << "Please choose stat to level up. " << std::endl;
-            std::cin >> statup;
-            if (std::cin.fail() || statup > 4 || statup < 1)
-            {
-                repeat = false;
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << std::endl << "Come on, just pick a valid stat. " << std::endl;
-            }
-            else
-            {
-                switch (statup)
+            rlutil::locate(x,y);
+            rlutil::hidecursor();
+            std::cout << "  <--";
+            //rlutil::locate(1,4); std::cout << "Turn count: " << cnt;
+            if (kbhit()) {
+                char k = getch(); // Get character
+                rlutil::locate(x,y); std::cout << "     "; // Erase player
+                if (k == 'w')
                 {
-                    case 1: ++str;
-                            std::cout << "You have leveled up strength." << std::endl;
-                            break;
-                    case 2: ++spd;
-                            std::cout << "You have leveled up speed." << std::endl;
-                            break;
-                    case 3: ++def;
-                            std::cout << "You have leveled up Health." << std::endl;
-                            break;
-                    case 4: ++mag;
-                            std::cout << "You have leveled up magic." << std::endl;
-                            break;
+                    if (y == 5)
+                    {
+                        y = y + 6;
+                    }
+                    else
+                    {
+                        y = y - 2;
+                    }
                 }
-                ++counter;
-                if (counter == 3)
+                else if (k == 's')
                 {
-                    break;
+                    if (y == 11)
+                    {
+                        y = y - 6;
+                    }
+                    else
+                    {
+                        y = y + 2;
+                    }
                 }
+                else if (k == ' ')
+                {
+                    if (y == 5)
+                    {
+                        ++counter;
+                        ++str;
+                        rlutil::locate(90,5);
+                        std::cout << " ";
+                        rlutil::locate (90,5);
+                        player.setStrength(str);
+                        std::cout << str;
+                        break;
+                    }
+                    else if(y == 7)
+                    {
+                        ++counter;
+                        ++spd;
+                        rlutil::locate(87,7);
+                        std::cout << " ";
+                        rlutil::locate (87,7);
+                        player.setSpeed(spd);
+                        std::cout << spd;
+                        break;
+                    }
+                    else if(y == 9)
+                    {
+                        ++counter;
+                        ++def;
+                        rlutil::locate(88,9);
+                        std::cout << " ";
+                        rlutil::locate (88,9);
+                        player.setHealth(def);
+                        std::cout << def;
+                        break;
+                    }
+                    else if (y == 11)
+                    {
+                        ++counter;
+                        ++mag;
+                        rlutil::locate(87,11);
+                        std::cout << " ";
+                        rlutil::locate (87,11);
+                        player.setMagic(mag);
+                        std::cout << mag;
+                        break;
+                    }
+                }
+                rlutil::locate(x,y); std::cout << '@'; // Output player
             }
-
         }
-        //set everything to new stats
-        player.setHealth(def);
-        player.setMagic(mag);
-        player.setStrength(str);
-        player.setSpeed(spd);
-
-        cout << "Your new stats: " << endl << "Strength: " << str << endl << "Speed: "
-        << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
-        break;
-
-        cout << "Press literally anything to continue your adventure. Just not the power button." << endl;
-        cin.ignore();
-        cin.get();
     }
+    rlutil::locate(1,11);
+    std::cout << "Your new stats: " << endl << "Strength: " << str << endl << "Speed: "
+            << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
+    std::cout << "Press literally anything to continue your adventure. Just not the power button." << endl;
+    std::cin.ignore();
+    std::cin.get();
 }
 //Now create copy constructor
 //Check the move list to add moves if levelled up.
