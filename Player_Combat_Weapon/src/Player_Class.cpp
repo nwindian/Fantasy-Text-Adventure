@@ -219,7 +219,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         break;
                     }
                 }
-                rlutil::locate(x,y); std::cout << '@'; // Output player
+                //rlutil::locate(x,y); std::cout << '@'; // Output player
             }
         }
     }
