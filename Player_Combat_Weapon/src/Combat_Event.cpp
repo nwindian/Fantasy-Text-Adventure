@@ -32,21 +32,16 @@ Weapon_Class getWeapon(Player_Class & play)
     std::cout << std::endl;
     while(repeat == false)
     {
-        try
+        std::cin >> choice;
+        if (std::cin.fail() || choice < 1 || choice > play.weaponInventory.size())
         {
-            std::cin >> choice;
-            throw choice;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Out of range boi" << std::endl;
         }
-        catch(int choiceof)
+        else
         {
-            if(choiceof < 0 || choiceof > play.weaponInventory.size())
-            {
-                repeat = false;
-            }
-            else
-            {
-                repeat = true;
-            }
+            repeat = true;
         }
     }
     return play.weaponInventory[choice -1];
@@ -98,6 +93,7 @@ int playerBP(Player_Class & play, Player_Class & enem)
         while(count < play.moveList.size())
         {
             std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl;
+            ++count;
         }
         while(repeatChoice == true)
         {
@@ -132,8 +128,6 @@ int playerBP(Player_Class & play, Player_Class & enem)
     {
 
     }
-
-
 }
 //Main function for Combat.
 void combat(Player_Class & play,Player_Class & enem)
