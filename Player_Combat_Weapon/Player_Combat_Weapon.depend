@@ -114,14 +114,14 @@
 	<string>
 	"Weapon_Class.h"
 
-1526587942 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
+1526932189 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
 	<iostream>
 	<string>
 	"Armor_Class.h"
 
-1526584362 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
 
-1526586834 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
+1526932189 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -129,20 +129,20 @@
 	"Chance_Calc_Interface.h"
 	"Moves_Class.h"
 
-1526797695 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	"Weapon_Class.h"
 	<vector>
 	"Moves_Class.h"
 	"Armor_Class.h"
 
-1526590045 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\weapon_class.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\weapon_class.h
 
-1526589073 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\moves_class.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\moves_class.h
 
-1526587203 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
 	"Moves_Class.h"
 
-1526589150 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1527144055 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -154,21 +154,45 @@
 	"Chance_Calc_Interface.h"
 	"Weapon_Class.h"
 
-1526587686 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1526932189 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 
-1526589343 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1526932189 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	"Player_Class.h"
 	"Weapon_Class.h"
 	"Damage_Calculator.h"
 
-1526589106 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
+1526932189 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	<iostream>
 	<string>
 	"Moves_Class.h"
 
-1526590045 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
+1526932189 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	<iostream>
 	<string>
 	"Weapon_Class.h"
+
+1527143391 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+	<iostream>
+	<windows.h>
+	<rlutil.h>
+	"Combat_Event_Prototype.h"
+	"Player_Class.h"
+	"Weapon_Class.h"
+	"Moves_Class.h"
+
+1527143826 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+	<iostream>
+	<limits>
+	<conio.h>
+	<vector>
+	"Moves_Class.h"
+	"Armor_Class.h"
+	"Weapon_Class.h"
+	"Player_Class.h"
+	"rlutil.h"
+
+1527142971 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+	"Weapon_Class.h"
+	"Player_Class.h"
 

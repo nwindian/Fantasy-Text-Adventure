@@ -65,9 +65,7 @@ void Player_Class::LevelUP(Player_Class & player)
     Player_Class::setLevel(++level);
     std::cout << Player_Class::getName() << " is now level " << Player_Class::getLevel() << "! " << endl;
     Player_Class::displayLevel(player, player.getStrength(),player.getSpeed(),player.getHealth(),player.getMagic(),player.getLevel());
-    std::cin.ignore();
-    std::cin.get();
-    checkMoveList(player);
+    //checkMoveList(player);
  }
 //Getters and Setters
 int Player_Class::getHealth()
@@ -120,10 +118,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
 {
     int x = 93;
     int y = 5;
-    bool repeat = false;
     int counter = 0;
-    //variable for player to choose which stat to level up
-    int statup;
     //Prints current stats
     rlutil::setColor(3);
     rlutil::locate(0,0); std::cout << "Awesome Adventurer: " << player.getName();
@@ -136,7 +131,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
     rlutil::resetColor();
     rlutil::setColor(2);
     rlutil::locate(1,3); std::cout << "--You have 3 points to put in your stats." << std::endl <<  "--Choose wisely, there are no take backs muahahahahahaha *cough cough*." << endl
-        << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of \n--Achimel, so if you don't have any, we'd recommend not upgrading this stat." << endl <<
+        << "--Press 1 for point in strength, 2 for speed, 3 for Health, and 4 for magic \n--(The only magic in this land is magic obtained from the sacred scrolls of \n--Achimel, so if you don't have any, we'd recommend not upgrading this stat.)" << endl <<
             "--Pretty simple, especially for the likes of you." << std::endl;
     //Loop through to ask and assign stats to new stats
     std::cout << "--Please choose stat to level up. Press the space bar to\n--finalize your decision. " << std::endl;
@@ -183,6 +178,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         std::cout << " ";
                         rlutil::locate (90,5);
                         player.setStrength(str);
+                        rlutil::setColor(3);
                         std::cout << str;
                         break;
                     }
@@ -194,6 +190,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         std::cout << " ";
                         rlutil::locate (87,7);
                         player.setSpeed(spd);
+                        rlutil::setColor(3);
                         std::cout << spd;
                         break;
                     }
@@ -202,9 +199,10 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         ++counter;
                         ++def;
                         rlutil::locate(88,9);
-                        std::cout << " ";
+                        std::cout << " ";rlutil::setColor(3);
                         rlutil::locate (88,9);
                         player.setHealth(def);
+                        rlutil::setColor(3);
                         std::cout << def;
                         break;
                     }
@@ -216,6 +214,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         std::cout << " ";
                         rlutil::locate (87,11);
                         player.setMagic(mag);
+                        rlutil::setColor(3);
                         std::cout << mag;
                         break;
                     }
@@ -225,8 +224,10 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
         }
     }
     rlutil::locate(1,11);
-    std::cout << "Your new stats: " << endl << "Strength: " << str << endl << "Speed: "
+    std::cout << "Your new stats: " << endl;
+    rlutil::setColor(3); std::cout << "Strength: " << str << endl << "Speed: "
             << spd << endl << "Health: " << def << endl << "Magic: " << mag << endl;
+    rlutil::setColor(2);
     std::cout << "Press literally anything to continue your adventure. Just not the power button." << endl;
     std::cin.ignore();
     std::cin.get();
