@@ -17,7 +17,7 @@ int main()
     Weapon_Class sword(5, 'd', "sword");
     Player_Class enemy("fish", 2, 2, 3, 0,0,2);
     Player_Class player("Joe",5,5,5,5,5,5);
-//    player.LevelUP(player);
+    player.LevelUP(player);
 //    rlutil::cls();
     //cin.get();
     player.moveList.push_back(move);
