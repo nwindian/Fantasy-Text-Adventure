@@ -15,15 +15,22 @@ int main()
     Moves_Class moves("Awesome moves", 5,5);
     Moves_Class movess("Awesome movess", 5,5);
     Weapon_Class sword(5, 'd', "sword");
+    Weapon_Class axe(6,'d', "axe");
+    Weapon_Class God(100,'l',"God Sword of Lightning");
     Player_Class enemy("fish", 2, 2, 3, 0,0,2);
     Player_Class player("Joe",5,5,5,5,5,5);
     player.LevelUP(player);
+
+    //player.LevelUP(player);
+
 //    rlutil::cls();
     //cin.get();
     player.moveList.push_back(move);
     player.moveList.push_back(moves);
     player.moveList.push_back(movess);
     player.weaponInventory.push_back(sword);
+    player.weaponInventory.push_back(axe);
+    player.weaponInventory.push_back(God);
     int a = playerBP(player, enemy);
    // player.LevelUP(player);
     return 0;
