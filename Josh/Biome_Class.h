@@ -6,6 +6,7 @@ class Biome
     private:
         int heat;
         char biome;
+        int color = 0;
         struct Entities
         {
             char type = '\'';
@@ -21,12 +22,13 @@ class Biome
     public:
         static int caveCount;
         Biome();
-        Biome(int, char);
+        Biome(int, char, int);
         char map[MAPSIZEY][MAPSIZEX];
         Entities entityMap[MAPSIZEY][MAPSIZEX];
         vector<Cave> caves;
         char getEntity(int, int);
         void entityMapPop(int);
+        int getColor() { return color; }
 
 
 };

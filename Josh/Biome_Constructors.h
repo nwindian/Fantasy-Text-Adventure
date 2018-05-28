@@ -1,7 +1,7 @@
 #ifndef BIOME_CONSTRUCTORS
 #define BIOME_CONSTRUCTORS
 
-Biome::Biome() : heat(0), biome('F')
+Biome::Biome() : heat(0), biome('F'), color(2)
 {
 
     char fog;
@@ -40,7 +40,7 @@ Biome::Biome() : heat(0), biome('F')
     entityMapPop(Size);
 }
 
-Biome::Biome(int temp, char type) : heat(temp), biome(type)
+Biome::Biome(int temp, char type, int c) : heat(temp), biome(type), color(c)
 {
 
     char fog;

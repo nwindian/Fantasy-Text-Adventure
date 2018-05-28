@@ -12,6 +12,7 @@ void playerView(Biome& biome, int x, int y, Stamina& stamina)
     biome.map[y][x] = '@';
     cursorSet(2*x, y);
     cout << biome.map[y][x];
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), biome.getColor());
     if ((x-1) >= 0)
     {
         biome.map[y][x-1] = biome.getEntity(y, x-1);
@@ -36,6 +37,7 @@ void playerView(Biome& biome, int x, int y, Stamina& stamina)
         cursorSet(2*x, y+1);
         cout << biome.map[y+1][x];
     }
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
     return;
 }
 

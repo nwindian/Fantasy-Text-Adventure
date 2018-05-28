@@ -2,7 +2,7 @@
 #define PROTOTYPES
 
 void mapGeneration(char[][MAPSIZEX]);
-void displayMap(char[][MAPSIZEX]);
+void displayMap(char[][MAPSIZEX], int);
 void moving(int&, int&, int, Biome&, Stamina&, int[]);
 void playerView(Biome&, int, int, Stamina&);
 void moveOptions(int, int, int, int[]);

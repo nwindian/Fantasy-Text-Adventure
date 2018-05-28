@@ -15,6 +15,7 @@ namespace playerSpace
 {
     //Player Joe("Joe");
 }
+#include "rlutil.h"
 #include "Josh/Stamina.h"
 #include "Josh/Globals.h"
 #include "Josh/cave_class.h"
@@ -27,7 +28,6 @@ namespace playerSpace
 #include "Josh/moveOptions.h"
 #include "Josh/playerView.h"
 #include "Josh/cave.h"
-
 #include "Josh/map.h"
 
 
@@ -35,7 +35,8 @@ namespace playerSpace
 
 int main()
 {
-	startMap();
+	cout << "rows " << rlutil::trows() << " columns " << rlutil::tcols();
+	//startMap();
     return 0;
 }
 

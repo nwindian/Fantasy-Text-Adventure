@@ -13,9 +13,9 @@ void startMap()
     int biome = 0;
     int biomeRestrict[3] = {0};
     Stamina stamina;
-    Biome maps[] = {Biome(0, 'F'), Biome(-1, 'T'), Biome(1, 'D'), Biome(0, 'M')};
+    Biome maps[] = {Biome(0, 'F', 2), Biome(-1, 'T', 11), Biome(1, 'D', 14), Biome(0, 'M', 8)};
     playerView(maps[biome], x, y, stamina);
-    displayMap(maps[biome].map);
+    displayMap(maps[biome].map, 2);
 
     while (true)
     {
@@ -43,7 +43,7 @@ void startMap()
                             maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);
                             biome = 2;
                             x = 0;
-                            displayMap(maps[biome].map);
+                            displayMap(maps[biome].map, 14);
                         }
 
                     }
@@ -64,7 +64,7 @@ void startMap()
                             maps[biome].map[y-1][x] =  maps[biome].getEntity(y-1, x);
                             biome = 1;
                             y = 0;
-                            displayMap(maps[biome].map);
+                            displayMap(maps[biome].map, 11);
                         }
 
                     }
@@ -85,7 +85,7 @@ void startMap()
                             maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
                             biome = 3;
                             x = 49;
-                            displayMap(maps[biome].map);
+                            displayMap(maps[biome].map, 8);
                         }
 
                     }
@@ -103,7 +103,7 @@ void startMap()
                         maps[biome].map[y+1][x] = maps[biome].getEntity(y+1, x);
                         biome = 0;
                         y = 24;
-                        displayMap(maps[biome].map);
+                        displayMap(maps[biome].map, 2);
                     }
                     playerView(maps[biome], x, y, stamina);
                     entityCheck(maps[biome], x, y);
@@ -119,7 +119,7 @@ void startMap()
                         maps[biome].map[y][x+1] =  maps[biome].getEntity(y, x+1);
                         biome = 0;
                         x = 49;
-                        displayMap(maps[biome].map);
+                        displayMap(maps[biome].map, 2);
                     }
                     playerView(maps[biome], x, y, stamina);
                     entityCheck(maps[biome], x, y);
@@ -135,7 +135,7 @@ void startMap()
                         maps[biome].map[y][x-1] =  maps[biome].getEntity(y, x-1);
                         biome = 0;
                         x = 0;
-                        displayMap(maps[biome].map);
+                        displayMap(maps[biome].map, 2);
                     }
                     playerView(maps[biome], x, y, stamina);
                     entityCheck(maps[biome], x, y);

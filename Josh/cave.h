@@ -14,14 +14,14 @@ void cave(Biome& biome, int y, int x)
     {
         int num = biome.entityMap[y][x].number;
         biome.caves[num].display();
-        displayMap(biome.map);
+        displayMap(biome.map, biome.getColor());
     }
     else
     {
         cout << "Chicken!" << endl;
         cin.get();
         cin.ignore();
-        displayMap(biome.map);
+        displayMap(biome.map, biome.getColor());
     }
 
 }
