@@ -48,7 +48,7 @@ Weapon_Class getWeapon(Player_Class & play)
             repeat = true;
         }
     }
-    return play.weaponInventory[choice -1];
+    return play.weaponInventory[choice - 1];
 }
 //To check who is faster
 bool whosQuicker(Player_Class & frnd, Player_Class & enem)
@@ -71,8 +71,6 @@ bool whosQuicker(Player_Class & frnd, Player_Class & enem)
 int playerBP(Player_Class & play, Player_Class & enem)
 {
     bool repeat = true;
-    bool repeatChoice = true;
-    unsigned int count = 0;
     int x = 23;
     int y = 7;
     unsigned int moveChoice;
@@ -84,6 +82,8 @@ int playerBP(Player_Class & play, Player_Class & enem)
     std::cout << "What would you like to do? " << std::endl;
     do
     {
+        unsigned int count = 0;
+        bool repeatChoice = true;
         //color
         rlutil::setColor(6);
         std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << " 4) Check Environment" <<  std::endl;
@@ -108,8 +108,8 @@ int playerBP(Player_Class & play, Player_Class & enem)
         }
         if (choice == 1)
         {
-            rlutil::locate(20,1); std::cout << "Press space to go back" << std::endl;
-            rlutil::locate(1,7);
+            rlutil::locate(30,7); std::cout << "Press space to go back" << std::endl;
+            //rlutil::locate(1,7);
             while(count < play.moveList.size())
             {
                 std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl << std::endl;

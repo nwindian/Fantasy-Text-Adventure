@@ -19,7 +19,7 @@ int main()
     Weapon_Class God(100,'l',"God Sword of Lightning");
     Player_Class enemy("fish", 2, 2, 3, 0,0,2);
     Player_Class player("Joe",5,5,5,5,5,5);
-    player.LevelUP(player);
+    //player.LevelUP(player);
 
     //player.LevelUP(player);
 

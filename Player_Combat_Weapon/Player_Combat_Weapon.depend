@@ -139,17 +139,13 @@
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\moves_class.h
 
-<<<<<<< HEAD
-1527195640 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
-	"Moves_Class.h"
+1527528545 D
 
-1527195640 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
-=======
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
 	"Moves_Class.h"
+	"Moves_Class.h"
 
-1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
->>>>>>> Player/Combat/Weapons
+1527532305 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -162,6 +158,37 @@
 	"Chance_Calc_Interface.h"
 	"Weapon_Class.h"
 	"rlutil.h"
+
+1527528545 yer/Combat/Weapons
+	<iostream>
+	<conio.h>
+	<iomanip>
+	<limits>
+	<windows.h>
+	"Upper_Bound.h"
+	"Player_Class.h"
+	"Chance_Calc_Interface.h"
+	"Damage_Calculator.h"
+	"Chance_Calc_Interface.h"
+	"Weapon_Class.h"
+	"rlutil.h"
+	<iostream>
+	<windows.h>
+	<rlutil.h>
+	"Combat_Event_Prototype.h"
+	"Player_Class.h"
+	"Weapon_Class.h"
+	"Moves_Class.h"
+	<iostream>
+	<limits>
+	<conio.h>
+	<vector>
+	"Moves_Class.h"
+	"Armor_Class.h"
+	"Weapon_Class.h"
+	"Player_Class.h"
+	"rlutil.h"
+	<vector>
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 
@@ -181,11 +208,7 @@
 	<string>
 	"Weapon_Class.h"
 
-<<<<<<< HEAD
-1527195640 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
-=======
-1527529139 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
->>>>>>> Player/Combat/Weapons
+1527530651 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -194,29 +217,11 @@
 	"Weapon_Class.h"
 	"Moves_Class.h"
 
-<<<<<<< HEAD
-1527195640 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
-=======
 1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
->>>>>>> Player/Combat/Weapons
-	<iostream>
-	<limits>
-	<conio.h>
-	<vector>
-	"Moves_Class.h"
-	"Armor_Class.h"
-	"Weapon_Class.h"
-	"Player_Class.h"
-	"rlutil.h"
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	"Weapon_Class.h"
 	"Player_Class.h"
 
-<<<<<<< HEAD
-1527195640 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\upper_bound.h
-=======
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\upper_bound.h
->>>>>>> Player/Combat/Weapons
-	<vector>
 
