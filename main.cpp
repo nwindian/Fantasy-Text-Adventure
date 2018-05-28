@@ -3,6 +3,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <vector>
+#define _WIN32_WINNT 0x0500
 #include <windows.h>
 #include <stdlib.h>
 #include <memory>
@@ -35,11 +36,15 @@ namespace playerSpace
 
 int main()
 {
-	cout << "rows " << rlutil::trows() << " columns " << rlutil::tcols();
-	//startMap();
+	//cout << "rows " << rlutil::trows() << " columns " << rlutil::tcols();
+	HWND console = GetConsoleWindow();
+    RECT r;
+    GetWindowRect(console, &r); //stores the console's current dimensions
+    //MoveWindow(window_handle, x, y, width, height, redraw_window);
+    MoveWindow(console, r.left, r.top, 773, 510, TRUE);
+	startMap();
     return 0;
 }
-
 
 
 

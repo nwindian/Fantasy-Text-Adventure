@@ -26,6 +26,7 @@ void village()
         char responce = getch();
         if (responce == 'y')
         {
+            MoveWindow(console, r.left, r.top, 773, 520, TRUE);
             cursorSet(0, 26)
             cout << setw(30) << "Where would you like to go?\n";
             cout << "(1) Weapon and Armor Smith\n"
