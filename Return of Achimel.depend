@@ -101,3 +101,61 @@
 1526408777 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\stamina.h
 	<memory>
 
+1527391668 source:c:\users\jcoch\documents\github\fantasy-text-adventure\josh\stamina.cpp
+	<iostream>
+	"Stamina.h"
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\stamina.h
+	<memory>
+
+1527391668 source:c:\users\jcoch\documents\github\fantasy-text-adventure\main.cpp
+	<iostream>
+	<limits>
+	<ctime>
+	<cstdlib>
+	<vector>
+	<windows.h>
+	<stdlib.h>
+	<memory>
+	"Josh/Stamina.h"
+	"Josh/Globals.h"
+	"Josh/cave_class.h"
+	"Josh/cave_constructors.h"
+	"Josh/Biome_Class.h"
+	"Josh/Prototypes.h"
+	"Josh/Biome_Constructors.h"
+	"Josh/displayMap.h"
+	"Josh/moving.h"
+	"Josh/moveOptions.h"
+	"Josh/playerView.h"
+	"Josh/cave.h"
+	"Josh/map.h"
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\globals.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave_class.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave_constructors.h
+	<conio.h>
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\biome_class.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\prototypes.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\biome_constructors.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\displaymap.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\moving.h
+	<conio.h>
+	<iomanip>
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\moveoptions.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\playerview.h
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave.h
+	"displayMap.h"
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\map.h
+
