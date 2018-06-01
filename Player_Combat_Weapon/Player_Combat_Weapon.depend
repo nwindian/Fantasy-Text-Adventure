@@ -129,7 +129,7 @@
 	"Chance_Calc_Interface.h"
 	"Moves_Class.h"
 
-1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1527888612 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	"Weapon_Class.h"
 	<vector>
 	"Moves_Class.h"
@@ -142,7 +142,7 @@
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
 	"Moves_Class.h"
 
-1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1527890623 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -155,14 +155,16 @@
 	"Chance_Calc_Interface.h"
 	"Weapon_Class.h"
 	"rlutil.h"
+	"Menu_Function.h"
 
-1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1527888369 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 
-1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1527888369 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	"Player_Class.h"
 	"Weapon_Class.h"
 	"Damage_Calculator.h"
+	"Moves_Class.h"
 
 1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	<iostream>
@@ -174,7 +176,7 @@
 	<string>
 	"Weapon_Class.h"
 
-1527529139 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+1527889768 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -194,10 +196,12 @@
 	"Player_Class.h"
 	"rlutil.h"
 
-1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1527889408 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	"Weapon_Class.h"
 	"Player_Class.h"
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\upper_bound.h
 	<vector>
+
+1527889295 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
 

@@ -12,11 +12,13 @@ int main()
     rlutil::setColor(2);
     rlutil::saveDefaultColor();
     Moves_Class move("Awesome move", 5,5);
-    Moves_Class moves("Awesome moves", 5,5);
+    Moves_Class  moves("Awesome moves", 5,5);
     Moves_Class movess("Awesome movess", 5,5);
+    Moves_Class movesss("Awesome movesss", 5,5);
     Weapon_Class sword(5, 'd', "sword");
     Weapon_Class axe(6,'d', "axe");
     Weapon_Class God(100,'l',"God Sword of Lightning");
+    Weapon_Class Godd(100,'l',"God Sword of Lightning");
     Player_Class enemy("fish", 2, 2, 3, 0,0,2);
     Player_Class player("Joe",5,5,5,5,5,5);
     //player.LevelUP(player);
@@ -25,10 +27,11 @@ int main()
     player.moveList.push_back(move);
     player.moveList.push_back(moves);
     player.moveList.push_back(movess);
+    //player.moveList.push_back(movesss);
     player.weaponInventory.push_back(sword);
     player.weaponInventory.push_back(axe);
     player.weaponInventory.push_back(God);
-    int a = playerBP(player, enemy);
+    combat(player,enemy);
    // player.LevelUP(player);
     return 0;
 }

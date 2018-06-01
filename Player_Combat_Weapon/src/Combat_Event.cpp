@@ -10,6 +10,7 @@
 #include "Chance_Calc_Interface.h"
 #include "Weapon_Class.h"
 #include "rlutil.h"
+#include "Menu_Function.h"
 
 
 
@@ -67,133 +68,87 @@ bool whosQuicker(Player_Class & frnd, Player_Class & enem)
         return true;
     }
 }
-//Players battle phase
-int playerBP(Player_Class & play, Player_Class & enem)
+int playerBP(Player_Class & play, Player_Class & enem, int choice)
 {
     bool repeat = true;
-    bool repeatChoice = true;
-    unsigned int count = 0;
     int x = 23;
     int y = 7;
     unsigned int moveChoice;
-    unsigned int choice;
     int upBound;
     rlutil::cls();
     Weapon_Class currentWeapon = getWeapon(play);
     rlutil::setColor(2);
     std::cout << "What would you like to do? " << std::endl;
-    do
+    unsigned moveCount = 0;
+    unsigned int count = 0;
+    bool repeatChoice = true;
+    bool repeatOne = true;
+    int vecCounter = 0;
+    //color
+    rlutil::setColor(6);
+    if (choice == 1)
     {
-        //color
-        rlutil::setColor(6);
-        std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << " 4) Check Environment" <<  std::endl;
-        while(repeat == true)
+        rlutil::locate(70,1); std::cout << "Press b to go back" << std::endl;
+        rlutil::locate(1,7);
+        while(count < play.moveList.size())
         {
-            if (kbhit())
-            {
-                std::cin.clear();
-            }
-            //choice = rlutil::getkey();
-            std::cin >> choice;
-            if (choice  < 1 || choice > 4)
-            {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Wrong choice doggo." << std::endl;
-            }
-            else
-            {
-                repeat = false;
-            }
+            std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl << std::endl;
+            ++count;
         }
-        if (choice == 1)
-        {
-            rlutil::locate(20,1); std::cout << "Press space to go back" << std::endl;
-            rlutil::locate(1,7);
-            while(count < play.moveList.size())
+            upBound = Upper_bound(play.moveList);
+            int l = upBound * 2;
+            while (true) {
+            rlutil::locate(x,y);
+            rlutil::hidecursor();
+            std::cout << " <--";
+            if (!kbhit())
             {
-                std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl << std::endl;
-                ++count;
-            }
-            while(repeatChoice == true)
-            {
-                upBound = Upper_bound(play.moveList);
-                int l = upBound * 2;
-                while (true) {
-               // rlutil::locate(1,4); std::cout << "Turn count: " << cnt;
-                    rlutil::locate(x,y);
-                    rlutil::hidecursor();
-                    std::cout << " <--";
-                    if (!kbhit()) {
-                        char k = getch(); // Get character
-                        rlutil::locate(x,y); std::cout << "     "; // Erase player
-                        if (k == 'w')
-                        {
-                            if (y == 7)
-                            {
-                                y = y + l - 2;
-                            }
-                            else
-                            {
-                                y = y - 2;
-                            }
-                        }
-                        else if (k == 's')
-                        {
-                            if (y == 11)
-                            {
-                                y = 7;
-                            }
-                            else
-                            {
-                                y = y + 2;
-                            }
-
-                        }
-                        else if (k == ' ')
-                        {
-                            //////////FIGURE OUT HOW TO DO DIS
-                            rlutil::cls();
-                            repeatChoice = false;
-                            repeat = true;
-                            break;
-                        }
-                       // rlutil::locate(x,y); std::cout << '@'; // Output player
+                char k = getch(); // Get character
+                rlutil::locate(x,y); std::cout << "     "; // Erase player
+                if (k == 'w')
+                {
+                    if (y == 7)
+                    {
+                        moveCount = play.moveList.size();
+                        y = y + l - 2;
+                    }
+                    else
+                    {
+                        ++moveCount;
+                        y = y - 2;
                     }
                 }
-            if (repeat == true)
-            {
-                break;
+                else if (k == 's')
+                {
+                    if (y == (play.moveList.size() * 2) + 5)
+                    {
+                        moveCount = 0;
+                        y = 7;
+                    }
+                    else
+                    {
+                        --moveCount;
+                        y = y + 2;
+                    }
+                }
+                else if (k == ' ')
+                {
+                    return moveCount;
+                }
+                else if (k == 'b')
+                {
+                    rlutil::cls();
+                    return -1;
+                }
             }
-            //Check if move hits
-            else if (!chance(play, play.moveList[moveChoice-1]))
-            {
-                std::cout << play.getName() << " has missed!" << std::endl;
-                return 0;
-            }
-            std::cout << play.getName() << " has used " << play.moveList[moveChoice - 1].getName() << " to " << enem.getName() << "!" << std::endl;
-            //Damage calculator
-            return dmg_calc(play, enem, currentWeapon);
-        }
-        }
-        else if(choice == 2)
-        {
-
-        }
-        else if(choice == 3)
-        {
-
-        }
-        else if (choice == 4)
-        {
-
         }
     }
-    while(repeat == true);
 }
 //Main function for Combat.
 void combat(Player_Class & play,Player_Class & enem)
 {
+    bool repeatFromB = true;
+    int moveChoice;
     int damage;
     int playerHealth = play.getHealth();
     int enemyHealth = enem.getHealth();
@@ -204,9 +159,25 @@ void combat(Player_Class & play,Player_Class & enem)
     //loop through battle until someone has 0 health (dies)
     while (play.getHealth() > 0 && enem.getHealth() > 0)
     {
-        if (whosQuicker(play, enem))
+        while (repeatFromB == true)
         {
-            damage = playerBP(play, enem);
+            int choice = menu();
+            if (whosQuicker(play, enem))
+            {
+                moveChoice = playerBP(play, enem, choice);
+                if (moveChoice == -1)
+                {
+                    repeatFromB = true;
+                }
+                else
+                {
+
+                }
+            }
+            else if (!whosQuicker(play,enem))
+            {
+
+            }
         }
     }
 }
