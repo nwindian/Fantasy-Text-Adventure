@@ -76,7 +76,6 @@ int playerBP(Player_Class & play, Player_Class & enem, int choice)
     unsigned int moveChoice;
     int upBound;
     rlutil::cls();
-    Weapon_Class currentWeapon = getWeapon(play);
     rlutil::setColor(2);
     std::cout << "What would you like to do? " << std::endl;
     unsigned moveCount = 0;
@@ -114,7 +113,7 @@ int playerBP(Player_Class & play, Player_Class & enem, int choice)
                     }
                     else
                     {
-                        ++moveCount;
+                        --moveCount;
                         y = y - 2;
                     }
                 }
@@ -127,7 +126,7 @@ int playerBP(Player_Class & play, Player_Class & enem, int choice)
                     }
                     else
                     {
-                        --moveCount;
+                        ++moveCount;
                         y = y + 2;
                     }
                 }
@@ -157,24 +156,44 @@ void combat(Player_Class & play,Player_Class & enem)
     int newEnemyHealth;
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //loop through battle until someone has 0 health (dies)
+    Weapon_Class currentWeapon = getWeapon(play);
     while (play.getHealth() > 0 && enem.getHealth() > 0)
     {
+        repeatFromB = true;
         while (repeatFromB == true)
         {
             int choice = menu();
-            if (whosQuicker(play, enem))
+            if (choice == 1)
             {
-                moveChoice = playerBP(play, enem, choice);
-                if (moveChoice == -1)
+                if (whosQuicker(play, enem))
                 {
-                    repeatFromB = true;
+                    moveChoice = playerBP(play, enem, choice);
+                    if (moveChoice == -1)
+                    {
+                        repeatFromB = true;
+                    }
+                    else
+                    {
+                        rlutil::cls();
+                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                        std::cout << damage << std::endl;
+                        repeatFromB = false;
+                    }
                 }
-                else
+                else if (!whosQuicker(play,enem))
                 {
 
                 }
             }
-            else if (!whosQuicker(play,enem))
+            else if (choice == 2)
+            {
+
+            }
+            else if (choice == 3)
+            {
+
+            }
+            else if (choice == 4)
             {
 
             }
