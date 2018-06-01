@@ -54,6 +54,7 @@
 		<Unit filename="include/Chance_Calc_Interface.h" />
 		<Unit filename="include/Combat_Event_Prototype.h" />
 		<Unit filename="include/Damage_Calculator.h" />
+		<Unit filename="include/Menu_Function.h" />
 		<Unit filename="include/Moves_Class.h" />
 		<Unit filename="include/Player_Class.h" />
 		<Unit filename="include/Upper_Bound.h" />
