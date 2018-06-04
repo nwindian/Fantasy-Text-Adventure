@@ -11,6 +11,7 @@
 #include "Weapon_Class.h"
 #include "rlutil.h"
 #include "Menu_Function.h"
+#include "Chance_To_Run.h"
 
 
 
@@ -160,6 +161,7 @@ int playerBP(Player_Class & play, Player_Class & enem, int choice)
 void combat(Player_Class & play,Player_Class & enem)
 {
     bool repeatFromB = true;
+    bool repeatFromRun = true;
     int moveChoice;
     int damage;
     int playerHealth = play.getHealth();
@@ -170,7 +172,7 @@ void combat(Player_Class & play,Player_Class & enem)
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //loop through battle until someone has 0 health (dies)
     Weapon_Class currentWeapon = getWeapon(play);
-    while (play.getHealth() > 0 && enem.getHealth() > 0)
+    while (play.getHealth() > 0 && enem.getHealth() > 0 && repeatFromRun == true)
     {
         repeatFromB = true;
         while (repeatFromB == true)
@@ -196,6 +198,7 @@ void combat(Player_Class & play,Player_Class & enem)
                 else if (!whosQuicker(play,enem))
                 {
 
+
                 }
             }
             else if (choice == 2)
@@ -204,7 +207,19 @@ void combat(Player_Class & play,Player_Class & enem)
             }
             else if (choice == 3)
             {
-
+                if (Chance_To_Run())
+                {
+                    std::cout << "You may be a wimp, but you sure are fast!";
+                    repeatFromB = false;
+                    repeatFromRun = false;
+                }
+                else
+                {
+                    std::cout << "Nope not today honey." << std::endl;
+                    rlutil::msleep(500);
+                    rlutil::cls();
+                    repeatFromB = true;
+                }
             }
             else if (choice == 4)
             {

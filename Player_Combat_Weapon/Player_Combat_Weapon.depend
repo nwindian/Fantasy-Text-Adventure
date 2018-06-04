@@ -165,6 +165,7 @@
 	"Menu_Function.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1527528545 yer/Combat/Weapons
 	<iostream>
 	<conio.h>
@@ -200,8 +201,11 @@
 =======
 1527888369 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 >>>>>>> Player/Combat/Weapons
+=======
+1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+>>>>>>> Player/Combat/Weapons
 
-1527893029 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1527893723 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	"Player_Class.h"
 	"Weapon_Class.h"
@@ -219,9 +223,13 @@
 	"Weapon_Class.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1527530651 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 =======
 1527893273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+>>>>>>> Player/Combat/Weapons
+=======
+1528095376 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 >>>>>>> Player/Combat/Weapons
 	<iostream>
 	<windows.h>
@@ -233,7 +241,7 @@
 
 1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 
-1527889408 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	"Weapon_Class.h"
 	"Player_Class.h"
 

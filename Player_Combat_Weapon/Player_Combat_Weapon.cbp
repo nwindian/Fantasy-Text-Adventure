@@ -52,12 +52,13 @@
 		</Unit>
 		<Unit filename="include/Armor_Class.h" />
 		<Unit filename="include/Chance_Calc_Interface.h" />
+		<Unit filename="include/Chance_To_Run.h" />
+		<Unit filename="include/Check_Inventory_Functions.h" />
 		<Unit filename="include/Combat_Event_Prototype.h" />
 		<Unit filename="include/Damage_Calculator.h" />
 		<Unit filename="include/Menu_Function.h" />
 		<Unit filename="include/Moves_Class.h" />
 		<Unit filename="include/Player_Class.h" />
-		<Unit filename="include/Upper_Bound.h" />
 		<Unit filename="include/Weapon_Class.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Armor_Class.cpp" />
