@@ -5,6 +5,7 @@
 #include "Player_Class.h"
 #include "Weapon_Class.h"
 #include "Moves_Class.h"
+#include "Monster.hpp"
 using namespace std;
 
 int main()
@@ -19,7 +20,7 @@ int main()
     Weapon_Class axe(5,'d', "axe");
     Weapon_Class God(5,'l',"God Sword of Lightning");
     Weapon_Class Godd(5,'l',"God Sword of Lightning");
-    Player_Class enemy("fish", 2, 2, 3, 0,0,2);
+    Monster enemy("fish", 2, 2, 3, 0,0,2);
     Player_Class player("Joe",5,5,5,5,5,5);
     //player.LevelUP(player);
 

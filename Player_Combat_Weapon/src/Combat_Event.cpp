@@ -12,6 +12,7 @@
 #include "rlutil.h"
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
+#include "Monster.hpp"
 
 
 
@@ -53,7 +54,7 @@ Weapon_Class getWeapon(Player_Class & play)
     return play.weaponInventory[choice - 1];
 }
 //To check who is faster
-bool whosQuicker(Player_Class & frnd, Player_Class & enem)
+bool whosQuicker(Player_Class & frnd, Monster & enem)
 {
     if (frnd.getSpeed() > enem.getSpeed())
     {
@@ -69,7 +70,7 @@ bool whosQuicker(Player_Class & frnd, Player_Class & enem)
         return true;
     }
 }
-int playerBP(Player_Class & play, Player_Class & enem, int choice)
+int playerBP(Player_Class & play, Monster & enem, int choice)
 {
     bool repeat = true;
     int x = 23;
@@ -158,7 +159,7 @@ int playerBP(Player_Class & play, Player_Class & enem, int choice)
     }
 }
 //Main function for Combat.
-void combat(Player_Class & play,Player_Class & enem)
+void combat(Player_Class & play,Monster & enem)
 {
     bool repeatFromB = true;
     bool repeatFromRun = true;

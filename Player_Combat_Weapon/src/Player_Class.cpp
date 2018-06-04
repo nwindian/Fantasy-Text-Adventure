@@ -6,6 +6,7 @@
 #include "Armor_Class.h"
 #include "Weapon_Class.h"
 #include "Player_Class.h"
+#include "Monster.hpp"
 #include "rlutil.h"
 //#include "Weapon_objects.hpp"
 

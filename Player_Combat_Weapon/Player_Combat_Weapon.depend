@@ -146,9 +146,13 @@
 	"Moves_Class.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1527532305 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 =======
 1527893246 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+>>>>>>> Player/Combat/Weapons
+=======
+1528134908 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 >>>>>>> Player/Combat/Weapons
 	<iostream>
 	<conio.h>
@@ -163,7 +167,10 @@
 	"Weapon_Class.h"
 	"rlutil.h"
 	"Menu_Function.h"
+	"Chance_To_Run.h"
+	"Monster.hpp"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 1527528545 yer/Combat/Weapons
@@ -204,9 +211,14 @@
 =======
 1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 >>>>>>> Player/Combat/Weapons
+=======
+1528135050 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+	"Monster.hpp"
+>>>>>>> Player/Combat/Weapons
 
-1527893723 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1528135040 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
+	"Monster.hpp"
 	"Player_Class.h"
 	"Weapon_Class.h"
 	"Damage_Calculator.h"
@@ -224,12 +236,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 1527530651 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 =======
 1527893273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 >>>>>>> Player/Combat/Weapons
 =======
 1528095376 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+>>>>>>> Player/Combat/Weapons
+=======
+1528134860 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 >>>>>>> Player/Combat/Weapons
 	<iostream>
 	<windows.h>
@@ -238,14 +254,42 @@
 	"Player_Class.h"
 	"Weapon_Class.h"
 	"Moves_Class.h"
+	"Monster.hpp"
 
+<<<<<<< HEAD
 1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
-
-1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+=======
+1528134508 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+	<iostream>
+	<limits>
+	<conio.h>
+	<vector>
+	"Moves_Class.h"
+	"Armor_Class.h"
 	"Weapon_Class.h"
 	"Player_Class.h"
+	"Monster.hpp"
+	"rlutil.h"
+>>>>>>> Player/Combat/Weapons
+
+1528134523 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+	"Weapon_Class.h"
+	"Player_Class.h"
+	"Monster.hpp"
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\upper_bound.h
 
-1527889295 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
+1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
+
+1528096291 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_to_run.h
+	<stdlib.h>
+	<time.h>
+
+1528134957 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\monster.cpp
+	<iostream>
+	<iomanip>
+	"Monster.hpp"
+
+1528134957 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\monster.hpp
+	<string>
 
