@@ -1,7 +1,16 @@
+#include <iostream>
+#include <iomanip>
+#include "Monster.hpp"
 // Initialize monster level to player level
-Monster::Monster(int playerLevel)
+Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight)
 {
+    name = Mname;
 	monsterLevel = playerLevel;
+	monsterHealth = health;
+	monsterSpeed = speed;
+	monsterStrength = strength;
+	monsterMagic = magic;
+	monsterWeight = weight;
 }
 
 // Set Monster class private member monsterLevel
@@ -52,6 +61,12 @@ int Monster::getHealth()
 	return monsterHealth;
 }
 
+//get name
+std::string Monster::getName()
+{
+    return name;
+}
+
 // Get Monster class private member monsterStrength
 int Monster::getStrength()
 {
@@ -81,7 +96,7 @@ void Monster::monsterStats(Monster monster)
 {
 	std::cout << std::setw(35) << std::endl << "Monster Stats" << std::endl << std::endl;
 
-	
+
 	std::cout << "Level: " << monster.getLevel();
 	std::cout << std::setw(20) << "Health: " << monster.getHealth();
 	std::cout << std::setw(20) << "Strength: " << monster.getStrength() << std::endl;

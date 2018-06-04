@@ -1,11 +1,13 @@
 #include <iostream>
+#include "Monster.hpp"
 #include "Player_Class.h"
 #include "Weapon_Class.h"
 #include "Damage_Calculator.h"
 #include "Moves_Class.h"
 
 
-int dmg_calc(Player_Class & player, Player_Class & enemy, Weapon_Class & weapon, Moves_Class & move)
+
+int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class & move)
 {
     int movdamage = move.getDamage();
     int damage = player.getStrength();
