@@ -2,6 +2,7 @@
 #include <string>
 #include "Weapon_Class.h"
 
+
 Weapon_Class::Weapon_Class()
 {
     name = " ";
