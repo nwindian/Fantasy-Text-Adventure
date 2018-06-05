@@ -5,6 +5,7 @@
 #include <windows.h>
 #include "Upper_Bound.h"
 #include "Player_Class.h"
+#include "Monster.hpp"
 #include "Chance_Calc_Interface.h"
 #include "Damage_Calculator.h"
 #include "Chance_Calc_Interface.h"
@@ -12,7 +13,7 @@
 #include "rlutil.h"
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
-#include "Monster.hpp"
+
 
 
 
