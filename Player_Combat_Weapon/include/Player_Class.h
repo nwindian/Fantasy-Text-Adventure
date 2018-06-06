@@ -4,6 +4,7 @@
 #include <vector>
 #include "Moves_Class.h"
 #include "Armor_Class.h"
+#include "Food_Class.h"
 
 class Player_Class
 {
@@ -17,6 +18,7 @@ class Player_Class
         std::vector<Moves_Class> moveList;
         std::vector<Weapon_Class> weaponInventory;
         std::vector<Armor_Class> armorInventory;
+        std::vector<Food_Class> foodInventory;
         //function to add moves to vector
         void checkMoveList(Player_Class&);
         //To display level during level up
