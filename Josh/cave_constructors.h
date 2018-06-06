@@ -47,19 +47,19 @@ void Cave::display()
         CursorPosition.X = 0;
         CursorPosition.Y = 1;
         SetConsoleCursorPosition(console,CursorPosition);
-        cout << "There is " << theCave[i].loot << " on the ground." << endl;
+        cout << "There " << theCave[i].loot << " on the ground." << endl;
         if (theCave[i].loot != "nothing")
         {
-            char i = " ";
+            char input = ' ';
             cout << "Would you like to pick it up? (Y)es (N)o: ";
-            i = getch();
-            switch (i)
+            input = getch();
+            switch (input)
             {
                 case 'Y':
-                    theCave[i].add();
+                    //theCave[i].add();
                     break;
                 case 'y':
-                    theCave[i].add();
+                    //theCave[i].add();
                     break;
             }
         }
