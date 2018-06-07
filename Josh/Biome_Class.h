@@ -23,8 +23,10 @@ class Biome
         static int caveCount;
         Biome();
         Biome(int, char, int);
-        char map[MAPSIZEY][MAPSIZEX];
-        Entities entityMap[MAPSIZEY][MAPSIZEX];
+        //char map[MAPSIZEY][MAPSIZEX];
+        char* map;
+        //Entities entityMap[MAPSIZEY][MAPSIZEX];
+        Entities* entityMap;
         vector<Cave> caves;
         char getEntity(int, int);
         void entityMapPop(int);

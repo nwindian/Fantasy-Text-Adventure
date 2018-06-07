@@ -34,13 +34,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Food.cpp" />
+		<Unit filename="Food.h" />
 		<Unit filename="Josh/Biome_Class.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Josh/Biome_Constructors.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Josh/Globals.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="Josh/Prototypes.h">
@@ -48,31 +44,43 @@
 		</Unit>
 		<Unit filename="Josh/Stamina.cpp" />
 		<Unit filename="Josh/Stamina.h" />
-		<Unit filename="Josh/cave.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="Josh/cave_class.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Josh/cave_constructors.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Josh/displayMap.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="Josh/entityCheck.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="Josh/map.h">
+		<Unit filename="Josh/mapSizes.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="Josh/moveOptions.h">
+		<Unit filename="cpp/Biome_Class.cpp" />
+		<Unit filename="cpp/cave.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="Josh/moving.h">
+		<Unit filename="cpp/cave_Class.cpp" />
+		<Unit filename="cpp/cursorSet.cpp" />
+		<Unit filename="cpp/displayMap.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="Josh/playerView.h">
+		<Unit filename="cpp/entityCheck.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/getTreasure.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/moveOptions.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/moving.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/playerView.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/startMap.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cpp/village.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />

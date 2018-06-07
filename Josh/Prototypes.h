@@ -12,5 +12,7 @@ void startMap();
 void cursorSet(int, int);
 char entityCheck(Biome&, int, int);
 void village();
+void adjustView(Biome&, int, int, int, int);
+void cursorSet(int, int);
 
 #endif // PROTOTYPES

@@ -1,6 +1,6 @@
 #ifndef STAMINA_H
 #define STAMINA_H
-#include <memory>
+//#include <memory>
 
 class Stamina
 {
