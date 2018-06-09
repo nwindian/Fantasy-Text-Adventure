@@ -20,7 +20,7 @@ int main()
     Weapon_Class sword(5, 'd', "sword");
     Weapon_Class axe(5,'d', "axe");
     Weapon_Class God(5,'l',"God Sword of Lightning");
-    Monster enemy("fish", 2, 2, 3, 0,0,2);
+    Monster enemy("fish", 2, 2, 3, 0,0,2,90);
     Player_Class player("Joe",5,5,5,5,5,5);
     //player.LevelUP(player);
 

@@ -7,14 +7,17 @@
 
 
 
-int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class & move)
+int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class & move, int who)
 {
-    int movdamage = move.getDamage();
-    int damage = player.getStrength();
-    int wdamage = weapon.getDmg();
-    char type = weapon.getType();
-    //add resistance and type to total damage;
-    //ADD MOVE TO PARMS AND IMPLICATE IT
-    return (damage + wdamage + movdamage) * 2;
-
+    if (who == 0)
+    {
+        int movdamage = move.getDamage();
+        int damage = player.getStrength();
+        int wdamage = weapon.getDmg();
+        char type = weapon.getType();
+        //add resistance and type to total damage;
+        //ADD MOVE TO PARMS AND IMPLICATE IT
+        return (damage + wdamage + movdamage) * 2;
+    }
+    //return (enemy.get)
 }

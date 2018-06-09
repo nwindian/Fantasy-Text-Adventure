@@ -200,7 +200,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
                         ++counter;
                         ++def;
                         rlutil::locate(88,9);
-                        std::cout << " ";rlutil::setColor(3);
+                        std::cout << " "; rlutil::setColor(3);
                         rlutil::locate (88,9);
                         player.setHealth(def);
                         rlutil::setColor(3);
@@ -243,4 +243,9 @@ void Player_Class::checkMoveList(Player_Class & player)
         moveList.push_back(move);
         cout << endl << "You have obtained a new move called Fury! Pretty basic and yet very exciting! Right now all it does is " << move.getDamage() << " damage!" << endl;
     }
+}
+
+void Player_Class::deductDamage(int damage)
+{
+    Player_Class::setHealth(Player_Class::getHealth() - damage);
 }

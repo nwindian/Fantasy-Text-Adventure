@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Monster.hpp"
 // Initialize monster level to player level
-Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight)
+Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight, int evasive)
 {
     name = Mname;
 	monsterLevel = playerLevel;
@@ -11,6 +11,7 @@ Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int 
 	monsterStrength = strength;
 	monsterMagic = magic;
 	monsterWeight = weight;
+	accuracy = evasive;
 }
 
 // Set Monster class private member monsterLevel
@@ -89,6 +90,16 @@ int Monster::getMagic()
 int Monster::getWeight()
 {
 	return monsterWeight;
+}
+
+void Monster::deductDamage(int damage)
+{
+    Monster::setHealth(Monster::getHealth() - damage);
+}
+
+int Monster::getAccuracy()
+{
+    return accuracy;
 }
 
 // Display monster's stats
