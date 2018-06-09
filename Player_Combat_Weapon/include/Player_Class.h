@@ -36,6 +36,7 @@ class Player_Class
         void setHealth(int deff);
         int setDamage();
         std::string getName();
+        void deductDamage(int);
 
     protected:
         char resistance;

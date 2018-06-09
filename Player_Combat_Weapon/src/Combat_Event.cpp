@@ -146,6 +146,21 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
         }
     }
 }
+
+int MonsterBP(Monster & enemy)
+{
+    std::cout << "The " << enemy.getName() << " attacks!" << std::endl;
+    if (chanceM(enemy))
+    {
+
+    }
+    else
+    {
+        std::cout << " Wow, he missed!" << std::endl;
+        return 0;
+    }
+
+}
 //Main function for Combat.
 void combat(Player_Class & play,Monster & enem)
 {
@@ -179,7 +194,8 @@ void combat(Player_Class & play,Monster & enem)
                     else
                     {
                         rlutil::cls();
-                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice],0);
+                        enem.deductDamage(damage);
                         std::cout << damage << std::endl;
                         repeatFromB = false;
                     }
@@ -205,7 +221,7 @@ void combat(Player_Class & play,Monster & enem)
                 else
                 {
                     std::cout << "Nope not today honey." << std::endl;
-                    rlutil::msleep(500);
+                    rlutil::msleep(800);
                     rlutil::cls();
                     repeatFromB = true;
                 }

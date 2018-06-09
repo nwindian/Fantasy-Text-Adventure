@@ -14,3 +14,14 @@ bool chance(Player_Class & player,Moves_Class & mov)
     }
     return true;
 }
+
+bool chanceM(Monster & enemy)
+{
+    srand(time(NULL));
+    int chance = rand() % 100 + 1;
+    if (chance > enemy.getAccuracy() && chance < 101)
+    {
+        return false;
+    }
+    return true;
+}
