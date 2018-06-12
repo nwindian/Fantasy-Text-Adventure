@@ -114,14 +114,14 @@
 	<string>
 	"Weapon_Class.h"
 
-1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
+1528767132 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
 	<iostream>
 	<string>
 	"Armor_Class.h"
 
-1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
+1528767132 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
 
-1528506803 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
+1528509896 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -129,7 +129,7 @@
 	"Chance_Calc_Interface.h"
 	"Moves_Class.h"
 
-1528506401 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1528766900 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	"Weapon_Class.h"
 	<vector>
 	"Moves_Class.h"
@@ -141,11 +141,11 @@
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\moves_class.h
 
-1528507356 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
+1528509895 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1528507306 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1528768619 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -162,16 +162,17 @@
 	"Menu_Function.h"
 	"Chance_To_Run.h"
 
-1528507306 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1528767482 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	"Monster.hpp"
 
-1528507366 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1528769064 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	"Monster.hpp"
 	"Player_Class.h"
 	"Weapon_Class.h"
 	"Damage_Calculator.h"
 	"Moves_Class.h"
+	"Armor_Class.h"
 
 1527528545 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	<iostream>
@@ -183,7 +184,7 @@
 	<string>
 	"Weapon_Class.h"
 
-1528507333 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+1528769305 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -193,7 +194,7 @@
 	"Weapon_Class.h"
 	"Moves_Class.h"
 
-1528138755 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1528766971 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
@@ -205,7 +206,7 @@
 	"Monster.hpp"
 	"rlutil.h"
 
-1528505317 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1528768394 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	"Weapon_Class.h"
 	"Player_Class.h"
 	"Monster.hpp"
@@ -219,12 +220,12 @@
 	<stdlib.h>
 	<time.h>
 
-1528507386 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\monster.cpp
+1528509896 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\monster.cpp
 	<iostream>
 	<iomanip>
 	"Monster.hpp"
 
-1528506828 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\monster.hpp
+1528509895 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\monster.hpp
 	<string>
 	"Moves_Class.h"
 

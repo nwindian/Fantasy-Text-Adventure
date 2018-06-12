@@ -6,9 +6,10 @@ class Armor_Class
     public:
         Armor_Class();
         Armor_Class(int, std::string, char);
+        int getArmor();
+        void setArmor(int);
 
     protected:
-        private:
         int armor;
         std::string name;
         char resistance;

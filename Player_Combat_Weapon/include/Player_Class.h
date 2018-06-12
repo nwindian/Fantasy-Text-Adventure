@@ -37,8 +37,11 @@ class Player_Class
         int setDamage();
         std::string getName();
         void deductDamage(int);
+        void setArmor(Armor_Class &);
+        Armor_Class getArmor();
 
     protected:
+        Armor_Class armor;
         char resistance;
         int health;
         int exp_To_lvl = 100;

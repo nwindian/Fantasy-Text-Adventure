@@ -90,7 +90,7 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     rlutil::setColor(6);
     if (choice == 1)
     {
-        rlutil::locate(70,1); std::cout << "Press b to go back" << std::endl;
+        rlutil::locate(70,1); std::cout << "Press b to go back or space to select." << std::endl;
         rlutil::locate(1,7);
         while(count < play.moveList.size())
         {
@@ -147,23 +147,32 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     }
 }
 
-int MonsterBP(Monster & enemy)
+void MonsterBP(Monster & enemy, Player_Class & player)
 {
+    rlutil::cls();
     std::cout << "The " << enemy.getName() << " attacks!" << std::endl;
+    for (int i = 0;i < 3; ++i)
+    {
+        std::cout << ". ";
+        rlutil::msleep(600);
+    }
+    //rlutil::msleep(800);
     if (chanceM(enemy))
     {
-
+        int damage = dmg_calc(player,enemy);
+        player.deductDamage(damage);
+        std::cout << damage << " health has been erased from you!" << std::endl;
     }
     else
     {
         std::cout << " Wow, he missed!" << std::endl;
-        return 0;
     }
 
 }
 //Main function for Combat.
 void combat(Player_Class & play,Monster & enem)
 {
+    int turnCount = 0;
     bool repeatFromB = true;
     bool repeatFromRun = true;
     int moveChoice;
@@ -184,9 +193,9 @@ void combat(Player_Class & play,Monster & enem)
             int choice = menu();
             if (choice == 1)
             {
+                moveChoice = playerBP(play, enem, choice);
                 if (whosQuicker(play, enem))
                 {
-                    moveChoice = playerBP(play, enem, choice);
                     if (moveChoice == -1)
                     {
                         repeatFromB = true;
@@ -194,16 +203,36 @@ void combat(Player_Class & play,Monster & enem)
                     else
                     {
                         rlutil::cls();
-                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice],0);
+                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
                         enem.deductDamage(damage);
                         std::cout << damage << std::endl;
                         repeatFromB = false;
+                        rlutil::cls();
+                        std::cout << enem.getName() << "'s turn!" << std::endl;
+                        for (int i = 0;i < 3; ++i)
+                        {
+                            std::cout << ". ";
+                            rlutil::msleep(600);
+                        }
+                        MonsterBP(enem,play);
                     }
+                    repeatFromB = false;
                 }
                 else if (!whosQuicker(play,enem))
                 {
-
-
+                    MonsterBP(enem,play);
+                    rlutil::msleep(1000);
+                    rlutil::cls();
+                    std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
+                    for (int i = 0;i < 3; ++i)
+                    {
+                        std::cout << ". ";
+                        rlutil::msleep(600);
+                    }
+                    damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                    std::cout << damage << " damage!!!";
+                    enem.deductDamage(damage);
+                    repeatFromB = false;
                 }
             }
             else if (choice == 2)
