@@ -249,3 +249,13 @@ void Player_Class::deductDamage(int damage)
 {
     Player_Class::setHealth(Player_Class::getHealth() - damage);
 }
+
+Armor_Class Player_Class::getArmor()
+{
+    return armor;
+}
+
+void Player_Class::setArmor(Armor_Class & arm)
+{
+    armor = arm;
+}

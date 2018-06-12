@@ -4,9 +4,9 @@
 #include "Player_Class.h"
 #include "Monster.hpp"
 
-Weapon_Class *getWeapon(Player_Class & play);
-bool whosQuicker(Player_Class & frnd, Monster &);
-int playerBP(Player_Class & play, Monster & enem, int);
-void combat(Player_Class & play,Monster & enem);
-int monsterBP(Monster & enem);
+Weapon_Class *getWeapon(Player_Class & );
+bool whosQuicker(Player_Class & , Monster &);
+int playerBP(Player_Class & , Monster &, int);
+void combat(Player_Class & ,Monster & );
+void monsterBP(Monster & , Player_Class &);
 #endif // COMBAT_EVENT_PROTOTYPE
