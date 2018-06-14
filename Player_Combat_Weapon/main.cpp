@@ -6,6 +6,7 @@
 #include "Monster.hpp"
 #include "Weapon_Class.h"
 #include "Moves_Class.h"
+#include "Food_Class.h"
 
 using namespace std;
 
@@ -21,6 +22,10 @@ int main()
     Weapon_Class axe(5,'d', "axe");
     Weapon_Class God(5,'l',"God Sword of Lightning");
     Monster enemy("fish", 2, 10, 10, 3,3,2,90);
+    Food_Class  food(3, "chicken");
+    Food_Class fd(4, "jalapeno");
+    Food_Class fo(5, "pizza");
+
     Player_Class player("Joe",5,5,10,5,5,5);
     //player.LevelUP(player);
 
@@ -28,6 +33,9 @@ int main()
 
 //    rlutil::cls();
     //cin.get();
+    player.foodInventory.push_back(food);
+    player.foodInventory.push_back(fd);
+    player.foodInventory.push_back(fo);
     player.moveList.push_back(move);
     player.moveList.push_back(moves);
     player.moveList.push_back(movess);

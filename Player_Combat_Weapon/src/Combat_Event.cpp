@@ -13,6 +13,7 @@
 #include "rlutil.h"
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
+#include "Check_Inventory_Functions.h"
 
 
 
@@ -178,7 +179,7 @@ void MonsterBP(Monster & enemy, Player_Class & player)
     {
         int damage = dmg_calc(player,enemy);
         player.deductDamage(damage);
-        std::cout << damage << " health has been erased from you!" << std::endl;
+        std::cout << std::endl << damage << " health has been erased from you!" << std::endl;
     }
     else
     {
@@ -247,14 +248,14 @@ void combat(Player_Class & play,Monster & enem)
                         rlutil::msleep(600);
                     }
                     damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
-                    std::cout << damage << " damage!!!";
+                    std::cout << damage << " damage!!!" << std::endl;
                     enem.deductDamage(damage);
                     repeatFromB = false;
                 }
             }
             else if (choice == 2)
             {
-
+                int finv = getFromInventory(play);
             }
             else if (choice == 3)
             {
