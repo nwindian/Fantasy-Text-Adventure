@@ -238,16 +238,7 @@ void combat(Player_Class & play,Monster & enem)
             }
             else if (choice == 2)
             {
-                std::cout << " Which Inventory do you want to look at?" << std::endl;
-                int inv = getInventory();
-                if (inv == 0)
-                {
-                    for(int i = 0; i < play.foodInventory.size(); ++i)
-                    {
-                        std::cout << play.foodInventory[i].getName() << std::endl;
-                    }
-                }
-
+                int finv = getFromInventory(play);
             }
             else if (choice == 3)
             {
