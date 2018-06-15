@@ -177,7 +177,7 @@ void MonsterBP(Monster & enemy, Player_Class & player)
     //rlutil::msleep(800);
     if (chanceM(enemy))
     {
-        int damage = dmg_calc(player,enemy);
+       // int damage = dmg_calc(player,enemy);
         player.deductDamage(damage);
         std::cout << std::endl << damage << " health has been erased from you!" << std::endl;
     }
