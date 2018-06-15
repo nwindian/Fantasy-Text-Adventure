@@ -53,6 +53,7 @@
 		<Unit filename="include/Armor_Class.h" />
 		<Unit filename="include/Chance_Calc_Interface.h" />
 		<Unit filename="include/Chance_To_Run.h" />
+		<Unit filename="include/Check_Inventory_Functions.h" />
 		<Unit filename="include/Combat_Event_Prototype.h" />
 		<Unit filename="include/Damage_Calculator.h" />
 		<Unit filename="include/Food_Class.h" />
@@ -65,6 +66,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Armor_Class.cpp" />
 		<Unit filename="src/Chance_Calculator.cpp" />
+		<Unit filename="src/Check_Inventory_Functions.cpp" />
 		<Unit filename="src/Combat_Event.cpp" />
 		<Unit filename="src/Damage_Calculator.cpp" />
 		<Unit filename="src/Food_Class.cpp" />
