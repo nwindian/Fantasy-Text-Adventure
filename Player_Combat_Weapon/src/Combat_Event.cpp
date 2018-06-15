@@ -92,16 +92,24 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     if (choice == 1)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> Player/Combat/Weapons
         unsigned int count = 0;
         bool repeatChoice = true;
         //color
         rlutil::setColor(6);
         std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << " 4) Check Environment" <<  std::endl;
+<<<<<<< HEAD
         while(repeat == true)
 
         rlutil::locate(70,1); std::cout << "Press b to go back" << std::endl;
 =======
+=======
+        rlutil::cls();
+        rlutil::locate(70,1); std::cout << "Press b to go back" << std::endl;
+>>>>>>> Player/Combat/Weapons
         rlutil::locate(70,1); std::cout << "Press b to go back or space to select." << std::endl;
 >>>>>>> Player/Combat/Weapons
         rlutil::locate(1,7);
@@ -117,48 +125,50 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
             while(count < play.moveList.size())
             upBound = Upper_bound(play.moveList);
             int l = upBound * 2;
-            while (true) {
-            rlutil::locate(x,y);
-            rlutil::hidecursor();
-            std::cout << " <--";
-            if (!kbhit())
+            while (true)
             {
-                char k = getch(); // Get character
-                rlutil::locate(x,y); std::cout << "     "; // Erase player
-                if (k == 'w')
+                rlutil::locate(x,y);
+                rlutil::hidecursor();
+                std::cout << " <--";
+                if (!kbhit())
                 {
-                    if (y == 7)
+                    char k = getch(); // Get character
+                    rlutil::locate(x,y); std::cout << "     "; // Erase player
+                    if (k == 'w')
                     {
-                        moveCount = play.moveList.size();
-                        y = y + l - 2;
+                        if (y == 7)
+                        {
+                            moveCount = play.moveList.size();
+                            y = (play.moveList.size() * 2) + 5;
+                        }
+                        else
+                        {
+                            --moveCount;
+                            y = y - 2;
+                        }
                     }
-                    else
+                    else if (k == 's')
                     {
-                        --moveCount;
-                        y = y - 2;
+                        if (y == (play.moveList.size() * 2) + 5)
+                        {
+                            moveCount = 0;
+                            y = 7;
+                        }
+                        else
+                        {
+                            ++moveCount;
+                            y = y + 2;
+                        }
                     }
-                }
-                else if (k == 's')
-                {
-                    if (y == (play.moveList.size() * 2) + 5)
+                    else if (k == ' ')
                     {
-                        moveCount = 0;
-                        y = 7;
+                        return moveCount;
                     }
-                    else
+                    else if (k == 'b')
                     {
-                        ++moveCount;
-                        y = y + 2;
+                        rlutil::cls();
+                        return -1;
                     }
-                }
-                else if (k == ' ')
-                {
-                    return moveCount;
-                }
-                else if (k == 'b')
-                {
-                    rlutil::cls();
-                    return -1;
                 }
             }
         }
@@ -238,19 +248,26 @@ void combat(Player_Class & play,Monster & enem)
                 }
                 else if (!whosQuicker(play,enem))
                 {
-                    MonsterBP(enem,play);
-                    rlutil::msleep(1000);
-                    rlutil::cls();
-                    std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
-                    for (int i = 0;i < 3; ++i)
+                    if (moveChoice == -1)
                     {
-                        std::cout << ". ";
-                        rlutil::msleep(600);
+                        repeatFromB = true;
                     }
-                    damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
-                    std::cout << damage << " damage!!!" << std::endl;
-                    enem.deductDamage(damage);
-                    repeatFromB = false;
+                    else
+                    {
+                        MonsterBP(enem,play);
+                        rlutil::msleep(1000);
+                        rlutil::cls();
+                        std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
+                        for (int i = 0;i < 3; ++i)
+                        {
+                            std::cout << ". ";
+                            rlutil::msleep(600);
+                        }
+                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                        std::cout << damage << " damage!!!" << std::endl;
+                        enem.deductDamage(damage);
+                        repeatFromB = false;
+                    }
                 }
             }
             else if (choice == 2)

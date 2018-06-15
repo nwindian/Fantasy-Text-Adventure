@@ -151,7 +151,11 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
+<<<<<<< HEAD
 1529005038 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+=======
+1529029389 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+>>>>>>> Player/Combat/Weapons
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -257,7 +261,11 @@
 	<string>
 	"Weapon_Class.h"
 
+<<<<<<< HEAD
 1529005038 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+=======
+1529029772 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+>>>>>>> Player/Combat/Weapons
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -304,7 +312,11 @@
 	<iostream>
 	<Loot_Class.h>
 
+<<<<<<< HEAD
 1529005037 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+=======
+1529030196 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+>>>>>>> Player/Combat/Weapons
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"

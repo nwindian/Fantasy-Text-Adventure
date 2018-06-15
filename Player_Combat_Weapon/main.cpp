@@ -21,7 +21,7 @@ int main()
     Weapon_Class sword(5, 'd', "sword");
     Weapon_Class axe(5,'d', "axe");
     Weapon_Class God(5,'l',"God Sword of Lightning");
-    Monster enemy("fish", 2, 10, 10, 3,3,2,90);
+    Monster enemy("fish", 200, 100, 100, 300,3,2,90);
     Food_Class  food(3, "chicken");
     Food_Class fd(4, "jalapeno");
     Food_Class fo(5, "pizza");
