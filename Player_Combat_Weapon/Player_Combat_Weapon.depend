@@ -145,12 +145,13 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1529029389 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1529209969 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
 	<limits>
 	<windows.h>
+	<memory>
 	"Upper_Bound.h"
 	"Player_Class.h"
 	"Monster.hpp"
@@ -162,6 +163,7 @@
 	"Menu_Function.h"
 	"Chance_To_Run.h"
 	"Check_Inventory_Functions.h"
+	"Extern_Variables.h"
 
 1528769816 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	"Monster.hpp"
@@ -185,7 +187,7 @@
 	<string>
 	"Weapon_Class.h"
 
-1529029772 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+1529188894 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -208,7 +210,7 @@
 	"Monster.hpp"
 	"rlutil.h"
 
-1528769816 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1529193447 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	"Weapon_Class.h"
 	"Player_Class.h"
 	"Monster.hpp"
@@ -243,11 +245,13 @@
 	<iostream>
 	<Loot_Class.h>
 
-1529030196 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+1529209697 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"
 
-1529005037 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
+1529209605 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
 	"Player_Class.h"
+
+1529193641 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\extern_variables.h
 
