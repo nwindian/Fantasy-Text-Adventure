@@ -2,6 +2,7 @@
 #include "rlutil.h"
 #include "Check_Inventory_Functions.h"
 
+
 int getInventory()
 {
     int moveCount = 0;
@@ -53,125 +54,125 @@ int getInventory()
     }
 }
 
-int getFromInventory(Player_Class &play)
+int getFromInventoryW(Player_Class &play)
 {
     bool repeatFromB = true;
     int moveCount = 0;
     int x = 30;
     int y = 1;
-    std::cout << " Which Inventory do you want to look at?" << std::endl;
-    while (repeatFromB)
-    {
-        int inv = getInventory();
-        if (inv == 0)
+    for(int i = 0; i < play.weaponInventory.size(); ++i)
         {
-            for(int i = 0; i < play.foodInventory.size(); ++i)
+            std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
+        }
+        while (true)
+        {
+            rlutil::locate(x,y);
+            rlutil::hidecursor();
+            std::cout << " <--";
+            if (!kbhit())
             {
-                std::cout << i+1 << ") " << play.foodInventory[i].getName() << std::endl;
-            }
-            while (true)
-            {
-                rlutil::locate(x,y);
-                rlutil::hidecursor();
-                std::cout << "   <--";
-                if (!kbhit())
+                char k = getch(); // Get character
+                rlutil::locate(x,y); std::cout << "         "; // Erase player
+                if (k == 'w')
                 {
-                    char k = getch(); // Get character
-                    rlutil::locate(x,y); std::cout << "       "; // Erase player
-                    if (k == 'w')
+                    if (y == 1)
                     {
-                        if (y == 1)
-                        {
-                            moveCount = play.foodInventory.size();
-                            y = play.foodInventory.size();
-                        }
-                        else
-                        {
-                            --moveCount;
-                            y = y - 1;
-                        }
+                        moveCount = play.weaponInventory.size();
+                        y = play.weaponInventory.size();
                     }
-                    else if (k == 's')
+                    else
                     {
-                        if (y == play.foodInventory.size())
-                        {
-                            moveCount = 0;
-                            y = 1;
-                        }
-                        else
-                        {
-                            ++moveCount;
-                            y = y + 1;
-                        }
-                    }
-                    else if (k == ' ')
-                    {
-                        rlutil::cls();
-                        return moveCount;
-                    }
-                    else if (k == 'b')
-                    {
-                        rlutil::cls();
-                        repeatFromB = true;
-                        break;
+                        --moveCount;
+                        y = y - 1;
                     }
                 }
-            }
-        }
-        else if (inv == 1)
-        {
-            for(int i = 0; i < play.foodInventory.size(); ++i)
-            {
-                std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
-            }
-            while (true)
-            {
-                rlutil::locate(x,y);
-                rlutil::hidecursor();
-                std::cout << " <--";
-                if (!kbhit())
+                else if (k == 's')
                 {
-                    char k = getch(); // Get character
-                    rlutil::locate(x,y); std::cout << "         "; // Erase player
-                    if (k == 'w')
+                    if (y == play.weaponInventory.size())
                     {
-                        if (y == 1)
-                        {
-                            moveCount = play.weaponInventory.size();
-                            y = play.weaponInventory.size();
-                        }
-                        else
-                        {
-                            --moveCount;
-                            y = y - 1;
-                        }
+                        moveCount = 0;
+                        y = 1;
                     }
-                    else if (k == 's')
+                    else
                     {
-                        if (y == play.weaponInventory.size())
-                        {
-                            moveCount = 0;
-                            y = 1;
-                        }
-                        else
-                        {
-                            ++moveCount;
-                            y = y + 1;
-                        }
+                        ++moveCount;
+                        y = y + 1;
                     }
-                    else if (k == ' ')
-                    {
-                        rlutil::cls();
-                        return moveCount;
-                    }
-                    else if (k == 'b')
-                    {
-                        rlutil::cls();
-                        repeatFromB = true;
-                        break;
-                    }
+                }
+                else if (k == ' ')
+                {
+                    rlutil::cls();
+                    return moveCount;
+                }
+                else if (k == 'b')
+                {
+                    rlutil::cls();
+                    return -1;
+                    break;
                 }
             }
         }
     }
+
+
+
+int getFromInventoryF(Player_Class &play)
+{
+    bool repeatFromB = true;
+    int moveCount = 0;
+    int x = 30;
+    int y = 1;
+    for(int i = 0; i < play.foodInventory.size(); ++i)
+    {
+        std::cout << i+1 << ") " << play.foodInventory[i].getName() << std::endl;
+    }
+    while (true)
+    {
+        rlutil::locate(x,y);
+        rlutil::hidecursor();
+        std::cout << "   <--";
+        if (!kbhit())
+        {
+            char k = getch(); // Get character
+            rlutil::locate(x,y); std::cout << "       "; // Erase player
+            if (k == 'w')
+            {
+                if (y == 1)
+                {
+                    moveCount = play.foodInventory.size();
+                    y = play.foodInventory.size();
+                }
+                else
+                {
+                    --moveCount;
+                    y = y - 1;
+                }
+            }
+            else if (k == 's')
+            {
+                if (y == play.foodInventory.size())
+                {
+                    moveCount = 0;
+                    y = 1;
+                }
+                else
+                {
+                    ++moveCount;
+                    y = y + 1;
+                }
+            }
+            else if (k == ' ')
+            {
+                rlutil::cls();
+                return moveCount;
+            }
+            else if (k == 'b')
+            {
+                rlutil::cls();
+                return -1;
+                break;
+            }
+        }
+    }
 }
+

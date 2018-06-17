@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <limits>
 #include <windows.h>
+#include <memory>
 #include "Upper_Bound.h"
 #include "Player_Class.h"
 #include "Monster.hpp"
@@ -14,6 +15,9 @@
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
 #include "Check_Inventory_Functions.h"
+#include "Extern_Variables.h"
+
+
 
 
 
@@ -76,7 +80,7 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
 {
     bool repeat = true;
     int x = 23;
-    int y = 7;
+    int y = 2;
     unsigned int moveChoice;
     int upBound;
     rlutil::cls();
@@ -108,21 +112,39 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
 =======
 =======
         rlutil::cls();
+<<<<<<< HEAD
         rlutil::locate(70,1); std::cout << "Press b to go back" << std::endl;
 >>>>>>> Player/Combat/Weapons
         rlutil::locate(70,1); std::cout << "Press b to go back or space to select." << std::endl;
 >>>>>>> Player/Combat/Weapons
         rlutil::locate(1,7);
+=======
+        rlutil::locate(40,1); std::cout << "**Press b to go back or space to select." << std::endl;
+>>>>>>> Player/Combat/Weapons
         while(count < play.moveList.size())
         {
+            rlutil::locate(1,count + 2);
             std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl << std::endl;
             ++count;
         }
         if (choice == 1)
         {
-            rlutil::locate(30,7); std::cout << "Press space to go back" << std::endl;
-            //rlutil::locate(1,7);
-            while(count < play.moveList.size())
+            for(int i = 0;i < 30; ++ i)
+            {
+                rlutil::locate(i+1, 1);
+                std::cout << "_";
+            }
+            for (int i = 0; i < play.moveList.size() + 2; ++i)
+            {
+                rlutil::locate(31,i+2);
+                std::cout << "|";
+            }
+            for(int i = 0;i < 30; ++ i)
+            {
+                rlutil::locate(i+1, play.moveList.size()+3);
+                std::cout << "_";
+            }
+            //rlutil::locate(1,3);
             upBound = Upper_bound(play.moveList);
             int l = upBound * 2;
             while (true)
@@ -136,28 +158,28 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
                     rlutil::locate(x,y); std::cout << "     "; // Erase player
                     if (k == 'w')
                     {
-                        if (y == 7)
+                        if (y == 2)
                         {
                             moveCount = play.moveList.size();
-                            y = (play.moveList.size() * 2) + 5;
+                            y = (play.moveList.size() + 1);
                         }
                         else
                         {
                             --moveCount;
-                            y = y - 2;
+                            y = y - 1;
                         }
                     }
                     else if (k == 's')
                     {
-                        if (y == (play.moveList.size() * 2) + 5)
+                        if (y == (play.moveList.size() + 1))
                         {
                             moveCount = 0;
-                            y = 7;
+                            y = 2;
                         }
                         else
                         {
                             ++moveCount;
-                            y = y + 2;
+                            y = y + 1;
                         }
                     }
                     else if (k == ' ')
@@ -212,7 +234,8 @@ void combat(Player_Class & play,Monster & enem)
     int newEnemyHealth;
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //loop through battle until someone has 0 health (dies)
-    Weapon_Class currentWeapon = getWeapon(play);
+    std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
+    //Weapon_Class currentWeapon = getWeapon(play);
     while (play.getHealth() > 0 && enem.getHealth() > 0 && repeatFromRun == true)
     {
         repeatFromB = true;
@@ -231,7 +254,7 @@ void combat(Player_Class & play,Monster & enem)
                     else
                     {
                         rlutil::cls();
-                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                        damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
                         enem.deductDamage(damage);
                         std::cout << damage << std::endl;
                         repeatFromB = false;
@@ -263,7 +286,7 @@ void combat(Player_Class & play,Monster & enem)
                             std::cout << ". ";
                             rlutil::msleep(600);
                         }
-                        damage = dmg_calc(play, enem,currentWeapon, play.moveList[moveChoice]);
+                        damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
                         std::cout << damage << " damage!!!" << std::endl;
                         enem.deductDamage(damage);
                         repeatFromB = false;
@@ -272,7 +295,39 @@ void combat(Player_Class & play,Monster & enem)
             }
             else if (choice == 2)
             {
-                int finv = getFromInventory(play);
+                int k = -1;
+                int check = 0;
+                while(k == -1)
+                {
+                    rlutil::cls();
+                    int inv = getInventory();
+                    if (inv == 0)
+                    {
+                        k = getFromInventoryF(play);
+                        check = 1;
+                    }
+                    else if (inv == 1)
+                    {
+                        k = getFromInventoryW(play);
+                        check = 2;
+                    }
+                }
+                if (check == 1)
+                {
+                    std::cout << "You have healed " << play.foodInventory[k].getName() << "." << std::endl;
+                    play.foodInventory.erase(play.foodInventory.begin() + k);
+                    rlutil::msleep(700);
+                    repeatFromB = false;
+                }
+                else if (check == 2)
+                {
+                    std::cout << "Your new equipped weapon is " << play.weaponInventory[k].getName() << "!" << std::endl;
+                    *currentWeapon = play.weaponInventory[k];
+                    rlutil::msleep(700);
+                    repeatFromB = false;
+
+                }
+
             }
             else if (choice == 3)
             {
