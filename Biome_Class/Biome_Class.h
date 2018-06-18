@@ -5,8 +5,6 @@
 #include <memory>
 #include <vector>
 
-
-
 class Biome
 {
     private:
