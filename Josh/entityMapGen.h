@@ -1,6 +1,6 @@
 #ifndef ENTITYMAPGEN
 #define ENTITYMAPGEN
-
+#include "mapSizes.h"
 void entityMapGen(char map[][MAPSIZEY][MAPSIZEX])
 {
     for (int i = 0; i < MAPSIZEY; ++i)

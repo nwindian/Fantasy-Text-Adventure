@@ -1,6 +1,0 @@
-#ifndef MOVEOPTIONS
-#define MOVEOPTIONS
-
-
-
-#endif // MOVEOPTIONS

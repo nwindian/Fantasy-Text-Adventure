@@ -1,7 +1,7 @@
 #ifndef MAPSIZES
 #define MAPSIZES
 
-extern int MAPSIZEY;
-extern int MAPSIZEX;
+extern const int MAPSIZEY;
+extern const int MAPSIZEX;
 
 #endif // MAPSIZES

@@ -1,6 +1,6 @@
 #ifndef PROTOTYPES
 #define PROTOTYPES
-
+#include "mapSizes.h"
 void mapGeneration(char[][MAPSIZEX]);
 void displayMap(char[][MAPSIZEX], int);
 void moving(int&, int&, int, Biome&, Stamina&, int[]);
