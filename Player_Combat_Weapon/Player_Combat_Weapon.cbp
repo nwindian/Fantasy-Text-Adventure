@@ -72,6 +72,7 @@
 		<Unit filename="src/Damage_Calculator.cpp" />
 		<Unit filename="src/Food_Class.cpp" />
 		<Unit filename="src/Loot_Class.cpp" />
+		<Unit filename="src/Menu_Functions.cpp" />
 		<Unit filename="src/Monster.cpp" />
 		<Unit filename="src/Moves_Class.cpp" />
 		<Unit filename="src/Player_Class.cpp" />
