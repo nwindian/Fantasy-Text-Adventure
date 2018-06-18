@@ -15,10 +15,6 @@
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
 #include "Check_Inventory_Functions.h"
-#include "Extern_Variables.h"
-
-
-
 
 
 
@@ -99,7 +95,7 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
         bool repeatChoice = true;
         //color
         rlutil::setColor(6);
-        std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << " 4) Check Environment" <<  std::endl;
+        std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << std::endl;
         rlutil::cls();
         rlutil::locate(40,1); std::cout << "**Press b to go back or space to select." << std::endl;
         while(count < play.moveList.size())
