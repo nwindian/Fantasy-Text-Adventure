@@ -153,12 +153,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 1529005038 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 =======
 1529029389 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 >>>>>>> Player/Combat/Weapons
 =======
 1529209969 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+>>>>>>> Player/Combat/Weapons
+=======
+1529285240 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 >>>>>>> Player/Combat/Weapons
 	<iostream>
 	<conio.h>
@@ -177,7 +181,6 @@
 	"Menu_Function.h"
 	"Chance_To_Run.h"
 	"Check_Inventory_Functions.h"
-	"Extern_Variables.h"
 
 1528769816 yer/Combat/Weapons
 	<iostream>
@@ -269,12 +272,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 1529005038 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 =======
 1529029772 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 >>>>>>> Player/Combat/Weapons
 =======
 1529188894 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+>>>>>>> Player/Combat/Weapons
+=======
+1529285032 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 >>>>>>> Player/Combat/Weapons
 	<iostream>
 	<windows.h>
@@ -295,7 +302,7 @@
 
 1527528545 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\upper_bound.h
 
-1527893723 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
+1529285732 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
 
 1528096291 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_to_run.h
 	<stdlib.h>
@@ -324,6 +331,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 1529005037 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 =======
 1529030196 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
@@ -331,12 +339,22 @@
 =======
 1529209697 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 >>>>>>> Player/Combat/Weapons
+=======
+1529210147 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+>>>>>>> Player/Combat/Weapons
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"
 
-1529209605 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
+1529210147 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
 	"Player_Class.h"
 
 1529193641 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\extern_variables.h
+
+1529285791 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\menu_functions.cpp
+	<iostream>
+	<iomanip>
+	<limits>
+	"rlutil.h"
+	"Menu_Function.h"
 
