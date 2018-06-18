@@ -1,8 +1,0 @@
-#ifndef BIOME_CONSTRUCTORS
-#define BIOME_CONSTRUCTORS
-
-
-
-
-
-#endif // BIOME_CONSTRUCTORS
