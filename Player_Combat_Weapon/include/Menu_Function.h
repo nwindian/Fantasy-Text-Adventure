@@ -1,0 +1,6 @@
+#ifndef MENU_FUNCTION_H_INCLUDED
+#define MENU_FUNCTION_H_INCLUDED
+
+int menu();
+
+#endif // MENU_FUNCTION_H_INCLUDED
