@@ -199,6 +199,9 @@ void MonsterBP(Monster & enemy, Player_Class & player)
 //Main function for Combat.
 void combat(Player_Class & play,Monster & enem)
 {
+    int x = 40;
+    int y = 2;
+    int moveCount = 0;
     int turnCount = 0;
     bool repeatFromB = true;
     bool repeatFromRun = true;
@@ -209,9 +212,57 @@ void combat(Player_Class & play,Monster & enem)
     //health after the battle phase.
     int newPlayerHealth;
     int newEnemyHealth;
+    rlutil::cls();
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //loop through battle until someone has 0 health (dies)
     std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
+    for (int i = 0; i < play.weaponInventory.size(); ++i)
+    {
+        std::cout << i + 1 << ") " << play.weaponInventory[i].getName() << std::endl;
+    }
+    while (true)
+    {
+        rlutil::locate(x,y);
+        rlutil::hidecursor();
+        std::cout << " <--";
+        if (!kbhit())
+        {
+            char k = getch(); // Get character
+            rlutil::locate(x,y); std::cout << "     "; // Erase player
+            if (k == 'w')
+            {
+                if (y == 2)
+                {
+                    moveCount = play.weaponInventory.size();
+                    y = (play.moveList.size() + 1);
+                }
+                else
+                {
+                    --moveCount;
+                    y = y - 1;
+                }
+            }
+            else if (k == 's')
+            {
+                if (y == (play.weaponInventory.size() + 1))
+                {
+                    moveCount = 0;
+                    y = 2;
+                }
+                else
+                {
+                    ++moveCount;
+                    y = y + 1;
+                }
+            }
+            else if (k == ' ')
+            {
+                *currentWeapon = play.weaponInventory[moveCount];
+                break;
+            }
+        }
+    }
+    rlutil::cls();
     //Weapon_Class currentWeapon = getWeapon(play);
     while (play.getHealth() > 0 && enem.getHealth() > 0 && repeatFromRun == true)
     {
@@ -321,10 +372,6 @@ void combat(Player_Class & play,Monster & enem)
                     rlutil::cls();
                     repeatFromB = true;
                 }
-            }
-            else if (choice == 4)
-            {
-
             }
         }
     }
