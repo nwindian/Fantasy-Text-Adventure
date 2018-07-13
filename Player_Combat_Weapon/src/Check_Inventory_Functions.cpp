@@ -9,8 +9,9 @@ int getInventory()
     int x = 20;
     int y = 2;
     rlutil::cls();
-    std::cout << "Would you like to change your weapon or heal?????" << std::endl;
+    std::cout << "Weapon or heal?????" << std::endl;
     std::cout << "1) Food(healing) " << std::endl << "2) Weapons";
+    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
     while (true) {
         rlutil::locate(x,y);
         rlutil::hidecursor();
@@ -50,6 +51,11 @@ int getInventory()
                 rlutil::cls();
                 return moveCount;
             }
+            else if (k =='b')
+            {
+                rlutil::cls();
+                return -1;
+            }
         }
     }
 }
@@ -61,58 +67,59 @@ int getFromInventoryW(Player_Class &play)
     int x = 30;
     int y = 1;
     for(int i = 0; i < play.weaponInventory.size(); ++i)
+    {
+        std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
+    }
+    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
+    while (true)
+    {
+        rlutil::locate(x,y);
+        rlutil::hidecursor();
+        std::cout << " <--";
+        if (!kbhit())
         {
-            std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
-        }
-        while (true)
-        {
-            rlutil::locate(x,y);
-            rlutil::hidecursor();
-            std::cout << " <--";
-            if (!kbhit())
+            char k = getch(); // Get character
+            rlutil::locate(x,y); std::cout << "         "; // Erase player
+            if (k == 'w')
             {
-                char k = getch(); // Get character
-                rlutil::locate(x,y); std::cout << "         "; // Erase player
-                if (k == 'w')
+                if (y == 1)
                 {
-                    if (y == 1)
-                    {
-                        moveCount = play.weaponInventory.size();
-                        y = play.weaponInventory.size();
-                    }
-                    else
-                    {
-                        --moveCount;
-                        y = y - 1;
-                    }
+                    moveCount = play.weaponInventory.size();
+                    y = play.weaponInventory.size();
                 }
-                else if (k == 's')
+                else
                 {
-                    if (y == play.weaponInventory.size())
-                    {
-                        moveCount = 0;
-                        y = 1;
-                    }
-                    else
-                    {
-                        ++moveCount;
-                        y = y + 1;
-                    }
+                    --moveCount;
+                    y = y - 1;
                 }
-                else if (k == ' ')
+            }
+            else if (k == 's')
+            {
+                if (y == play.weaponInventory.size())
                 {
-                    rlutil::cls();
-                    return moveCount;
+                    moveCount = 0;
+                    y = 1;
                 }
-                else if (k == 'b')
+                else
                 {
-                    rlutil::cls();
-                    return -1;
-                    break;
+                    ++moveCount;
+                    y = y + 1;
                 }
+            }
+            else if (k == ' ')
+            {
+                rlutil::cls();
+                return moveCount;
+            }
+            else if (k == 'b')
+            {
+                rlutil::cls();
+                return -1;
+                break;
             }
         }
     }
+}
 
 
 
@@ -126,6 +133,7 @@ int getFromInventoryF(Player_Class &play)
     {
         std::cout << i+1 << ") " << play.foodInventory[i].getName() << std::endl;
     }
+    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
     while (true)
     {
         rlutil::locate(x,y);

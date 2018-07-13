@@ -15,14 +15,16 @@
 #include "Menu_Function.h"
 #include "Chance_To_Run.h"
 #include "Check_Inventory_Functions.h"
+#include "Show_Health.h"
+#include "Loading.h"
 
 
 
 
 Weapon_Class getWeapon(Player_Class & play)
 {
-    std::cout << "Choose a weapon my Player:" << std::endl;
     rlutil::setColor(6);
+    std::cout << "Choose a weapon my Player:" << std::endl;
     bool repeat = false;
     unsigned int choice;
     int count = 0;
@@ -80,8 +82,9 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     unsigned int moveChoice;
     int upBound;
     rlutil::cls();
+    showHealth(play,enem,play.getHealth(),enem.getHealth());
     rlutil::setColor(2);
-    std::cout << "What would you like to do? " << std::endl;
+    rlutil::locate(1,1); std::cout << "What would you like to do? " << std::endl;
     unsigned moveCount = 0;
     unsigned int count = 0;
     bool repeatChoice = true;
@@ -93,17 +96,16 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     {
         unsigned int count = 0;
         bool repeatChoice = true;
-        //color
+        rlutil::resetColor();
+        rlutil::locate(40,10); std::cout << "**Press b to go back or space to select." << std::endl;
         rlutil::setColor(6);
-        std::cout << "1) Fight " << std::setw(5) << "2) Inventory " << std::setw(5) << "3) Attempt to Run " << std::endl;
-        rlutil::cls();
-        rlutil::locate(40,1); std::cout << "**Press b to go back or space to select." << std::endl;
         while(count < play.moveList.size())
         {
             rlutil::locate(1,count + 2);
             std::cout << count + 1 << ") " << play.moveList[count].getName() << std::endl << std::endl;
             ++count;
         }
+        rlutil::resetColor();
         if (choice == 1)
         {
             for(int i = 0;i < 30; ++ i)
@@ -128,6 +130,7 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
             {
                 rlutil::locate(x,y);
                 rlutil::hidecursor();
+                rlutil::resetColor();
                 std::cout << " <--";
                 if (!kbhit())
                 {
@@ -174,9 +177,12 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     }
 }
 
-void MonsterBP(Monster & enemy, Player_Class & player)
+int MonsterBP(Monster & enemy, Player_Class & player)
 {
+    rlutil::resetColor();
     rlutil::cls();
+    showHealth(player,enemy,player.getHealth(),enemy.getHealth());
+    rlutil::locate(1,1);
     std::cout << "The " << enemy.getName() << " attacks!" << std::endl;
     for (int i = 0;i < 3; ++i)
     {
@@ -187,8 +193,8 @@ void MonsterBP(Monster & enemy, Player_Class & player)
     if (chanceM(enemy))
     {
         int damage = dmg_calc(player,enemy);
-        player.deductDamage(damage);
         std::cout << std::endl << damage << " health has been erased from you!" << std::endl;
+        return damage;
     }
     else
     {
@@ -199,6 +205,8 @@ void MonsterBP(Monster & enemy, Player_Class & player)
 //Main function for Combat.
 void combat(Player_Class & play,Monster & enem)
 {
+    rlutil::setColor(2);
+    rlutil::saveDefaultColor();
     int x = 40;
     int y = 2;
     int moveCount = 0;
@@ -207,19 +215,27 @@ void combat(Player_Class & play,Monster & enem)
     bool repeatFromRun = true;
     int moveChoice;
     int damage;
-    int playerHealth = play.getHealth();
-    int enemyHealth = enem.getHealth();
+    int mdamage;
+    int currentHealth = play.getHealth();
+    int currentEHealth = enem.getHealth();
     //health after the battle phase.
     int newPlayerHealth;
     int newEnemyHealth;
     rlutil::cls();
+    showHealth(play,enem,currentHealth,currentEHealth);
+    rlutil::locate(1,1);
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
-    //loop through battle until someone has 0 health (dies)
+    //FOR WEAPON
     std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
+    rlutil::setColor(6);
     for (int i = 0; i < play.weaponInventory.size(); ++i)
     {
         std::cout << i + 1 << ") " << play.weaponInventory[i].getName() << std::endl;
     }
+    //color
+    rlutil::setColor(2);
+    rlutil::locate(40,10); std::cout << "**Press b to go back or space to select." << std::endl;
+    rlutil::resetColor();
     while (true)
     {
         rlutil::locate(x,y);
@@ -264,11 +280,13 @@ void combat(Player_Class & play,Monster & enem)
     }
     rlutil::cls();
     //Weapon_Class currentWeapon = getWeapon(play);
-    while (play.getHealth() > 0 && enem.getHealth() > 0 && repeatFromRun == true)
+    while (currentHealth > 0 && currentEHealth > 0 && repeatFromRun == true)
     {
         repeatFromB = true;
         while (repeatFromB == true)
         {
+            showHealth(play,enem,currentHealth,currentEHealth);
+            rlutil::locate(1,1);
             int choice = menu();
             if (choice == 1)
             {
@@ -282,42 +300,92 @@ void combat(Player_Class & play,Monster & enem)
                     else
                     {
                         rlutil::cls();
+                        showHealth(play,enem,currentHealth,currentEHealth);
                         damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
-                        enem.deductDamage(damage);
-                        std::cout << damage << std::endl;
-                        repeatFromB = false;
-                        rlutil::cls();
-                        std::cout << enem.getName() << "'s turn!" << std::endl;
-                        for (int i = 0;i < 3; ++i)
+                        if(chance(play, play.moveList[moveChoice]))
                         {
-                            std::cout << ". ";
-                            rlutil::msleep(600);
+                            currentEHealth = currentEHealth - damage;
+                            std::cout << damage << std::endl;
+                            updateHealth(play,enem,currentHealth,currentEHealth);
+                            repeatFromB = false;
+                            rlutil::msleep(500);
+                            rlutil::cls();
+                            showHealth(play,enem,currentHealth,currentEHealth);
                         }
-                        MonsterBP(enem,play);
-                    }
+                        else
+                        {
+                            std::cout << "You missed. May need some glasses.";
+                            rlutil::msleep(500);
+                            rlutil::cls();
+                            showHealth(play,enem,currentHealth,currentEHealth);
+
+                        }
+                        if (currentEHealth < 1)
+                        {
+                            std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
+                            repeatFromB = false;
+                            loading_Six();
+                        }
+                        else
+                        {
+                            std::cout << enem.getName() << "'s turn!" << std::endl;
+                            for (int i = 0;i < 3; ++i)
+                            {
+                                std::cout << ". ";
+                                rlutil::msleep(600);
+                            }
+                            mdamage = MonsterBP(enem,play);
+                            currentHealth = currentHealth - mdamage;
+                            if (currentHealth < 1)
+                            {
+                                std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
+                                repeatFromB = false;
+                            }
+                        }
                     repeatFromB = false;
                 }
+            }
                 else if (!whosQuicker(play,enem))
                 {
+
                     if (moveChoice == -1)
                     {
                         repeatFromB = true;
                     }
                     else
                     {
-                        MonsterBP(enem,play);
-                        rlutil::msleep(1000);
-                        rlutil::cls();
-                        std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
-                        for (int i = 0;i < 3; ++i)
+                        mdamage = MonsterBP(enem,play);
+                        currentHealth = currentHealth - mdamage;
+                        updateHealth(play,enem,currentHealth,currentEHealth);
+                        if (currentHealth < 1)
                         {
-                            std::cout << ". ";
-                            rlutil::msleep(600);
+                            rlutil::locate(1,5); std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
+                            repeatFromB = false;
+                            rlutil::msleep(4000);
                         }
-                        damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
-                        std::cout << damage << " damage!!!" << std::endl;
-                        enem.deductDamage(damage);
-                        repeatFromB = false;
+                        else
+                        {
+                            rlutil::msleep(1000);
+                            rlutil::cls();
+                            showHealth(play,enem,currentHealth,currentEHealth);
+                            std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
+                            for (int i = 0;i < 3; ++i)
+                            {
+                                std::cout << ". ";
+                                rlutil::msleep(600);
+                            }
+                            damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
+                            std::cout << damage << " damage!!!" << std::endl;
+                            currentEHealth = currentEHealth - damage;
+                            updateHealth(play,enem,currentHealth,currentEHealth);
+                            if (currentEHealth < 1)
+                            {
+                                std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
+                                repeatFromB = false;
+                                loading_Six();
+                            }
+                            repeatFromB = false;
+                        }
                     }
                 }
             }
@@ -328,6 +396,7 @@ void combat(Player_Class & play,Monster & enem)
                 while(k == -1)
                 {
                     rlutil::cls();
+                    showHealth(play,enem,currentHealth,currentEHealth);
                     int inv = getInventory();
                     if (inv == 0)
                     {
@@ -339,10 +408,16 @@ void combat(Player_Class & play,Monster & enem)
                         k = getFromInventoryW(play);
                         check = 2;
                     }
+                    else
+                    {
+                        repeatFromB = true;
+                        break;
+                    }
                 }
                 if (check == 1)
                 {
-                    std::cout << "You have healed " << play.foodInventory[k].getName() << "." << std::endl;
+                    std::cout << "You have healed " << play.foodInventory[k].getAmount() << "." << std::endl;
+                    updateHealth(play,enem,currentHealth,currentEHealth);
                     play.foodInventory.erase(play.foodInventory.begin() + k);
                     rlutil::msleep(700);
                     repeatFromB = false;
@@ -353,15 +428,14 @@ void combat(Player_Class & play,Monster & enem)
                     *currentWeapon = play.weaponInventory[k];
                     rlutil::msleep(700);
                     repeatFromB = false;
-
                 }
-
             }
             else if (choice == 3)
             {
                 if (Chance_To_Run())
                 {
                     std::cout << "You may be a wimp, but you sure are fast!";
+                    rlutil::msleep(800);
                     repeatFromB = false;
                     repeatFromRun = false;
                 }
@@ -370,6 +444,7 @@ void combat(Player_Class & play,Monster & enem)
                     std::cout << "Nope not today honey." << std::endl;
                     rlutil::msleep(800);
                     rlutil::cls();
+                    showHealth(play,enem,currentHealth,currentEHealth);
                     repeatFromB = true;
                 }
             }

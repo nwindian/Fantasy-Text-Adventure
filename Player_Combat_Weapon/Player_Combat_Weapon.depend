@@ -145,7 +145,7 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1529535537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1531526380 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -163,6 +163,8 @@
 	"Menu_Function.h"
 	"Chance_To_Run.h"
 	"Check_Inventory_Functions.h"
+	"Show_Health.h"
+	"Loading.h"
 
 1529534640 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	"Monster.hpp"
@@ -244,7 +246,7 @@
 	<iostream>
 	<Loot_Class.h>
 
-1529534640 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+1531526124 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"
@@ -260,4 +262,20 @@
 	<limits>
 	"rlutil.h"
 	"Menu_Function.h"
+
+1531526124 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
+	<iostream>
+	"Show_Health.h"
+	"rlutil.h"
+
+1531526124 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\show_health.h
+	"Player_Class.h"
+	"Monster.hpp"
+
+1531523162 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\loading.h
+
+1531523670 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\loading.cpp
+	<iostream>
+	"Loading.h"
+	"rlutil.h"
 
