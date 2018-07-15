@@ -246,10 +246,11 @@
 	<iostream>
 	<Loot_Class.h>
 
-1531526124 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+1531591184 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"
+	"Show_Health.h"
 
 1529534640 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
 	"Player_Class.h"

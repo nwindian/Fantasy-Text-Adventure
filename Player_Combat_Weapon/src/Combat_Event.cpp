@@ -396,8 +396,9 @@ void combat(Player_Class & play,Monster & enem)
                 while(k == -1)
                 {
                     rlutil::cls();
-                    showHealth(play,enem,currentHealth,currentEHealth);
                     int inv = getInventory();
+                    showHealth(play,enem,currentHealth,currentEHealth);
+                    rlutil::locate(1,1);
                     if (inv == 0)
                     {
                         k = getFromInventoryF(play);
@@ -417,16 +418,18 @@ void combat(Player_Class & play,Monster & enem)
                 if (check == 1)
                 {
                     std::cout << "You have healed " << play.foodInventory[k].getAmount() << "." << std::endl;
+                    showHealth(play,enem,currentHealth,currentEHealth);
                     updateHealth(play,enem,currentHealth,currentEHealth);
                     play.foodInventory.erase(play.foodInventory.begin() + k);
-                    rlutil::msleep(700);
+                    rlutil::msleep(2000);
                     repeatFromB = false;
                 }
                 else if (check == 2)
                 {
                     std::cout << "Your new equipped weapon is " << play.weaponInventory[k].getName() << "!" << std::endl;
                     *currentWeapon = play.weaponInventory[k];
-                    rlutil::msleep(700);
+                    rlutil::msleep(2000);
+                    rlutil::cls();
                     repeatFromB = false;
                 }
             }

@@ -6,7 +6,7 @@
 class Monster
 {
 	public:
-		Monster(std::string name,int,int,int,int,int,int,int);
+		Monster(std::string name,int,int,int,int,int,int,int,char);
 		Moves_Class moveO;
 		Moves_Class moveT;
 		Moves_Class moveTR;
@@ -26,10 +26,12 @@ class Monster
 		void monsterStats(Monster);
 		void deductDamage(int);
 		int getAccuracy();
+		char getType();
 
 	protected:
 
 	    std::string name;
+	    char type;
 		int monsterLevel, monsterHealth, monsterStrength, monsterSpeed, monsterMagic, monsterWeight, accuracy;
 };
 

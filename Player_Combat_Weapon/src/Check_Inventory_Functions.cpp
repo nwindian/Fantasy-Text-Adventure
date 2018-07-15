@@ -1,6 +1,7 @@
 #include <iostream>
 #include "rlutil.h"
 #include "Check_Inventory_Functions.h"
+#include "Show_Health.h"
 
 
 int getInventory()

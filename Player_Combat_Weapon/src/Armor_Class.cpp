@@ -7,7 +7,7 @@ Armor_Class::Armor_Class()
     //ctor
     armor = 0;
     name = " ";
-    resistance = 'N';
+    resistance = '0';
 
 }
 
