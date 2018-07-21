@@ -3,9 +3,7 @@
 #include "../rlutil.h"
 #include "../Josh/mapSizes.h"
 #include <iostream>
-using std::cout;
-using std::endl;
-void displayMap(char map[][MAPSIZEX], int color)
+void displayMap(char** map, int color)
 {
     cursorSet(0, 0);
     switch(color)
@@ -35,9 +33,9 @@ void displayMap(char map[][MAPSIZEX], int color)
             {
                 SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
             }
-            cout << map[i][j] << " ";
+            std::cout << map[i][j] << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
     return;
 }

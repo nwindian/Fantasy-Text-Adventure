@@ -1,7 +1,6 @@
 #ifndef DISPLAYMAP
 #define DISPLAYMAP
-#include "../Josh/mapSizes.h"
 
-void displayMap(char[][MAPSIZEX], int);
+void displayMap(char**, int);
 
 #endif // DISPLAYMAP

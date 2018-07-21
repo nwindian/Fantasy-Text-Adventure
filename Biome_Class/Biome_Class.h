@@ -2,9 +2,7 @@
 #define BIOME_CLASS
 #include "../Josh/mapSizes.h"
 #include "../cave_Class/cave_class.h"
-#include <memory>
 #include <vector>
-
 class Biome
 {
     private:
@@ -27,10 +25,8 @@ class Biome
         static int caveCount;
         Biome();
         Biome(int, char, int);
-        std::unique_ptr<char[][MAPSIZEX]> map = std::make_unique<char[][MAPSIZEX]>(MAPSIZEY, MAPSIZEX);
-        //char map[MAPSIZEY][MAPSIZEX];
-        std::unique_ptr<Entities[][MAPSIZEX]> entityMap = std::make_unique<Entities[][MAPSIZEX]>(MAPSIZEY, MAPSIZEX);
-        //Entities entityMap[MAPSIZEY][MAPSIZEX];
+        char** map;
+        Entities** entityMap;
         std::vector<Cave> caves;
         char getEntity(int, int);
         void entityMapPop(int);

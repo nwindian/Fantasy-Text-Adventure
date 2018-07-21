@@ -46,6 +46,8 @@
 		<Unit filename="cave/cave.h" />
 		<Unit filename="cave_Class/cave_Class.cpp" />
 		<Unit filename="cave_Class/cave_class.h" />
+		<Unit filename="charOutput/charOutput.cpp" />
+		<Unit filename="charOutput/charOutput.h" />
 		<Unit filename="cursorSet/cursorSet.cpp" />
 		<Unit filename="cursorSet/cursorSet.h" />
 		<Unit filename="displayMap/displayMap.cpp" />
@@ -59,6 +61,8 @@
 		<Unit filename="moveOptions/moveOptions.h" />
 		<Unit filename="moving/moving.cpp" />
 		<Unit filename="moving/moving.h" />
+		<Unit filename="optionSelector/optionSelector.cpp" />
+		<Unit filename="optionSelector/optionSelector.h" />
 		<Unit filename="playerView/playerView.cpp" />
 		<Unit filename="playerView/playerView.h" />
 		<Unit filename="rlutil.h" />

@@ -1,8 +1,11 @@
 #include "cave_class.h"
 #include "../cursorSet/cursorSet.h"
+#include "../optionSelector/optionSelector.h"
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 #include <conio.h>
+#include <windows.h>
 using std::cout;
 using std::endl;
 using std::cin;
@@ -19,97 +22,89 @@ void Cave::display()
    int location = 1;
    for (int i = 0; i < depth; ++i)
     {
-
-        char response;
         if (i == 0)
         {
-           cout << "You enter the cave and slowly your eyes adjust." << endl;
+           std::cout << "You enter the cave and slowly your eyes adjust." << std::endl;
            for (int i = 0; i <= location-1; ++i)
             {
                 if (i != location-1)
                 {
                     cursorSet(100, 1 + i);
-                    //CursorPosition.X = 100;
-                    //CursorPosition.Y = 1 + i;
-                    //SetConsoleCursorPosition(console,CursorPosition);
-                    cout << "[ ]";
+                    std::cout << "[ ]";
                 }
                 else
                 {
                     cursorSet(100, 1 + i);
-                    //CursorPosition.X = 100;
-                    //CursorPosition.Y = 1 + i;
-                    //SetConsoleCursorPosition(console,CursorPosition);
-                    cout << "[@]";
+                    std::cout << "[@]";
                 }
 
             }
         }
         cursorSet(0, 1);
-        //CursorPosition.X = 0;
-        //CursorPosition.Y = 1;
-        //SetConsoleCursorPosition(console,CursorPosition);
-        cout << "There " << theCave[i].loot << " on the ground." << endl;
         if (theCave[i].loot != "nothing")
         {
-            char input = ' ';
-            cout << "Would you like to pick it up? (Y)es (N)o: ";
-            input = getch();
-            switch (input)
+            std::cout << "There " << theCave[i].loot << " on the ground." << std::endl;
+            std::cout << "    Pick up " << theCave[i].loot << std::endl;
+            std::cout << "    Dive deeper into the cave" << std::endl;
+            std::cout << "    Leave the cave" << std::endl;
+            switch (optionSelector(3, 0, 2))
             {
-                case 'Y':
-                    //theCave[i].add();
+                case 0:
+                    system("CLS");
+                    cursorSet(0, 0);
+                    std::cout << "Loot has been put into your inventory" << std::endl;
+                    //add
                     break;
-                case 'y':
-                    //theCave[i].add();
+                case 1:
+                    system("CLS");
+                    std::cout << "You dive deeper into the darkness" << std::endl;
+                    ++location;
                     break;
-            }
-        }
-        cout << endl << "Would you like to continue? (Y)es (N)o: ";
-        //cin.ignore();
-        response = getch();
+                case 2:
+                    system("CLS");
+                    std::cout << "You return to the entrance of the cave.\nPainfully, your eyes adjust." << std::endl;
+                    Sleep(500);
+                    return;
 
-        if (response == 'y' || response == 'Y')
-        {
-            system("CLS");
-            cout << "You dive deeper into the darkness" << endl;
-            ++location;
+            }
         }
         else
         {
-            system("CLS");
-            cout << "You return to the entrance of the cave.\nPainfully, your eyes adjust." << endl;
-            cin.ignore();
-            cin.get();
-            return;
+            std::cout << std::setw(30) << std::left << "There is nothing here" << std::endl;
+            std::cout << "    Dive deeper into the cave" << std::endl;
+            std::cout << "    Leave the cave" << std::endl;
+            switch (optionSelector(2, 0, 2))
+            {
+                case 0:
+                    system("CLS");
+                    std::cout << "You dive deeper into the darkness" << std::endl;
+                    ++location;
+                    break;
+                case 1:
+                    system("CLS");
+                    std::cout << "You return to the entrance of the cave.\nPainfully, your eyes adjust." << std::endl;
+                    Sleep(500);
+                    return;
+            }
         }
+
         for (int i = 0; i <= location-1; ++i)
         {
             if (i != location-1)
             {
                 cursorSet(100, 1 + i);
-                //CursorPosition.X = 100;
-                //CursorPosition.Y = 1 + i;
-                //SetConsoleCursorPosition(console,CursorPosition);
-                cout << "[ ]";
+                std::cout << "[ ]";
             }
             else
             {
                 cursorSet(100, 1 + i);
-                //CursorPosition.X = 100;
-                //CursorPosition.Y = 1 + i;
-                //SetConsoleCursorPosition(console,CursorPosition);
-                cout << "[@]";
+                std::cout << "[@]";
             }
 
         }
     }
     cursorSet(0, 0);
-    //CursorPosition.X = 0;
-    //CursorPosition.Y = 0;
-    //SetConsoleCursorPosition(console,CursorPosition);
-    cout << "You have reached the end of the cave";
-    cin.ignore();
-    cin.get();
+    std::cout << "You have reached the end of the cave";
+    Sleep(500);
     system("CLS");
 }

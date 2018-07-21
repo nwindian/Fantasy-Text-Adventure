@@ -43,8 +43,9 @@
 
 1520975922 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave_constructors.h
 
-1529183725 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
+1530141928 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
 	"startMap/startMap.h"
+	"Josh/mapSizes.h"
 
 1526408777 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\globals.h
 
@@ -86,7 +87,7 @@
 
 1526408777 D
 
-1529167518 c:\users\jmfos\documents\github\fantasy-text-adventure\rlutil.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -172,7 +173,7 @@
 	<iostream>
 	<ctime>
 
-1529247791 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\mapsizes.h
+1530141928 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\mapsizes.h
 
 1529174726 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\cave_class.cpp
 	"../Josh/cave_class.h"
@@ -268,7 +269,7 @@
 	<iomanip>
 	<conio.h>
 
-1529248739 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+1530143388 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
 	"Biome_Class.h"
 	"../Josh/mapSizes.h"
 	"../cave_Class/cave_class.h"
@@ -276,81 +277,84 @@
 	<cstdlib>
 	<ctime>
 
-1529184032 c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.h
+1530144038 c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.h
 	"../Food/Food.h"
 	<string>
 	<memory>
 	<cstdlib>
 
-1529170377 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
-1529262274 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+1530143845 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
 	"../Josh/mapSizes.h"
 	"../cave_Class/cave_class.h"
-	<memory>
 	<vector>
 
-1529182831 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
+1532023906 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
 	"cave.h"
 	"../Biome_Class/Biome_Class.h"
 	"../displayMap/displayMap.h"
 	<iostream>
+	<conio.h>
 	<windows.h>
 
-1529180944 c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.h
 
-1529184032 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
-	"../Josh/mapSizes.h"
+1530144280 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
 
-1529183410 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1532111995 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
 	<iostream>
+	<iomanip>
 	<cstdlib>
 	<conio.h>
+	<windows.h>
 
-1529183398 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
 	"cursorSet.h"
 	<windows.h>
 
-1529176714 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+1530143845 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
 	"mapSizes.h"
 	"../cursorSet/cursorSet.h"
 	"../rlutil.h"
+	"../Josh/mapSizes.h"
 	<iostream>
 
-1529182877 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1530141774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
 	"../village/village.h"
 	"../cave/cave.h"
 
-1529179145 c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
+1530141794 c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
 
-1529180616 c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.h
 
-1529180969 c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.h
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
 	<cstdlib>
 
-1529181191 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
 	"getTreasure.h"
 	<string>
 	<cstdlib>
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
 	"moveOptions.h"
 	"../Josh/mapSizes.h"
 
-1529178644 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
+1532113920 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
 	"moving.h"
 	"../moveOptions/moveOptions.h"
 	"../Stamina/Stamina.h"
@@ -360,25 +364,26 @@
 	<windows.h>
 	<iomanip>
 
-1529178311 c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.h
 
-1529184032 c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.h
 
-1529182914 source:c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.cpp
+1532022203 source:c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.cpp
 	"playerView.h"
 	"../cursorSet/cursorSet.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
+	"../charOutput/charOutput.h"
 	<iostream>
 	<windows.h>
 
-1529177788 c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.h
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.cpp
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.cpp
 	"Stamina.h"
 	<iostream>
 
-1529183651 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+1530144211 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
 	"startMap.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
@@ -392,12 +397,29 @@
 	<ctime>
 	<windows.h>
 
-1529175472 c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.h
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.h
 
-1529182967 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
+1532021627 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
 	"village.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<windows.h>
+
+1532111995 source:c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.cpp
 	"../cursorSet/cursorSet.h"
 	<iostream>
 	<iomanip>
 	<conio.h>
+	<windows.h>
+
+1532018669 c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.h
+
+1532022152 source:c:\users\jmfos\documents\github\fantasy-text-adventure\charoutput\charoutput.cpp
+	<iostream>
+	<windows.h>
+
+1532022140 c:\users\jmfos\documents\github\fantasy-text-adventure\charoutput\charoutput.h
 

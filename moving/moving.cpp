@@ -17,15 +17,27 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
     moveOptions(x, y, biome, allowed);
     cin.clear();
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
-    char obj = getch();
-
-        switch (obj)
+    int rest = 0;
+    while (true)
+    {
+        char option = 'r';
+        if (kbhit())
+        {
+            option = getch();
+            rest = 0;
+        }
+        else
+        {
+            ++rest;
+        }
+        switch (option)
         {
             case 'a':
                 if (!stamina.check())
                 {
                     cursorSet(0, 26);
-                    cout << "You are out of stamina. Press R to rest.";
+                    cout << "You are out of stamina. Rest to regain.";
+                    Sleep(300);
                     return;
                 }
                 if (allowed[0] == 1)
@@ -41,12 +53,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cursorSet(0, 25);
                     cout << setw(50) << " ";
                 }
-                break;
+                return;
             case 'd':
                 if (!stamina.check())
                 {
                     cursorSet(0, 26);
-                    cout << "You are out of stamina. Press R to rest.";
+                    cout << "You are out of stamina. Rest to regain.";
+                    Sleep(300);
                     return;
                 }
                 if (allowed[1] == 1)
@@ -62,12 +75,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cursorSet(0, 25);
                     cout << setw(50) << " ";
                 }
-                break;
+                return;
             case 'w':
                 if (!stamina.check())
                 {
                     cursorSet(0, 26);
-                    cout << "You are out of stamina. Press R to rest.";
+                    cout << "You are out of stamina. Rest to regain.";
+                    Sleep(300);
                     return;
                 }
                 if (allowed[2] == 1)
@@ -83,12 +97,13 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cursorSet(0, 25);
                     cout << setw(50) << " ";
                 }
-                break;
+                return;
             case 's':
                 if (!stamina.check())
                 {
                     cursorSet(0, 26);
-                    cout << "You are out of stamina. Press R to rest.";
+                    cout << "You are out of stamina. Rest to regain.";
+                    Sleep(300);
                     return;
                 }
                 if (allowed[3] == 1)
@@ -104,19 +119,25 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                     cursorSet(0, 25);
                     cout << setw(50) << " ";
                 }
-                break;
+                return;
             case 'r':
-                cursorSet(0, 26);
-                cout << setw(50) <<  " ";
-                Sleep(450);
-                stamina.increase();
+                if (rest > 9999)
+                {
+                    cursorSet(0, 26);
+                    cout << setw(50) <<  " ";
+                    cursorSet(0, 27);
+                    stamina.increase();
+                    stamina.display();
+                    Sleep(450);
+                }
+
                 break;
             case 'p':
                 for (int i = 0; i < 3; ++i)
                 {
                     biomeRestrict[i] = 1;
                 }
-                break;
+                return;
             default:
                 cursorSet(0, 25);
                 cout << "Invalid Key";
@@ -126,6 +147,7 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                 break;
 
         }
+    }
 
     return;
 }

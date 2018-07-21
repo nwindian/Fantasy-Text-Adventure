@@ -4,7 +4,6 @@
 #include <string>
 #include <memory>
 #include <cstdlib>
-using std::string;
 
 class Monster;
 class Cave
@@ -14,8 +13,8 @@ class Cave
         struct cavePiece
         {
             int heat = 0;
-            string message;
-            string loot;
+            std::string message;
+            std::string loot;
             bool gold = false;
             int goldNum = 0;
             bool weapon = false;

@@ -3,7 +3,7 @@
 #include "../getTreasure/getTreasure.h"
 #include "../village/village.h"
 #include "../cave/cave.h"
-char entityCheck(Biome& biome, int x, int y)
+void entityCheck(Biome& biome, int x, int y)
 {
     switch (biome.getEntity(y, x))
     {
@@ -19,5 +19,6 @@ char entityCheck(Biome& biome, int x, int y)
         case 'V':
             village();
     }
+
 }
 

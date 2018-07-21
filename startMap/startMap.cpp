@@ -11,8 +11,7 @@
 #include <ctime>
 #include <windows.h>
 
-using std::cout;
-using std::setw;
+
 void startMap()
 {
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -44,10 +43,10 @@ void startMap()
                         if (biomeRestrict[0] != 1)
                         {
                             cursorSet(0, 25);
-                            cout << "Story stuff, you shall not pass!";
+                            std::cout << "Story stuff, you shall not pass!";
                             Sleep(1000);
                             cursorSet(0, 25);
-                            cout << setw(50) << " ";
+                            std::cout << std::setw(50) << " ";
                             --x;
                             stamina.increase();
                         }
@@ -65,10 +64,10 @@ void startMap()
                         if (biomeRestrict[1] != 1)
                         {
                             cursorSet(0, 25);
-                            cout << "Story stuff, you shall not pass!";
+                            std::cout << "Story stuff, you shall not pass!";
                             Sleep(1000);
                             cursorSet(0, 25);
-                            cout << setw(50) << " ";
+                            std::cout << std::setw(50) << " ";
                             --y;
                             stamina.increase();
                         }
@@ -86,10 +85,10 @@ void startMap()
                         if (biomeRestrict[2] != 1)
                         {
                             cursorSet(0, 25);
-                            cout << "Story stuff, you shall not pass!";
+                            std::cout << "Story stuff, you shall not pass!";
                             Sleep(1000);
                             cursorSet(0, 25);
-                            cout << setw(50) << " ";
+                            std::cout << std::setw(50) << " ";
                             ++x;
                             stamina.increase();
                         }
