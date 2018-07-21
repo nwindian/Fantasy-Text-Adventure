@@ -7,15 +7,15 @@ Armor_Class::Armor_Class()
     //ctor
     armor = 0;
     name = " ";
-    resistance = '0';
+    type = "0";
 
 }
 
-Armor_Class::Armor_Class(int arm, std::string nameof, char resist)
+Armor_Class::Armor_Class(int arm, std::string nameof, std::string resist)
 {
     armor = arm;
     name = nameof;
-    resistance = resist;
+    type = resist;
 }
 
 int Armor_Class::getArmor()
@@ -26,4 +26,9 @@ int Armor_Class::getArmor()
 void Armor_Class::setArmor(int arm)
 {
     armor = arm;
+}
+
+std::string Armor_Class::getType()
+{
+    return type;
 }

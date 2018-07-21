@@ -5,14 +5,15 @@ class Armor_Class
 {
     public:
         Armor_Class();
-        Armor_Class(int, std::string, char);
+        Armor_Class(int, std::string, std::string);
         int getArmor();
         void setArmor(int);
+        std::string getType();
 
     protected:
         int armor;
         std::string name;
-        char resistance;
+        std::string type;
 
     private:
 };

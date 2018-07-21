@@ -74,7 +74,7 @@ bool whosQuicker(Player_Class & frnd, Monster & enem)
         return true;
     }
 }
-int playerBP(Player_Class & play, Monster & enem, int choice)
+int playerBP(Player_Class & play, Monster & enem, int choice, int health, int mHealth)
 {
     bool repeat = true;
     int x = 23;
@@ -82,7 +82,7 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     unsigned int moveChoice;
     int upBound;
     rlutil::cls();
-    showHealth(play,enem,play.getHealth(),enem.getHealth());
+    showHealth(play,enem,health,mHealth);
     rlutil::setColor(2);
     rlutil::locate(1,1); std::cout << "What would you like to do? " << std::endl;
     unsigned moveCount = 0;
@@ -177,11 +177,11 @@ int playerBP(Player_Class & play, Monster & enem, int choice)
     }
 }
 
-int MonsterBP(Monster & enemy, Player_Class & player)
+int MonsterBP(Monster & enemy, Player_Class & player, int & currentHealth, int & currentEHealth)
 {
     rlutil::resetColor();
     rlutil::cls();
-    showHealth(player,enemy,player.getHealth(),enemy.getHealth());
+    showHealth(player,enemy,currentHealth,enemy.getHealth());
     rlutil::locate(1,1);
     std::cout << "The " << enemy.getName() << " attacks!" << std::endl;
     for (int i = 0;i < 3; ++i)
@@ -193,12 +193,14 @@ int MonsterBP(Monster & enemy, Player_Class & player)
     if (chanceM(enemy))
     {
         int damage = dmg_calc(player,enemy);
+        currentHealth = currentHealth - damage;
         std::cout << std::endl << damage << " health has been erased from you!" << std::endl;
-        return damage;
+        return currentHealth;
     }
     else
     {
         std::cout << " Wow, he missed!" << std::endl;
+        return 0;
     }
 
 }
@@ -285,12 +287,14 @@ void combat(Player_Class & play,Monster & enem)
         repeatFromB = true;
         while (repeatFromB == true)
         {
+            rlutil::msleep(1000);
+            rlutil::cls();
             showHealth(play,enem,currentHealth,currentEHealth);
             rlutil::locate(1,1);
             int choice = menu();
             if (choice == 1)
             {
-                moveChoice = playerBP(play, enem, choice);
+                moveChoice = playerBP(play, enem, choice, currentHealth, currentEHealth);
                 if (whosQuicker(play, enem))
                 {
                     if (moveChoice == -1)
@@ -329,13 +333,9 @@ void combat(Player_Class & play,Monster & enem)
                         else
                         {
                             std::cout << enem.getName() << "'s turn!" << std::endl;
-                            for (int i = 0;i < 3; ++i)
-                            {
-                                std::cout << ". ";
-                                rlutil::msleep(600);
-                            }
-                            mdamage = MonsterBP(enem,play);
-                            currentHealth = currentHealth - mdamage;
+                            loading_Six();
+                            mdamage = MonsterBP(enem,play,currentHealth,currentEHealth);
+                            updateHealth(play,enem,currentHealth,currentEHealth);
                             if (currentHealth < 1)
                             {
                                 std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
@@ -354,8 +354,7 @@ void combat(Player_Class & play,Monster & enem)
                     }
                     else
                     {
-                        mdamage = MonsterBP(enem,play);
-                        currentHealth = currentHealth - mdamage;
+                        mdamage = MonsterBP(enem,play,currentHealth, currentEHealth);
                         updateHealth(play,enem,currentHealth,currentEHealth);
                         if (currentHealth < 1)
                         {
@@ -368,12 +367,9 @@ void combat(Player_Class & play,Monster & enem)
                             rlutil::msleep(1000);
                             rlutil::cls();
                             showHealth(play,enem,currentHealth,currentEHealth);
+                            rlutil::locate(1,1);
                             std::cout << "You have used " << play.moveList[moveChoice].getName() << std::endl;
-                            for (int i = 0;i < 3; ++i)
-                            {
-                                std::cout << ". ";
-                                rlutil::msleep(600);
-                            }
+                            loading_Six();
                             damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
                             std::cout << damage << " damage!!!" << std::endl;
                             currentEHealth = currentEHealth - damage;

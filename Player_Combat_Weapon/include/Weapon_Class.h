@@ -1,6 +1,6 @@
 #ifndef WEAPON_CLASS_H
 #define WEAPON_CLASS_H
-
+#include "Loot_Class.h"
 
 
 class Weapon_Class : public Loot_Class

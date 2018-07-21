@@ -65,7 +65,6 @@
 		<Unit filename="include/Moves_Class.h" />
 		<Unit filename="include/Player_Class.h" />
 		<Unit filename="include/Show_Health.h" />
-		<Unit filename="include/Type_Class.h" />
 		<Unit filename="include/Weapon_Class.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Armor_Class.cpp" />
@@ -81,7 +80,6 @@
 		<Unit filename="src/Moves_Class.cpp" />
 		<Unit filename="src/Player_Class.cpp" />
 		<Unit filename="src/Show_Health.cpp" />
-		<Unit filename="src/Type_Class.cpp" />
 		<Unit filename="src/Weapon_Class.cpp" />
 		<Extensions>
 			<code_completion />

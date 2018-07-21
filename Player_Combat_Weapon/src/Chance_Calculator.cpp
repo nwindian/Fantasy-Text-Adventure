@@ -21,7 +21,7 @@ bool chanceM(Monster & enemy)
     int chance = rand() % 100 + 1;
     if (chance > enemy.getAccuracy() && chance < 101)
     {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }

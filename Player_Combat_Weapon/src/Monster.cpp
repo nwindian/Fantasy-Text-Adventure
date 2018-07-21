@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Monster.hpp"
 // Initialize monster level to player level
-Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight, int evasive, char typ)
+Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight, int evasive, std::string typ)
 {
     name = Mname;
 	monsterLevel = playerLevel;
@@ -103,7 +103,7 @@ int Monster::getAccuracy()
     return accuracy;
 }
 
-char Monster::getType()
+std::string Monster::getType()
 {
     return type;
 }

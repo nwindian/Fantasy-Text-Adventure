@@ -11,11 +11,12 @@ Moves_Class::Moves_Class()
     evasiveness = 100;
 }
 
-Moves_Class::Moves_Class(std::string nameO, int damageO, int evasivenesss)
+Moves_Class::Moves_Class(std::string nameO, int damageO, int evasivenesss, std::string typo)
 {
     damage = damageO;
     name = nameO;
     evasiveness = evasivenesss;
+    type = typo;
 }
 
 int Moves_Class::getDamage()
@@ -31,4 +32,9 @@ int Moves_Class::getEvasive()
 std::string Moves_Class::getName()
 {
     return name;
+}
+
+std::string Moves_Class::getType()
+{
+    return type;
 }

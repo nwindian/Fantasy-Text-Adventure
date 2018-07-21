@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "Show_Health.h"
 #include "rlutil.h"
 
@@ -7,6 +8,7 @@ void showHealth(Player_Class & player, Monster & enemy, int playHealth, int enem
     rlutil::locate(50,1); std::cout << player.getName() << "'s health:     ";
     rlutil::locate(50,2); std::cout << playHealth << "   / " << player.getHealth();
     rlutil::locate(65,1); std::cout << enemy.getName() << "'s health: ";
+    rlutil::locate(65,2); std::cout << "                               ";
     rlutil::locate(65,2); std::cout << enemHealth << "   / " << enemy.getHealth();
 }
 
