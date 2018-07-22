@@ -58,11 +58,13 @@
 		<Unit filename="include/Damage_Calculator.h" />
 		<Unit filename="include/Extern_Variables.h" />
 		<Unit filename="include/Food_Class.h" />
+		<Unit filename="include/Loading.h" />
 		<Unit filename="include/Loot_Class.h" />
 		<Unit filename="include/Menu_Function.h" />
 		<Unit filename="include/Monster.hpp" />
 		<Unit filename="include/Moves_Class.h" />
 		<Unit filename="include/Player_Class.h" />
+		<Unit filename="include/Show_Health.h" />
 		<Unit filename="include/Weapon_Class.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Armor_Class.cpp" />
@@ -71,11 +73,13 @@
 		<Unit filename="src/Combat_Event.cpp" />
 		<Unit filename="src/Damage_Calculator.cpp" />
 		<Unit filename="src/Food_Class.cpp" />
+		<Unit filename="src/Loading.cpp" />
 		<Unit filename="src/Loot_Class.cpp" />
 		<Unit filename="src/Menu_Functions.cpp" />
 		<Unit filename="src/Monster.cpp" />
 		<Unit filename="src/Moves_Class.cpp" />
 		<Unit filename="src/Player_Class.cpp" />
+		<Unit filename="src/Show_Health.cpp" />
 		<Unit filename="src/Weapon_Class.cpp" />
 		<Extensions>
 			<code_completion />

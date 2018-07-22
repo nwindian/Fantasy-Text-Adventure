@@ -6,14 +6,15 @@ class Moves_Class
 {
     public:
         Moves_Class();
-        Moves_Class(std::string , int, int);
+        Moves_Class(std::string , int, int, std::string);
         int getDamage();
         int getEvasive();
+        std::string getType();
         std::string getName();
     protected:
         int damage;
         std::string name;
-        char type;
+        std::string type;
         int evasiveness;
 
     private:

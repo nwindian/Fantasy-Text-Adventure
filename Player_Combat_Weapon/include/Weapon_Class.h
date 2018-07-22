@@ -3,7 +3,6 @@
 #include "Loot_Class.h"
 
 
-
 class Weapon_Class : public Loot_Class
 {
     public:

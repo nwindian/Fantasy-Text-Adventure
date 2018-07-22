@@ -1,12 +1,13 @@
 #ifndef MONSTER_HPP
 #define MONSTER_HPP
 #include <string>
+#include <vector>
 #include "Moves_Class.h"
 
 class Monster
 {
 	public:
-		Monster(std::string name,int,int,int,int,int,int,int);
+		Monster(std::string name,int,int,int,int,int,int,int,std::string);
 		Moves_Class moveO;
 		Moves_Class moveT;
 		Moves_Class moveTR;
@@ -26,10 +27,13 @@ class Monster
 		void monsterStats(Monster);
 		void deductDamage(int);
 		int getAccuracy();
+		std::string getType();
+		std::vector<Moves_Class> moveInventory;
 
 	protected:
 
 	    std::string name;
+	    std::string type;
 		int monsterLevel, monsterHealth, monsterStrength, monsterSpeed, monsterMagic, monsterWeight, accuracy;
 };
 

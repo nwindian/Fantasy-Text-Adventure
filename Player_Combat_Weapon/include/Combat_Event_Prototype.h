@@ -8,5 +8,5 @@ Weapon_Class *getWeapon(Player_Class & );
 bool whosQuicker(Player_Class & , Monster &);
 int playerBP(Player_Class & , Monster &, int);
 void combat(Player_Class & ,Monster & );
-void monsterBP(Monster & , Player_Class &);
+void monsterBP(Monster & , Player_Class &, int&, int&);
 #endif // COMBAT_EVENT_PROTOTYPE
