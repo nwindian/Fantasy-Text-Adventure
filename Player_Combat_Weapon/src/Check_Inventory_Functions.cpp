@@ -4,15 +4,16 @@
 #include "Show_Health.h"
 
 
-int getInventory()
+int getInventory(Player_Class & player, Monster & enemy, int h, int e)
 {
     int moveCount = 0;
     int x = 20;
     int y = 2;
     rlutil::cls();
-    std::cout << "Weapon or heal?????" << std::endl;
-    std::cout << "1) Food(healing) " << std::endl << "2) Weapons";
-    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
+    showHealth(player, enemy,h,e);
+    rlutil::locate(1,1); std::cout << "Weapon or heal?" << std::endl;
+    std::cout << "1) Food / healing" << std::endl << "2) Weapons";
+    rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true) {
         rlutil::locate(x,y);
         rlutil::hidecursor();
@@ -47,7 +48,7 @@ int getInventory()
                     y = 3;
                 }
             }
-            else if (k == ' ')
+            else if (k == '\r')
             {
                 rlutil::cls();
                 return moveCount;
@@ -71,7 +72,7 @@ int getFromInventoryW(Player_Class &play)
     {
         std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
     }
-    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
+    rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true)
     {
         rlutil::locate(x,y);
@@ -107,7 +108,7 @@ int getFromInventoryW(Player_Class &play)
                     y = y + 1;
                 }
             }
-            else if (k == ' ')
+            else if (k == '\r')
             {
                 rlutil::cls();
                 return moveCount;
@@ -134,7 +135,7 @@ int getFromInventoryF(Player_Class &play)
     {
         std::cout << i+1 << ") " << play.foodInventory[i].getName() << std::endl;
     }
-    rlutil::locate(40,3); std::cout << "**Press b to go back or space to select." << std::endl;
+    rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true)
     {
         rlutil::locate(x,y);
@@ -170,7 +171,7 @@ int getFromInventoryF(Player_Class &play)
                     y = y + 1;
                 }
             }
-            else if (k == ' ')
+            else if (k == '\r')
             {
                 rlutil::cls();
                 return moveCount;

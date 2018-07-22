@@ -114,12 +114,12 @@
 	<string>
 	"Weapon_Class.h"
 
-1531952090 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
+1532231956 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
 	<iostream>
 	<string>
 	"Armor_Class.h"
 
-1531952010 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
+1532231956 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
 
 1532055194 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
 	<iostream>
@@ -145,7 +145,7 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1532055758 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1532232214 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -170,7 +170,7 @@
 	<iostream>
 	"Monster.hpp"
 
-1531957963 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1532231432 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	<fstream>
 	<map>
@@ -191,7 +191,7 @@
 	<string>
 	"Weapon_Class.h"
 
-1531957281 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+1532231904 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	<windows.h>
 	<rlutil.h>
@@ -250,18 +250,19 @@
 	<iostream>
 	<Loot_Class.h>
 
-1531591184 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+1532203336 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 	<iostream>
 	"rlutil.h"
 	"Check_Inventory_Functions.h"
 	"Show_Health.h"
 
-1529534640 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
+1532203289 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
 	"Player_Class.h"
+	"Monster.hpp"
 
 1529193641 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\extern_variables.h
 
-1529534640 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\menu_functions.cpp
+1532199812 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\menu_functions.cpp
 	<iostream>
 	<iomanip>
 	<limits>

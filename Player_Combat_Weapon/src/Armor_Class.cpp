@@ -32,3 +32,7 @@ std::string Armor_Class::getType()
 {
     return type;
 }
+std::string Armor_Class::getName()
+{
+    return name;
+}

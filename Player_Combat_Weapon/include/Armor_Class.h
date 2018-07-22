@@ -9,6 +9,7 @@ class Armor_Class
         int getArmor();
         void setArmor(int);
         std::string getType();
+        std::string getName();
 
     protected:
         int armor;

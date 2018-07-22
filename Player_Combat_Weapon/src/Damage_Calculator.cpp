@@ -33,7 +33,7 @@ int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Move
     double type = check_type(move.getType(), enemy.getType());
 
     //add resistance and type to total damage;
-    return (((player.getStrength() + weapon.getDmg()) / 2) + (move.getDamage() * type));
+    return (((player.getStrength() + weapon.getDmg()) / 10) + move.getDamage()) * type;
 }
 
 int dmg_calc(Player_Class & player, Monster & enemy)
@@ -42,7 +42,8 @@ int dmg_calc(Player_Class & player, Monster & enemy)
     int arm = armor.getArmor();
     int strength = enemy.getStrength();
     std::string name = enemy.getName();
-    return (enemy.getStrength() - armor.getArmor());
+    double type = check_type(enemy.getType(), armor.getType());
+    return ((enemy.getStrength() - armor.getArmor())/2) * type;
 }
 
 
