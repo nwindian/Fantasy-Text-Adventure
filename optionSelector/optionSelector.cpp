@@ -32,13 +32,13 @@ int optionSelector(int size, int dx, int dy)
                 break;
             case 13:
                 return y - dy;
-            default:
-                cursorSet(dx, dy + size + 1);
-                std::cout << "Invalid key";
-                Sleep(300);
-                cursorSet(dx, dy + size + 1);
-                std::cout << std::setw(11) << " ";
-                break;
+//            default:
+//                cursorSet(dx, dy + size + 1);
+//                std::cout << "Invalid key";
+//                Sleep(300);
+//                cursorSet(dx, dy + size + 1);
+//                std::cout << std::setw(11) << " ";
+//                break;
         }
     }
 }

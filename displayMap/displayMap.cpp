@@ -1,24 +1,24 @@
 #include "mapSizes.h"
 #include "../cursorSet/cursorSet.h"
-#include "../rlutil.h"
 #include "../Josh/mapSizes.h"
 #include <iostream>
+#include <windows.h>
 void displayMap(char** map, int color)
 {
     cursorSet(0, 0);
     switch(color)
     {
         case 2:
-            rlutil::setConsoleTitle("Forest");
+            SetConsoleTitle("The Forest");
             break;
         case 11:
-            rlutil::setConsoleTitle("Tundra");
+            SetConsoleTitle("The Tundra");
             break;
         case 14:
-            rlutil::setConsoleTitle("Desert");
+            SetConsoleTitle("The Desert");
             break;
         case 8:
-            rlutil::setConsoleTitle("Mountain");
+            SetConsoleTitle("The Mountains");
             break;
     }
     for (int i = 0; i < MAPSIZEY ; ++i)

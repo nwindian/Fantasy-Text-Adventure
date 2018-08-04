@@ -1,27 +1,27 @@
 #include "village.h"
 #include "../cursorSet/cursorSet.h"
 #include "../optionSelector/optionSelector.h"
+#include "../clearGaps/clearGaps.h"
 #include <iostream>
 #include <iomanip>
 #include <conio.h>
 #include <windows.h>
 using std::cout;
 using std::setw;
-using std::cin;
-using std::left;
+using std::endl;
+
 void village()
 {
-    cursorSet(0, 27);
-    cout << setw(50) << " ";
-    cursorSet(0, 28);
-    cout << setw(50) << " ";
+    clearGaps();
     cursorSet(0, 25);
-    cout << "Would you like to enter the village? (Y)es (N)o";
+    cout << "Would you like to enter the village?" << endl;
+    cout << "    Yes" << endl;
+    cout << "    No" << endl;
     while (true)
     {
-        switch (getch())
+        switch (optionSelector(2, 0, 26))
         {
-            case 'y':
+            case 0:
                 {
                     cursorSet(0, 25);
                     cout << setw(50) << " ";
@@ -55,16 +55,10 @@ void village()
                     }
                     break;
                 }
-            case 'n':
+            case 1:
                 cursorSet(0, 25);
                 cout << setw(30) << " ";
                 return;
-                break;
-            default:
-                cursorSet(0, 26);
-                cout << "invalid key";
-                Sleep(300);
-                cout << setw(15) << " ";
                 break;
         }
     }

@@ -6,6 +6,7 @@
 #include "../moving/moving.h"
 #include "../cursorSet/cursorSet.h"
 #include "../entityCheck/entityCheck.h"
+#include "../title/title.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -19,6 +20,7 @@ void startMap()
 	lpCursor.bVisible = false;
 	lpCursor.dwSize = 20;
 	SetConsoleCursorInfo(console,&lpCursor);
+	title();
     srand(time(0));
     int x = 0;
     int y = 0;

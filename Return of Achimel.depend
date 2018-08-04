@@ -43,7 +43,7 @@
 
 1520975922 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave_constructors.h
 
-1530141928 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
+1533414195 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
 	"startMap/startMap.h"
 	"Josh/mapSizes.h"
 
@@ -291,10 +291,13 @@
 	"../cave_Class/cave_class.h"
 	<vector>
 
-1532023906 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
+1533412269 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
 	"cave.h"
 	"../Biome_Class/Biome_Class.h"
 	"../displayMap/displayMap.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
@@ -303,10 +306,11 @@
 
 1530144280 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
 
-1532111995 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1533411710 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
 	<iostream>
 	<iomanip>
 	<cstdlib>
@@ -319,12 +323,12 @@
 
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
 
-1530143845 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+1533414717 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
 	"mapSizes.h"
 	"../cursorSet/cursorSet.h"
-	"../rlutil.h"
 	"../Josh/mapSizes.h"
 	<iostream>
+	<windows.h>
 
 1530141774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
@@ -354,7 +358,7 @@
 
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
 
-1532113920 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
+1533414242 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
 	"moving.h"
 	"../moveOptions/moveOptions.h"
 	"../Stamina/Stamina.h"
@@ -383,7 +387,7 @@
 	"Stamina.h"
 	<iostream>
 
-1530144211 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+1533414260 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
 	"startMap.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
@@ -392,6 +396,7 @@
 	"../moving/moving.h"
 	"../cursorSet/cursorSet.h"
 	"../entityCheck/entityCheck.h"
+	"../title/title.h"
 	<iostream>
 	<iomanip>
 	<ctime>
@@ -399,10 +404,11 @@
 
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.h
 
-1532021627 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
+1533412269 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
 	"village.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
 	<iostream>
 	<iomanip>
 	<conio.h>
@@ -422,4 +428,21 @@
 	<windows.h>
 
 1532022140 c:\users\jmfos\documents\github\fantasy-text-adventure\charoutput\charoutput.h
+
+1533414195 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.cpp
+	"clearGaps.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<iomanip>
+
+1533409552 c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
+
+1533414772 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
+	"title.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<windows.h>
+	<conio.h>
+
+1533414195 c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.h
 

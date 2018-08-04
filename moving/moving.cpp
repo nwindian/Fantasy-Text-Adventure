@@ -1,4 +1,3 @@
-
 #include "moving.h"
 #include "../moveOptions/moveOptions.h"
 #include "../Stamina/Stamina.h"
