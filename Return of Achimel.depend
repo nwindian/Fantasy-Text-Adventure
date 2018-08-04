@@ -43,9 +43,9 @@
 
 1520975922 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave_constructors.h
 
-1533414195 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
+1533416444 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
 	"startMap/startMap.h"
-	"Josh/mapSizes.h"
+	"mapSizes/mapSizes.h"
 
 1526408777 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\globals.h
 
@@ -286,8 +286,8 @@
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
-1530143845 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
-	"../Josh/mapSizes.h"
+1533416469 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
 	<vector>
 
@@ -323,10 +323,10 @@
 
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
 
-1533414717 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
-	"mapSizes.h"
+1533416461 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+	"../mapSizes/mapSizes.h"
 	"../cursorSet/cursorSet.h"
-	"../Josh/mapSizes.h"
+	"../mapSizes/mapSizes.h"
 	<iostream>
 	<windows.h>
 
@@ -352,9 +352,9 @@
 	<string>
 	<cstdlib>
 
-1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
+1533416444 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
 	"moveOptions.h"
-	"../Josh/mapSizes.h"
+	"../mapSizes/mapSizes.h"
 
 1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
 
@@ -414,7 +414,7 @@
 	<conio.h>
 	<windows.h>
 
-1532111995 source:c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.cpp
+1533415401 source:c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.cpp
 	"../cursorSet/cursorSet.h"
 	<iostream>
 	<iomanip>
@@ -445,4 +445,6 @@
 	<conio.h>
 
 1533414195 c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.h
+
+1530141928 c:\users\jmfos\documents\github\fantasy-text-adventure\mapsizes\mapsizes.h
 

@@ -1,6 +1,6 @@
 #ifndef BIOME_CLASS
 #define BIOME_CLASS
-#include "../Josh/mapSizes.h"
+#include "../mapSizes/mapSizes.h"
 #include "../cave_Class/cave_class.h"
 #include <vector>
 class Biome

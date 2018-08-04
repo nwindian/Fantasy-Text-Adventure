@@ -1,5 +1,5 @@
 #include "Biome_Class.h"
-#include "../Josh/mapSizes.h"
+#include "../mapSizes/mapSizes.h"
 #include "../cave_Class/cave_class.h"
 #include <iostream>
 #include <cstdlib>

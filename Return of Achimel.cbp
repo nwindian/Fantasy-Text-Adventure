@@ -38,8 +38,6 @@
 		<Unit filename="Biome_Class/Biome_Class.h" />
 		<Unit filename="Food/Food.cpp" />
 		<Unit filename="Food/Food.h" />
-		<Unit filename="Josh/entityMapGen.h" />
-		<Unit filename="Josh/mapSizes.h" />
 		<Unit filename="Stamina/Stamina.cpp" />
 		<Unit filename="Stamina/Stamina.h" />
 		<Unit filename="cave/cave.cpp" />
@@ -59,6 +57,7 @@
 		<Unit filename="getTreasure/getTreasure.cpp" />
 		<Unit filename="getTreasure/getTreasure.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mapSizes/mapSizes.h" />
 		<Unit filename="moveOptions/moveOptions.cpp" />
 		<Unit filename="moveOptions/moveOptions.h" />
 		<Unit filename="moving/moving.cpp" />

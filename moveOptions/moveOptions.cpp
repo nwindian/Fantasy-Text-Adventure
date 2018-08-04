@@ -1,5 +1,5 @@
 #include "moveOptions.h"
-#include "../Josh/mapSizes.h"
+#include "../mapSizes/mapSizes.h"
 
 void moveOptions(int x, int y, int biome, int allowed[])
 {
