@@ -21,17 +21,20 @@ int main()
     Weapon_Class sword(5, 'd', "sword");
     Weapon_Class axe(5,'d', "axe");
     Weapon_Class God(5,'l',"God Sword of Lightning");
-    Monster enemy("fish", 5, 10, 10, 5,3,2,3,"I");
     Food_Class  food(3, "chicken");
     Food_Class fd(4, "jalapeno");
     Food_Class fo(5, "pizza");
-    Armor_Class armor(5, "Cool Armor", "I");
-
-    Player_Class player("Joe",5,5,10,5,5,5);
+    Armor_Class armor(2, "Cool Armor", "I");
+    Armor_Class armorr(2, "Cooler Armor", "I");
+    Armor_Class armorrr(2, "Coolest Armor", "I");
+    Monster enemy("fish", 1, 100, 3, 3,1,3,3,"I");
+    Player_Class player("Joe",2,2,100,1,2,1);
     //player.LevelUP(player);
 //    rlutil::cls();
     //cin.get();
     player.armorInventory.push_back(armor);
+    player.armorInventory.push_back(armorr);
+    player.armorInventory.push_back(armorrr);
     player.foodInventory.push_back(food);
     player.foodInventory.push_back(fd);
     player.foodInventory.push_back(fo);

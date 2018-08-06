@@ -167,29 +167,27 @@ int playerBP(Player_Class & play, Monster & enem, int choice, int health, int mH
     }
 }
 
-int MonsterBP(Monster & enemy, Player_Class & player, int & currentHealth, int & currentEHealth)
+int MonsterBP(Monster & enemy, Player_Class & player, int & currentHealth, int & currentEHealth, std::shared_ptr<Armor_Class> armor)
 {
     rlutil::resetColor();
     rlutil::cls();
     showHealth(player,enemy,currentHealth,currentEHealth);
     rlutil::locate(1,1);
     std::cout << "The " << enemy.getName() << " attacks!" << std::endl;
-    for (int i = 0;i < 3; ++i)
-    {
-        std::cout << ". ";
-        rlutil::msleep(600);
-    }
+    loading_Six();
     //rlutil::msleep(800);
     if (chanceM(enemy))
     {
-        int damage = dmg_calc(player,enemy);
+        int damage = dmg_calc(player,enemy,armor);
         currentHealth = currentHealth - damage;
         std::cout << std::endl << damage << " health has been erased from you!" << std::endl;
+        loading_Six();
         return currentHealth;
     }
     else
     {
         std::cout << " Wow, he missed!" << std::endl;
+        loading_Six();
         return 0;
     }
 
@@ -216,7 +214,7 @@ void combat(Player_Class & play,Monster & enem)
     std::cout << "You have entered combat with " << enem.getName() << "!!" << std::endl;
     //FOR WEAPON
     std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
-    std::unique_ptr<Armor_Class> currentArmor(new Armor_Class);
+    std::shared_ptr<Armor_Class> currentArmor(new Armor_Class);
     rlutil::setColor(6);
     for (unsigned int i = 0; i < play.weaponInventory.size(); ++i)
     {
@@ -268,6 +266,7 @@ void combat(Player_Class & play,Monster & enem)
         }
     }
     x = 40; y = 2;
+    moveCount = 0;
     std::cout << "Now choose your armor: " << std::endl;
     rlutil::setColor(4);
     for (unsigned int i = 0; i < play.armorInventory.size(); ++i)
@@ -342,11 +341,16 @@ void combat(Player_Class & play,Monster & enem)
                         rlutil::cls();
                         showHealth(play,enem,currentHealth,currentEHealth);
                         damage = dmg_calc(play, enem,*currentWeapon, play.moveList[moveChoice]);
+                        rlutil::locate(1,1);
+                        std::cout << "You have used " << play.moveList[moveChoice].getName() << "!" << std::endl;
+                        loading_Six();
                         if(chance(play, play.moveList[moveChoice]))
                         {
+                            rlutil::locate(1,1);
                             currentEHealth = currentEHealth - damage;
-                            std::cout << damage << std::endl;
+                            std::cout << std::endl << damage << " damage" << std::endl;
                             updateHealth(play,enem,currentHealth,currentEHealth);
+                            rlutil::locate(1,1);
                             repeatFromB = false;
                             rlutil::msleep(500);
                             rlutil::cls();
@@ -354,8 +358,9 @@ void combat(Player_Class & play,Monster & enem)
                         }
                         else
                         {
+                            rlutil::locate(1,1);
                             std::cout << "You missed. May need some glasses.";
-                            rlutil::msleep(500);
+                            rlutil::msleep(1000);
                             rlutil::cls();
                             showHealth(play,enem,currentHealth,currentEHealth);
 
@@ -368,9 +373,10 @@ void combat(Player_Class & play,Monster & enem)
                         }
                         else
                         {
+                            rlutil::locate(1,1);
                             std::cout << enem.getName() << "'s turn!" << std::endl;
                             loading_Six();
-                            mdamage = MonsterBP(enem,play,currentHealth,currentEHealth);
+                            mdamage = MonsterBP(enem,play,currentHealth,currentEHealth, currentArmor);
                             updateHealth(play,enem,currentHealth,currentEHealth);
                             if (currentHealth < 1)
                             {
@@ -390,7 +396,7 @@ void combat(Player_Class & play,Monster & enem)
                     }
                     else
                     {
-                        mdamage = MonsterBP(enem,play,currentHealth, currentEHealth);
+                        mdamage = MonsterBP(enem,play,currentHealth, currentEHealth, currentArmor);
                         updateHealth(play,enem,currentHealth,currentEHealth);
                         if (currentHealth < 1)
                         {
@@ -442,6 +448,11 @@ void combat(Player_Class & play,Monster & enem)
                         k = getFromInventoryW(play);
                         check = 2;
                     }
+                    else if (inv == 2)
+                    {
+                        k = getFromInventoryA(play);
+                        check = 3;
+                    }
                     else
                     {
                         repeatFromB = true;
@@ -465,8 +476,11 @@ void combat(Player_Class & play,Monster & enem)
                     play.foodInventory.erase(play.foodInventory.begin() + k);
                     rlutil::msleep(2000);
                     repeatFromB = false;
-                    mdamage = MonsterBP(enem,play,currentHealth, currentEHealth);
+                    mdamage = MonsterBP(enem,play,currentHealth, currentEHealth,currentArmor);
                     updateHealth(play,enem,currentHealth,currentEHealth);
+                    rlutil::locate(1,4);
+                    rlutil::msleep(200);
+                    loading_Six();
                     if (currentHealth < 1)
                     {
                         rlutil::locate(1,5); std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
@@ -481,6 +495,36 @@ void combat(Player_Class & play,Monster & enem)
                     rlutil::msleep(2000);
                     rlutil::cls();
                     repeatFromB = false;
+                    mdamage = MonsterBP(enem,play,currentHealth, currentEHealth,currentArmor);
+                    updateHealth(play,enem,currentHealth,currentEHealth);
+                    rlutil::msleep(200);
+                    rlutil::locate(1,4);
+                    loading_Six();
+                    if (currentHealth < 1)
+                    {
+                        rlutil::locate(1,5); std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
+                        repeatFromB = false;
+                        rlutil::msleep(4000);
+                    }
+                }
+                else if (check == 3)
+                {
+                    std::cout << "Your new equipped armor is " << play.armorInventory[k].getName() << "!" << std::endl;
+                    *currentArmor = play.armorInventory[k];
+                    rlutil::msleep(2000);
+                    rlutil::cls();
+                    repeatFromB = false;
+                    mdamage = MonsterBP(enem,play,currentHealth, currentEHealth,currentArmor);
+                    updateHealth(play,enem,currentHealth,currentEHealth);
+                    rlutil::msleep(200);
+                    rlutil::locate(1,4);
+                    loading_Six();
+                    if (currentHealth < 1)
+                    {
+                        rlutil::locate(1,5); std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
+                        repeatFromB = false;
+                        rlutil::msleep(4000);
+                    }
                 }
             }
             else if (choice == 3)

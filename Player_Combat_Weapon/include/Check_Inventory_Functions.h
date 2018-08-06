@@ -6,6 +6,7 @@
 int getInventory(Player_Class&, Monster&,int,int);
 int getFromInventoryF(Player_Class&);
 int getFromInventoryW(Player_Class&);
+int getFromInventoryA(Player_Class&);
 
 
 #endif // CHECK_INVENTORY_FUNCTIONS_H_INCLUDED

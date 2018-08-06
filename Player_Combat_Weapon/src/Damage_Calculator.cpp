@@ -36,14 +36,13 @@ int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Move
     return (((player.getStrength() + weapon.getDmg()) / 10) + move.getDamage()) * type;
 }
 
-int dmg_calc(Player_Class & player, Monster & enemy)
+int dmg_calc(Player_Class & player, Monster & enemy, std::shared_ptr<Armor_Class> armor)
 {
-    Armor_Class armor = player.getArmor();
-    int arm = armor.getArmor();
-    int strength = enemy.getStrength();
     std::string name = enemy.getName();
-    double type = check_type(enemy.getType(), armor.getType());
-    return ((enemy.getStrength() - armor.getArmor())/2) * type;
+    double type = check_type(enemy.getType(), armor->getType());
+    int damage = (enemy.getStrength() - ((armor->getArmor()/2))) * type;
+    damage == 0 ? damage = 1 : damage = damage;
+    return damage;;
 }
 
 
