@@ -50,6 +50,11 @@ void Player_Class::setLevel(int levelll)
 {
     level = levelll;
 }
+
+void Player_Class::setName(std::string namee)
+{
+    name = namee;
+}
 //Level
 void Player_Class::LevelUP(Player_Class & player)
 {
