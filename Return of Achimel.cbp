@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Return of Achimel" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Return of Achimel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="Josh" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Return of Achimel" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="Josh" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Biome_Class/Biome_Class.cpp" />
+		<Unit filename="Biome_Class/Biome_Class.h" />
+		<Unit filename="Food/Food.cpp" />
+		<Unit filename="Food/Food.h" />
+		<Unit filename="Player_Combat_Weapon/include/Armor_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Chance_Calc_Interface.h" />
+		<Unit filename="Player_Combat_Weapon/include/Chance_To_Run.h" />
+		<Unit filename="Player_Combat_Weapon/include/Check_Inventory_Functions.h" />
+		<Unit filename="Player_Combat_Weapon/include/Combat_Event_Prototype.h" />
+		<Unit filename="Player_Combat_Weapon/include/Damage_Calculator.h" />
+		<Unit filename="Player_Combat_Weapon/include/Food_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Loading.h" />
+		<Unit filename="Player_Combat_Weapon/include/Loot_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Menu_Function.h" />
+		<Unit filename="Player_Combat_Weapon/include/Monster.hpp" />
+		<Unit filename="Player_Combat_Weapon/include/Moves_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Player_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Show_Health.h" />
+		<Unit filename="Player_Combat_Weapon/include/Sword_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Type_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Upper_Bound.h" />
+		<Unit filename="Player_Combat_Weapon/include/Weapon_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/rlutil.h" />
+		<Unit filename="Player_Combat_Weapon/src/Armor_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Chance_Calculator.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Chance_To_Run.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Check_Inventory_Functions.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Combat_Event.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Damage_Calculator.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Food_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Loading.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Loot_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Menu_Functions.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Monster.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Moves_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Player_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Show_Health.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Sword_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Weapon_Class.cpp" />
+		<Unit filename="Stamina/Stamina.cpp" />
+		<Unit filename="Stamina/Stamina.h" />
+		<Unit filename="cave/cave.cpp" />
+		<Unit filename="cave/cave.h" />
+		<Unit filename="cave_Class/cave_Class.cpp" />
+		<Unit filename="cave_Class/cave_class.h" />
+		<Unit filename="charOutput/charOutput.cpp" />
+		<Unit filename="charOutput/charOutput.h" />
+		<Unit filename="clearGaps/clearGaps.cpp" />
+		<Unit filename="clearGaps/clearGaps.h" />
+		<Unit filename="cursorSet/cursorSet.cpp" />
+		<Unit filename="cursorSet/cursorSet.h" />
+		<Unit filename="displayMap/displayMap.cpp" />
+		<Unit filename="displayMap/displayMap.h" />
+		<Unit filename="entityCheck/entityCheck.cpp" />
+		<Unit filename="entityCheck/entityCheck.h" />
+		<Unit filename="getTreasure/getTreasure.cpp" />
+		<Unit filename="getTreasure/getTreasure.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mapSizes/mapSizes.h" />
+		<Unit filename="moveOptions/moveOptions.cpp" />
+		<Unit filename="moveOptions/moveOptions.h" />
+		<Unit filename="moving/moving.cpp" />
+		<Unit filename="moving/moving.h" />
+		<Unit filename="optionSelector/optionSelector.cpp" />
+		<Unit filename="optionSelector/optionSelector.h" />
+		<Unit filename="playerView/playerView.cpp" />
+		<Unit filename="playerView/playerView.h" />
+		<Unit filename="startMap/startMap.cpp" />
+		<Unit filename="startMap/startMap.h" />
+		<Unit filename="title/title.cpp" />
+		<Unit filename="title/title.h" />
+		<Unit filename="village/village.cpp" />
+		<Unit filename="village/village.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

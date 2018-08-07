@@ -1,0 +1,786 @@
+# depslib dependency file v1.0
+1522197541 source:c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\main.cpp
+	<iostream>
+	<limits>
+	<ctime>
+	<cstdlib>
+	<vector>
+	<windows.h>
+	<stdlib.h>
+	"Josh/Globals.h"
+	"Josh/cave_class.h"
+	"Josh/cave_constructors.h"
+	"Josh/Biome_Class.h"
+	"Josh/Prototypes.h"
+	"Josh/Biome_Constructors.h"
+	"Josh/displayMap.h"
+	"Josh/moving.h"
+	"Josh/moveOptions.h"
+	"Josh/playerView.h"
+	"Josh/cave.h"
+
+1518564974 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\globals.h
+
+1519766715 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\prototypes.h
+
+1521402315 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\biome_class.h
+
+1521402519 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\biome_constructors.h
+
+1522196494 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\displaymap.h
+
+1522197976 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\moving.h
+	<conio.h>
+
+1522195892 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\moveoptions.h
+
+1522196590 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\playerview.h
+
+1522198046 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave.h
+	"displayMap.h"
+
+1520975847 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave_class.h
+
+1520975922 c:\users\jmfos\documents\codeblocks\start\test3\return of achimel\josh\cave_constructors.h
+
+1533416444 source:c:\users\jmfos\documents\github\fantasy-text-adventure\main.cpp
+	"startMap/startMap.h"
+	"mapSizes/mapSizes.h"
+
+1526408777 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\globals.h
+
+1529170321 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cave_class.h
+	<string>
+	<memory>
+	<cstdlib>
+	"../Food.h"
+
+1528329310 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cave_constructors.h
+	<conio.h>
+
+1529176406 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\biome_class.h
+	"mapSizes.h"
+	"cave_Class.h"
+	<vector>
+
+1529167518 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\prototypes.h
+
+1528329087 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\biome_constructors.h
+
+1529176618 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\displaymap.h
+
+1529178311 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\moving.h
+
+1529178644 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\moveoptions.h
+
+1529177788 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\playerview.h
+
+1529180944 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cave.h
+
+1528328686 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\map.h
+
+1529167518 source:c:\users\jmfos\documents\github\fantasy-text-adventure\josh\stamina.cpp
+	<iostream>
+	"Stamina.h"
+
+1529167518 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\stamina.h
+
+1526408777 D
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1526505967 h>
+
+1527391668 source:c:\users\jcoch\documents\github\fantasy-text-adventure\josh\stamina.cpp
+	<iostream>
+	"Stamina.h"
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\stamina.h
+	<memory>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\main.cpp
+	"startMap/startMap.h"
+	"mapSizes/mapSizes.h"
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\globals.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave_class.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave_constructors.h
+	<conio.h>
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\biome_class.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\prototypes.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\biome_constructors.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\displaymap.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\moving.h
+	<conio.h>
+	<iomanip>
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\moveoptions.h
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\playerview.h
+
+1527195634 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\cave.h
+	"displayMap.h"
+
+1527391668 c:\users\jcoch\documents\github\fantasy-text-adventure\josh\map.h
+
+1527391668 e412cfd4f9ac32881605ce966f843ce622bb8
+
+1529170377 c:\users\jmfos\documents\github\fantasy-text-adventure\food.h
+	<string>
+
+1529170347 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\biome_class.cpp
+	"../Josh/cave_class.h"
+	"../Josh/Biome_Class.h"
+	"../Josh/mapSizes.h"
+	<iostream>
+	<ctime>
+
+1530141928 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\mapsizes.h
+
+1529174726 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\cave_class.cpp
+	"../Josh/cave_class.h"
+	<iostream>
+	<conio.h>
+
+1529174387 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cursordefine.h
+	<windows.h>
+
+1529177177 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\cursorset.cpp
+	<windows.h>
+	"cursorSet.h"
+
+1529170321 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food.cpp
+	"Food.h"
+	<cstdlib>
+
+1529175472 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\startmap.h
+
+1529177509 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\startmap.cpp
+	"startMap.h"
+	"Stamina.h"
+	"Biome_Class.h"
+	"playerView.h"
+	"displayMap.h"
+	"moving.h"
+	"cursorSet.h"
+	"entityCheck.h"
+	<iostream>
+	<iomanip>
+	<windows.h>
+	<ctime>
+
+1529176714 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\cursorset.h
+
+1529179145 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\entitycheck.h
+
+1529177950 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\playerview.cpp
+	"playerView.h"
+	"cursorSet.h"
+	"stamina.h"
+	"Biome_Class.h"
+	<iostream>
+	<windows.h>
+
+1529178172 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\displaymap.cpp
+	"mapSizes.h"
+	"cursorSet.h"
+	"../rlutil.h"
+	<iostream>
+
+1529178779 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\moving.cpp
+	"moving.h"
+	"moveOptions.h"
+	"Stamina.h"
+	"cursorSet.h"
+	<conio.h>
+	<windows.h>
+	<iomanip>
+	<iostream>
+
+1529178820 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\moveoptions.cpp
+	"moveOptions.h"
+	"mapSizes.h"
+
+1529180727 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\entitycheck.cpp
+	"entityCheck.h"
+	"Biome_Class.h"
+	"getTreasure.h"
+	"village.h"
+	"cave.h"
+
+1529180616 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\gettreasure.h
+
+1529180969 c:\users\jmfos\documents\github\fantasy-text-adventure\josh\village.h
+
+1529181081 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\cave.cpp
+	"cave.h"
+	"Biome_Class.h"
+	"displayMap.h"
+	<iostream>
+	<windows.h>
+
+1529181191 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\gettreasure.cpp
+	"getTreasure.h"
+	<string>
+	<cstdlib>
+
+1529181324 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cpp\village.cpp
+	"village.h"
+	"cursorSet.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+
+1530143388 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+	"Biome_Class.h"
+	"../Josh/mapSizes.h"
+	"../cave_Class/cave_class.h"
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1530144038 c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.h
+	"../Food/Food.h"
+	<string>
+	<memory>
+	<cstdlib>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
+	<string>
+
+1533416469 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+	"../mapSizes/mapSizes.h"
+	"../cave_Class/cave_class.h"
+	<vector>
+
+1533412269 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
+	"cave.h"
+	"../Biome_Class/Biome_Class.h"
+	"../displayMap/displayMap.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.h
+
+1530144280 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
+
+1533411710 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+	"cave_class.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<conio.h>
+	<windows.h>
+
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
+	"cursorSet.h"
+	<windows.h>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
+
+1533416461 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+	"../mapSizes/mapSizes.h"
+	"../cursorSet/cursorSet.h"
+	"../mapSizes/mapSizes.h"
+	<iostream>
+	<windows.h>
+
+1530141774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+	"entityCheck.h"
+	"../Biome_Class/Biome_Class.h"
+	"../getTreasure/getTreasure.h"
+	"../village/village.h"
+	"../cave/cave.h"
+
+1530141794 c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.h
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.h
+
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
+	"Food.h"
+	<cstdlib>
+
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+	"getTreasure.h"
+	<string>
+	<cstdlib>
+
+1533416444 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
+	"moveOptions.h"
+	"../mapSizes/mapSizes.h"
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
+
+1533414242 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
+	"moving.h"
+	"../moveOptions/moveOptions.h"
+	"../Stamina/Stamina.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<iomanip>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.h
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.h
+
+1532022203 source:c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.cpp
+	"playerView.h"
+	"../cursorSet/cursorSet.h"
+	"../Stamina/Stamina.h"
+	"../Biome_Class/Biome_Class.h"
+	"../charOutput/charOutput.h"
+	<iostream>
+	<windows.h>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.h
+
+1529288716 source:c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.cpp
+	"Stamina.h"
+	<iostream>
+
+1533414260 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+	"startMap.h"
+	"../Stamina/Stamina.h"
+	"../Biome_Class/Biome_Class.h"
+	"../playerView/playerView.h"
+	"../displayMap/displayMap.h"
+	"../moving/moving.h"
+	"../cursorSet/cursorSet.h"
+	"../entityCheck/entityCheck.h"
+	"../title/title.h"
+	<iostream>
+	<iomanip>
+	<ctime>
+	<windows.h>
+
+1529288716 c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.h
+
+1533412269 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
+	"village.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<windows.h>
+
+1533415401 source:c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.cpp
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<windows.h>
+
+1532018669 c:\users\jmfos\documents\github\fantasy-text-adventure\optionselector\optionselector.h
+
+1532022152 source:c:\users\jmfos\documents\github\fantasy-text-adventure\charoutput\charoutput.cpp
+	<iostream>
+	<windows.h>
+
+1532022140 c:\users\jmfos\documents\github\fantasy-text-adventure\charoutput\charoutput.h
+
+1533414195 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.cpp
+	"clearGaps.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<iomanip>
+
+1533409552 c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
+
+1533414772 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
+	"title.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<windows.h>
+	<conio.h>
+
+1533414195 c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.h
+
+1530141928 c:\users\jmfos\documents\github\fantasy-text-adventure\mapsizes\mapsizes.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+	"Biome_Class.h"
+	"../mapSizes/mapSizes.h"
+	"../cave_Class/cave_class.h"
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+	"../mapSizes/mapSizes.h"
+	"../cave_Class/cave_class.h"
+	<vector>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\mapsizes\mapsizes.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\cave_class\cave_class.h
+	"../Food/Food.h"
+	<string>
+	<memory>
+	<cstdlib>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.h
+	<string>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cave\cave.cpp
+	"cave.h"
+	"../Biome_Class/Biome_Class.h"
+	"../displayMap/displayMap.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\cave\cave.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\displaymap\displaymap.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\cursorset\cursorset.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\optionselector\optionselector.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+	"cave_class.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<conio.h>
+	<windows.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\charoutput\charoutput.cpp
+	<iostream>
+	<windows.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cleargaps\cleargaps.cpp
+	"clearGaps.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<iomanip>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
+	"cursorSet.h"
+	<windows.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+	"../mapSizes/mapSizes.h"
+	"../cursorSet/cursorSet.h"
+	"../mapSizes/mapSizes.h"
+	<iostream>
+	<windows.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
+	"Food.h"
+	<cstdlib>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+	"getTreasure.h"
+	<string>
+	<cstdlib>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\startmap\startmap.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
+	"moveOptions.h"
+	"../mapSizes/mapSizes.h"
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\moving\moving.cpp
+	"moving.h"
+	"../moveOptions/moveOptions.h"
+	"../Stamina/Stamina.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<iomanip>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\moving\moving.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\stamina\stamina.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\optionselector\optionselector.cpp
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<windows.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\playerview\playerview.cpp
+	"playerView.h"
+	"../cursorSet/cursorSet.h"
+	"../Stamina/Stamina.h"
+	"../Biome_Class/Biome_Class.h"
+	"../charOutput/charOutput.h"
+	<iostream>
+	<windows.h>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\playerview\playerview.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\charoutput\charoutput.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\stamina\stamina.cpp
+	"Stamina.h"
+	<iostream>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+	"startMap.h"
+	"../Stamina/Stamina.h"
+	"../Biome_Class/Biome_Class.h"
+	"../playerView/playerView.h"
+	"../displayMap/displayMap.h"
+	"../moving/moving.h"
+	"../cursorSet/cursorSet.h"
+	"../entityCheck/entityCheck.h"
+	"../title/title.h"
+	<iostream>
+	<iomanip>
+	<ctime>
+	<windows.h>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.h
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.cpp
+	"title.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<windows.h>
+	<conio.h>
+
+1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\village\village.cpp
+	"village.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<iomanip>
+	<conio.h>
+	<windows.h>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\village\village.h
+
+1533669437 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+	"entityCheck.h"
+	"../Biome_Class/Biome_Class.h"
+	"../getTreasure/getTreasure.h"
+	"../village/village.h"
+	"../cave/cave.h"
+	"../Player_Combat_Weapon/include/Player_Class.h"
+	"../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
+	"../displayMap/displayMap.h"
+
+1533667853 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+	<iostream>
+	<limits>
+	<conio.h>
+	<vector>
+	"Moves_Class.h"
+	"Armor_Class.h"
+	"Food_Class.h"
+	"Monster.hpp"
+	"Weapon_Class.h"
+	"rlutil.h"
+
+1533668065 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\weapon_class.h
+	<iostream>
+	<string>
+	"Loot_Class.h"
+
+1533660276 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\loot_class.h
+
+1533667750 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\moves_class.h
+	<iostream>
+	<string>
+
+1533668244 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
+	<iostream>
+	<string>
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\food_class.h
+	<iostream>
+	"Loot_Class.h"
+
+1533669885 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+	<iostream>
+	<conio.h>
+	<iomanip>
+	<limits>
+	<windows.h>
+	<memory>
+	"../include/Chance_To_Run.h"
+	"../include/Player_Class.h"
+	"../include/Monster.hpp"
+	"../include/Chance_Calc_Interface.h"
+	"../include/Damage_Calculator.h"
+	"../include/Weapon_Class.h"
+	"../include/Menu_Function.h"
+	"../include/Check_Inventory_Functions.h"
+	"../include/Show_Health.h"
+	"../include/Loading.h"
+	"../include/rlutil.h"
+
+1533667729 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\monster.hpp
+	<iostream>
+	<iomanip>
+	<string>
+	<vector>
+	"Moves_Class.h"
+
+1533667522 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
+	"Player_Class.h"
+	"Moves_Class.h"
+	"Monster.hpp"
+
+1533660276 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+	<iostream>
+	<memory>
+	"Monster.hpp"
+
+1533667660 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
+	<iostream>
+	<iomanip>
+	<limits>
+	"rlutil.h"
+
+1533668428 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_to_run.h
+
+1533660276 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\check_inventory_functions.h
+	"Player_Class.h"
+	"Monster.hpp"
+
+1533667921 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\show_health.h
+	<iostream>
+	<iomanip>
+	"Player_Class.h"
+	"Monster.hpp"
+	"rlutil.h"
+
+1533667623 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\loading.h
+	<iostream>
+	"rlutil.h"
+
+1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1533668244 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
+	"../include/Armor_Class.h"
+
+1533667352 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"../include/Chance_Calc_Interface.h"
+	"../include/Moves_Class.h"
+	"../include/Player_Class.h"
+
+1533668428 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
+	"../include/Chance_To_Run.h"
+	<stdlib.h>
+	<time.h>
+
+1533667550 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
+	<iostream>
+	"../include/rlutil.h"
+	"../include/Check_Inventory_Functions.h"
+	"../include/Show_Health.h"
+
+1533668757 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+	"../include/Combat_Event_Prototype.h"
+
+1533667566 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+	<iostream>
+	<fstream>
+	<map>
+	"../include/Monster.hpp"
+	"../include/Player_Class.h"
+	"../include/Weapon_Class.h"
+	"../include/Damage_Calculator.h"
+	"../include/Moves_Class.h"
+	"../include/Armor_Class.h"
+
+1533667577 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\food_class.cpp
+	"../include/Food_Class.h"
+
+1533667630 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\loading.cpp
+	"../include/Loading.h"
+
+1533667639 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\loot_class.cpp
+	"../include/Loot_Class.h"
+
+1533667671 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\menu_functions.cpp
+	"../include/Menu_Function.h"
+
+1533667729 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\monster.cpp
+	"../include/Monster.hpp"
+
+1533667750 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
+	"../include/Moves_Class.h"
+
+1533667880 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+	"../include/Player_Class.h"
+
+1533667921 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
+	"../include/Show_Health.h"
+
+1533667930 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\sword_class.cpp
+	"../include/Sword_Class.h"
+
+1533667939 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\sword_class.h
+	"Weapon_Class.h"
+
+1533668065 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
+	"../include/Weapon_Class.h"
+
