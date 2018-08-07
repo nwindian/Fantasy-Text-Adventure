@@ -7,7 +7,7 @@ Moves_Class::Moves_Class()
 {
     //ctor
     damage = 0;
-    name = " ";
+    name = "NULLMAN";
     evasiveness = 100;
 }
 

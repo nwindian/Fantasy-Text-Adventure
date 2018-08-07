@@ -24,15 +24,12 @@ double check_type(std::string att, std::string def)
     types["LE"] = .5; types["LP"] = 1.0; types["LF"] = 1.0; types["LI"] = 1.0; types["LS"] = .5; types["LD"] = 1.0; types["LH"] = 1.0; types["LL"] = 1.0; types["LB"] = 2.0; types["LW"] = 2.0;
     types["BE"] = 1.0; types["BP"] = .5; types["BF"] = 1.0; types["BI"] = 1.0; types["BS"] = 1.0; types["BD"] = 1.0; types["BH"] = .5; types["BL"] = .5; types["BB"] = 1.0; types["BW"] = 1.0;
     types["WE"] = 2.0; types["WP"] = .5; types["WF"] = 2.0; types["WI"] = 1.0; types["WS"] = 1.0; types["WD"] = 1.0; types["WH"] = 1.0; types["WL"] = .5; types["WB"] = 1.0; types["WW"] = 1.0;
-
     return types[type];
 }
 
 int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class & move)
 {
     double type = check_type(move.getType(), enemy.getType());
-
-    //add resistance and type to total damage;
     return (((player.getStrength() + weapon.getDmg()) / 10) + move.getDamage()) * type;
 }
 
@@ -42,7 +39,7 @@ int dmg_calc(Player_Class & player, Monster & enemy, std::shared_ptr<Armor_Class
     double type = check_type(enemy.getType(), armor->getType());
     int damage = (enemy.getStrength() - ((armor->getArmor()/2))) * type;
     damage == 0 ? damage = 1 : damage = damage;
-    return damage;;
+    return damage;
 }
 
 

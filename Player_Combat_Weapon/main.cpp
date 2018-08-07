@@ -26,8 +26,8 @@ int main()
     Food_Class fo(5, "pizza");
     Armor_Class armor(2, "Cool Armor", "I");
     Armor_Class armorr(2, "Cooler Armor", "I");
-    Armor_Class armorrr(2, "Coolest Armor", "I");
-    Monster enemy("fish", 1, 100, 3, 3,1,3,3,"I");
+    Armor_Class armorrr(2, "Coolest Armor", "W");
+    Monster enemy("fish", 1, 100, 3, 3,1,3,3,"F");
     Player_Class player("Joe",2,2,100,1,2,1);
     //player.LevelUP(player);
 //    rlutil::cls();
