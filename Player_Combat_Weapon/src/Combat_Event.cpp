@@ -206,9 +206,20 @@ bool combat(Player_Class & play,char Biome)
     std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
     std::shared_ptr<Armor_Class> currentArmor(new Armor_Class);
     rlutil::setColor(6);
+    if(play.weaponInventory.size() == 0)
+    {
+        Weapon_Class default(1,'N',"Fists");
+        play.weaponInventory.push_back(default);
+    }
+    if(play.armorInventory.size() == 0)
+    {
+        Armor_Class defaultA(1,"Your Clothes" , "N");
+        play.weaponInventory.push_back(defaultA);
+    }
+    std::cout << "1) Fists" << std::endl;
     for (unsigned int i = 0; i < play.weaponInventory.size(); ++i)
     {
-        std::cout << i + 1 << ") " << play.weaponInventory[i].getName() << std::endl;
+        std::cout << i + 2 << ") " << play.weaponInventory[i].getName() << std::endl;
     }
     //color
     rlutil::resetColor();
