@@ -30,6 +30,7 @@ class Biome
         std::vector<Cave> caves;
         char getEntity(int, int);
         void entityMapPop(int);
+        char getBiome() { return biome; }
         int getColor() { return color; }
 };
 
