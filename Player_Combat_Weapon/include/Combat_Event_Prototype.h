@@ -1,15 +1,28 @@
 #ifndef COMBAT_EVENT_PROTOTYPE
 #define COMBAT_EVENT_PROTOTYPE
 #include <iostream>
+#include <conio.h>
+#include <iomanip>
+#include <limits>
+#include <windows.h>
 #include <memory>
-#include "Weapon_Class.h"
-#include "Player_Class.h"
-#include "Monster.hpp"
-#include "Armor_Class.h"
+#include "../include/Player_Class.h"
+#include "../include/Monster.hpp"
+#include "../include/Chance_Calc_Interface.h"
+#include "../include/Damage_Calculator.h"
+#include "../include/Chance_Calc_Interface.h"
+#include "../include/Weapon_Class.h"
+#include "../include/Menu_Function.h"
+#include "../include/Chance_To_Run.h"
+#include "../include/Check_Inventory_Functions.h"
+#include "../include/Show_Health.h"
+#include "../include/Loading.h"
+#include "../include/rlutil.h"
 
-Weapon_Class *getWeapon(Player_Class & );
+Weapon_Class getWeapon(Player_Class & );
 bool whosQuicker(Player_Class & , Monster &);
 int playerBP(Player_Class & , Monster &, int);
-void combat(Player_Class & ,Monster & );
+void combat(Player_Class &, char );
 void monsterBP(Monster & , Player_Class &, int&, int&, std::shared_ptr<Armor_Class>);
+std::unique_ptr<Monster> spawnMonster(char);
 #endif // COMBAT_EVENT_PROTOTYPE

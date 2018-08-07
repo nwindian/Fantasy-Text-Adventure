@@ -1,7 +1,7 @@
 #ifndef FOOD_CLASS_H
 #define FOOD_CLASS_H
 #include <iostream>
-#include <Loot_Class.h>
+#include "Loot_Class.h"
 
 
 class Food_Class : public Loot_Class

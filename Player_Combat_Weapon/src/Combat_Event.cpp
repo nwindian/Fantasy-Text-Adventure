@@ -1,22 +1,4 @@
-#include <iostream>
-#include <conio.h>
-#include <iomanip>
-#include <limits>
-#include <windows.h>
-#include <memory>
-#include "Upper_Bound.h"
-#include "Player_Class.h"
-#include "Monster.hpp"
-#include "Chance_Calc_Interface.h"
-#include "Damage_Calculator.h"
-#include "Chance_Calc_Interface.h"
-#include "Weapon_Class.h"
-#include "rlutil.h"
-#include "Menu_Function.h"
-#include "Chance_To_Run.h"
-#include "Check_Inventory_Functions.h"
-#include "Show_Health.h"
-#include "Loading.h"
+#include "../include/Combat_Event_Prototype.h"
 
 
 
@@ -192,9 +174,18 @@ int MonsterBP(Monster & enemy, Player_Class & player, int & currentHealth, int &
     }
 
 }
-//Main function for Combat.
-void combat(Player_Class & play,Monster & enem)
+std::unique_ptr<Monster> spawnMonster(char Biome)
 {
+    if(Biome == 'F')
+    {
+
+    }
+}
+//Main function for Combat.
+void combat(Player_Class & play,char Biome)
+{
+    //std::unique_ptr<Monster> = spawnMonster(Biome);
+    Monster enem("Fish", 1, 10,2,2,0,2,2, "W");
     rlutil::setColor(2);
     rlutil::saveDefaultColor();
     int x = 40;
@@ -552,3 +543,4 @@ void combat(Player_Class & play,Monster & enem)
         }
     }
 }
+
