@@ -11,13 +11,12 @@ using std::cin;
 Player_Class::Player_Class()
 {
     name = "Michael";
-    strength = 0;
-    speed = 0;
-    health = 0;
+    strength = 1;
+    speed = 1;
+    health = 10;
     magic = 0;
     thirst = 0;
     level = 1;
-    resistance = '0';
 }
 //Overloaded struct for Player class
 
