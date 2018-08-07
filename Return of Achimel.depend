@@ -311,7 +311,7 @@
 	<iostream>
 	<windows.h>
 
-1533670496 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1533674622 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -320,6 +320,7 @@
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	"../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
 	"../displayMap/displayMap.h"
+	"../player/player.h"
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
 
@@ -421,7 +422,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
 
-1533671618 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
+1533675545 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
 	"title.h"
 	"../cursorSet/cursorSet.h"
 	"../player/player.h"
@@ -916,7 +917,7 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 
-1533670496 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1533674064 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	"../include/Combat_Event_Prototype.h"
 
 1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
@@ -963,11 +964,13 @@
 1533671628 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	"../include/Player_Class.h"
 
-1533671478 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
+1533675533 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
+	"player.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
 
-1533671619 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
+1533675483 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"
+	<vector>
 
 1533671900 c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"

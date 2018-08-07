@@ -18,7 +18,7 @@ void entityCheck(Biome& biome, int x, int y)
             getTreasure();
             break;
         case 'M':
-            combat(player::player, biome.getBiome());
+            combat(player::players, biome.getBiome());
             displayMap(biome.map, biome.getColor());
             //monster stuff
             break;

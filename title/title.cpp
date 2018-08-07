@@ -33,7 +33,7 @@ void title()
                 std::string name;
                 std::cout << "Enter player name: ";
                 std::cin >> name;
-                player::player.setName(name);
+                player::players.setName(name);
                 return;
             }
         }
@@ -48,7 +48,7 @@ void title()
                 std::string name;
                 std::cout << "Enter player name: ";
                 std::cin >> name;
-                player::player.setName(name);
+                player::players.setName(name);
                 return;
             }
         }
