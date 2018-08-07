@@ -601,7 +601,7 @@
 
 1533664837 c:\users\jcoch\documents\github\fantasy-text-adventure\village\village.h
 
-1533666947 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1533669437 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -609,6 +609,7 @@
 	"../cave/cave.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	"../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
+	"../displayMap/displayMap.h"
 
 1533667853 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
@@ -641,7 +642,7 @@
 	<iostream>
 	"Loot_Class.h"
 
-1533668566 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1533669885 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -736,7 +737,7 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 
-1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1533668757 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	"../include/Combat_Event_Prototype.h"
 
 1533667566 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp

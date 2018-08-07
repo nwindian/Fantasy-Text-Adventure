@@ -6,7 +6,7 @@
 #include <limits>
 #include <windows.h>
 #include <memory>
-//#include "../include/Chance_To_Run.h"
+#include "../include/Chance_To_Run.h"
 #include "../include/Player_Class.h"
 #include "../include/Monster.hpp"
 #include "../include/Chance_Calc_Interface.h"
@@ -21,7 +21,7 @@
 Weapon_Class getWeapon(Player_Class & );
 bool whosQuicker(Player_Class & , Monster &);
 int playerBP(Player_Class & , Monster &, int);
-void combat(Player_Class &, char);
+bool combat(Player_Class &, char);
 void monsterBP(Monster & , Player_Class &, int&, int&, std::shared_ptr<Armor_Class>);
 std::unique_ptr<Monster> spawnMonster(char);
 #endif // COMBAT_EVENT_PROTOTYPE

@@ -1,8 +1,6 @@
 #include "../include/Combat_Event_Prototype.h"
 
 
-
-
 Weapon_Class getWeapon(Player_Class & play)
 {
     rlutil::setColor(6);
@@ -182,10 +180,11 @@ std::unique_ptr<Monster> spawnMonster(char Biome)
     }
 }
 //Main function for Combat.
-void combat(Player_Class & play,char Biome)
+bool combat(Player_Class & play,char Biome)
 {
     //std::unique_ptr<Monster> = spawnMonster(Biome);
-    Monster enem("Fish", 1, 10,2,2,0,2,2, "W");
+    bool ifwin = false;
+    Monster enem("Fish", 1, 10,2,1000,0,2,2, "W");
     rlutil::setColor(2);
     rlutil::saveDefaultColor();
     int x = 40;
@@ -308,7 +307,7 @@ void combat(Player_Class & play,char Biome)
         }
     }
     //Weapon_Class currentWeapon = getWeapon(play);
-    while (currentHealth > 0 && currentEHealth > 0 && repeatFromRun == true)
+    while (ifwin == false && repeatFromRun == true)
     {
         repeatFromB = true;
         while (repeatFromB == true)
@@ -361,6 +360,7 @@ void combat(Player_Class & play,char Biome)
                             std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
                             repeatFromB = false;
                             loading_Six();
+                            return true;
                         }
                         else
                         {
@@ -371,8 +371,11 @@ void combat(Player_Class & play,char Biome)
                             updateHealth(play,enem,currentHealth,currentEHealth);
                             if (currentHealth < 1)
                             {
+                                rlutil::locate(1,10);
                                 std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
-                                repeatFromB = false;
+                                rlutil::msleep(2000);
+                                rlutil::cls();
+                                return false;
                             }
                         }
                     repeatFromB = false;
@@ -394,6 +397,7 @@ void combat(Player_Class & play,char Biome)
                             rlutil::locate(1,5); std::cout << "You have been defeated!! Not entirely surprising!!" << std::endl;
                             repeatFromB = false;
                             rlutil::msleep(4000);
+                            return false;
                         }
                         else
                         {
@@ -412,6 +416,7 @@ void combat(Player_Class & play,char Biome)
                                 std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
                                 repeatFromB = false;
                                 loading_Six();
+                                return true;
                             }
                             repeatFromB = false;
                         }
