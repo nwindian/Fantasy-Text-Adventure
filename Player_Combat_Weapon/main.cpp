@@ -46,6 +46,7 @@ int main()
     player.weaponInventory.push_back(axe);
     player.weaponInventory.push_back(God);
    // player.LevelUP(player);
-    combat(player,enemy);
+   char f = 'F';
+    combat(player,f );
     return 0;
 }

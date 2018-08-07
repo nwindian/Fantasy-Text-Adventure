@@ -22,7 +22,7 @@
 Weapon_Class getWeapon(Player_Class & );
 bool whosQuicker(Player_Class & , Monster &);
 int playerBP(Player_Class & , Monster &, int);
-void combat(Player_Class &, char );
+void combat(Player_Class &, char);
 void monsterBP(Monster & , Player_Class &, int&, int&, std::shared_ptr<Armor_Class>);
 std::unique_ptr<Monster> spawnMonster(char);
 #endif // COMBAT_EVENT_PROTOTYPE
