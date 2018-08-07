@@ -208,13 +208,13 @@ bool combat(Player_Class & play,char Biome)
     rlutil::setColor(6);
     if(play.weaponInventory.size() == 0)
     {
-        Weapon_Class default(1,'N',"Fists");
-        play.weaponInventory.push_back(default);
+        Weapon_Class defaultt(1,'N',"Fists");
+        play.weaponInventory.push_back(defaultt);
     }
     if(play.armorInventory.size() == 0)
     {
         Armor_Class defaultA(1,"Your Clothes" , "N");
-        play.weaponInventory.push_back(defaultA);
+        play.armorInventory.push_back(defaultA);
     }
     std::cout << "1) Fists" << std::endl;
     for (unsigned int i = 0; i < play.weaponInventory.size(); ++i)

@@ -510,7 +510,7 @@
 	<iostream>
 	<windows.h>
 
-1533664837 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
+1533670780 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
 	<cstdlib>
 
@@ -606,7 +606,7 @@
 
 1533670779 c:\users\jcoch\documents\github\fantasy-text-adventure\village\village.h
 
-1533669437 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1533673997 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -615,6 +615,7 @@
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	"../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
 	"../displayMap/displayMap.h"
+	"../player/player.h"
 
 1533671521 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
@@ -647,7 +648,7 @@
 	<iostream>
 	"Loot_Class.h"
 
-1533669885 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1533670780 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	<iostream>
 	<conio.h>
 	<iomanip>
