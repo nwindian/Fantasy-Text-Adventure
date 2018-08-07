@@ -1,5 +1,6 @@
 #include "title.h"
 #include "../cursorSet/cursorSet.h"
+#include "../player/player.h"
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
@@ -28,6 +29,11 @@ void title()
         {
             if (getch() == 13)
             {
+                system("CLS");
+                std::string name;
+                std::cout << "Enter player name: ";
+                std::cin >> name;
+                player::player.setName(name);
                 return;
             }
         }
@@ -38,6 +44,11 @@ void title()
         {
             if (getch() == 13)
             {
+                system("CLS");
+                std::string name;
+                std::cout << "Enter player name: ";
+                std::cin >> name;
+                player::player.setName(name);
                 return;
             }
         }
