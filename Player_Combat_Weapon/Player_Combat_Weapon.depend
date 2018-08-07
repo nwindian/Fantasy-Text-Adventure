@@ -185,7 +185,7 @@
 	"Moves_Class.h"
 	"Food_Class.h"
 
-1533660276 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1533666647 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
@@ -197,7 +197,7 @@
 	"Monster.hpp"
 	"rlutil.h"
 
-1533665149 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1533666647 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -208,7 +208,6 @@
 	"../include/Monster.hpp"
 	"../include/Chance_Calc_Interface.h"
 	"../include/Damage_Calculator.h"
-	"../include/Chance_Calc_Interface.h"
 	"../include/Weapon_Class.h"
 	"../include/Menu_Function.h"
 	"../include/Chance_To_Run.h"
@@ -303,4 +302,7 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1533665309 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
+	"Chance_To_Run.h"
 

@@ -30,7 +30,7 @@ Player_Class::Player_Class()
 }
 //Overloaded struct for Player class
 
-Player_Class::Player_Class(std::string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
+Player_Class::Player_Class(std::string namee, int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
 {
     name = namee;
     strength = strengthh;

@@ -69,6 +69,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Armor_Class.cpp" />
 		<Unit filename="src/Chance_Calculator.cpp" />
+		<Unit filename="src/Chance_To_Run.cpp" />
 		<Unit filename="src/Check_Inventory_Functions.cpp" />
 		<Unit filename="src/Combat_Event.cpp" />
 		<Unit filename="src/Damage_Calculator.cpp" />

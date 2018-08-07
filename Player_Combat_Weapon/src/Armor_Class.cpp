@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Armor_Class.h"
+#include "../include/Armor_Class.h"
 
 Armor_Class::Armor_Class()
 {
