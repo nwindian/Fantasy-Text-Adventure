@@ -1,4 +1,4 @@
-#include "Loot_Class.h"
+#include "../include/Loot_Class.h"
 
 Loot_Class::Loot_Class()
 {

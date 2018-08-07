@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <map>
-#include "Monster.hpp"
-#include "Player_Class.h"
-#include "Weapon_Class.h"
-#include "Damage_Calculator.h"
-#include "Moves_Class.h"
-#include "Armor_Class.h"
+#include "../include/Monster.hpp"
+#include "../include/Player_Class.h"
+#include "../include/Weapon_Class.h"
+#include "../include/Damage_Calculator.h"
+#include "../include/Moves_Class.h"
+#include "../include/Armor_Class.h"
 
 
 double check_type(std::string att, std::string def)

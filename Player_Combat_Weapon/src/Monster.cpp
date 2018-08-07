@@ -1,6 +1,5 @@
-#include <iostream>
-#include <iomanip>
-#include "Monster.hpp"
+
+#include "../include/Monster.hpp"
 // Initialize monster level to player level
 Monster::Monster(std::string Mname, int playerLevel, int health, int speed, int strength, int magic, int weight, int evasive, std::string typ)
 {

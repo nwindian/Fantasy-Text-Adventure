@@ -1,4 +1,4 @@
-#include "Sword_Class.h"
+#include "../include/Sword_Class.h"
 
 Sword_Class::Sword_Class()
 {

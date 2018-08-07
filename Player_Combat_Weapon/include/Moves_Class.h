@@ -1,6 +1,7 @@
 #ifndef MOVES_CLASS_H
 #define MOVES_CLASS_H
-
+#include <iostream>
+#include <string>
 
 class Moves_Class
 {

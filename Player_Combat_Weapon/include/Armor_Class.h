@@ -1,5 +1,7 @@
 #ifndef ARMOR_CLASS_H
 #define ARMOR_CLASS_H
+#include <iostream>
+#include <string>
 
 class Armor_Class
 {

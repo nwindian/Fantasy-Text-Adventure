@@ -1,10 +1,15 @@
 #ifndef PLAYER_CLASS_H
 #define PLAYER_CLASS_H
-#include "Weapon_Class.h"
+#include <iostream>
+#include <limits>
+#include <conio.h>
 #include <vector>
 #include "Moves_Class.h"
 #include "Armor_Class.h"
 #include "Food_Class.h"
+#include "Monster.hpp"
+#include "Weapon_Class.h"
+#include "rlutil.h"
 
 class Player_Class
 {

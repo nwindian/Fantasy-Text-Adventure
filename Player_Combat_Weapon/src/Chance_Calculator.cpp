@@ -1,9 +1,9 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include "../include/Chance_Calc_Interface.h"
+#include "../include/Moves_Class.h"
 #include "../include/Player_Class.h"
-#include "Chance_Calc_Interface.h"
-#include "Moves_Class.h"
 bool chance(Player_Class & player,Moves_Class & mov)
 {
     srand(time(NULL));

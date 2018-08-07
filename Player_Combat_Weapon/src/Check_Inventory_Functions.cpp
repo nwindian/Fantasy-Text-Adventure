@@ -1,7 +1,7 @@
 #include <iostream>
-#include "rlutil.h"
-#include "Check_Inventory_Functions.h"
-#include "Show_Health.h"
+#include "../include/rlutil.h"
+#include "../include/Check_Inventory_Functions.h"
+#include "../include/Show_Health.h"
 
 
 int getInventory(Player_Class & player, Monster & enemy, int h, int e)

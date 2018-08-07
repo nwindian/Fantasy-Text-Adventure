@@ -1,4 +1,6 @@
-#include "Chance_To_Run.h"
+#include "../include/Chance_To_Run.h"
+#include <stdlib.h>
+#include <time.h>
 bool Chance_To_Run()
 {
     int random;

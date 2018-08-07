@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "../include/Armor_Class.h"
 
 Armor_Class::Armor_Class()

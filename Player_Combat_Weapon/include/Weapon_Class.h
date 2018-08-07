@@ -1,5 +1,7 @@
 #ifndef WEAPON_CLASS_H
 #define WEAPON_CLASS_H
+#include <iostream>
+#include <string>
 #include "Loot_Class.h"
 
 

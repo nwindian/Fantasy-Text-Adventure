@@ -1,5 +1,7 @@
 #ifndef MONSTER_HPP
 #define MONSTER_HPP
+#include <iostream>
+#include <iomanip>
 #include <string>
 #include <vector>
 #include "Moves_Class.h"
