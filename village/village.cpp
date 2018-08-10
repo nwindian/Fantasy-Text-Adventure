@@ -51,13 +51,13 @@ void village()
                         case 3:
                             break;
                         case 4:
+                            clearGaps();
                             return;
                     }
                     break;
                 }
             case 1:
-                cursorSet(0, 25);
-                cout << setw(30) << " ";
+                clearGaps();
                 return;
                 break;
         }

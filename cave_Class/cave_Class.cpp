@@ -10,43 +10,40 @@
 
 Cave::Cave()
 {
-    depth = rand() % 10 + 6;
+    depth = rand() % 5 + 6;
     theCave = new cavePiece[depth]();
 }
 
 void Cave::display()
 {
    clearGaps();
-   int location = 1;
+   int location = 0;
    int x = 0;
-   for (int i = 0; i < depth; ++i)
+   bool item;
+   for (int j = 0; j <= location; ++j)
     {
-        if (i == 0)
+        if (j != location)
         {
-
-           for (int i = 0; i <= location-1; ++i)
-            {
-                if (i != location-1)
-                {
-                    cursorSet(101, 1 + i);
-                    std::cout << "[ ]";
-                }
-                else
-                {
-                    cursorSet(101, 1 + i);
-                    std::cout << "[@]";
-                }
-
-            }
-            cursorSet(0, 25);
-            std::cout << "You enter the cave and slowly your eyes adjust. ";
-            x =48;
+            cursorSet(101, 1 + j);
+            std::cout << "[ ]";
         }
-        cursorSet(x, 25);
-        if (theCave[i].loot != "nothing")
+        else
         {
-            std::cout << "There " << theCave[i].loot << " on the ground." << std::endl;
-            std::cout << "    Pick up " << theCave[i].loot << std::endl;
+            cursorSet(101, 1 + j);
+            std::cout << "[@]";
+        }
+
+    }
+    cursorSet(0, 25);
+    std::cout << "You enter the cave and slowly your eyes adjust. ";
+    x = 48;
+   for (; location < depth;)
+    {
+        cursorSet(x, 25);
+        if (theCave[location].loot != "nothing")
+        {
+            std::cout << "There " << theCave[location].loot << " on the ground." << std::endl;
+            std::cout << "    Pick up " << theCave[location].loot << std::endl;
             std::cout << "    Dive deeper into the cave" << std::endl;
             std::cout << "    Leave the cave" << std::endl;
             switch (optionSelector(3, 0, 26))
@@ -56,13 +53,16 @@ void Cave::display()
                     clearGaps();
                     cursorSet(0, 25);
                     std::cout << "Loot has been put into your inventory. ";
-                    x =39;
+                    theCave[location].loot = "nothing";
+                    item = false;
+                    x = 39;
                     //add
                     break;
                 case 1:
                     clearGaps();
                     cursorSet(0, 25);
                     std::cout << "You dive deeper into the darkness. ";
+                    item = true;
                     x = 35;
                     ++location;
                     break;
@@ -77,8 +77,11 @@ void Cave::display()
         }
         else
         {
-            std::cout << std::setw(30) << std::left << "There is nothing here." << std::endl;
-            std::cout << "    Dive deeper into the cave" << std::endl;
+            if (item)
+            {
+                std::cout << std::setw(30) << std::left << "There is nothing here.";
+            }
+            std::cout << std::endl << "    Dive deeper into the cave" << std::endl;
             std::cout << "    Leave the cave" << std::endl;
             switch (optionSelector(2, 0, 26))
             {
@@ -86,6 +89,7 @@ void Cave::display()
                     clearGaps();
                     cursorSet(0, 25);
                     std::cout << "You dive deeper into the darkness. ";
+                    item = true;
                     x = 35;
                     ++location;
                     break;
@@ -98,16 +102,16 @@ void Cave::display()
             }
         }
 
-        for (int i = 0; i <= location-1; ++i)
+        for (int j = 0; j <= location; ++j)
         {
-            if (i != location-1)
+            if (j != location)
             {
-                cursorSet(101, 1 + i);
+                cursorSet(101, 1 + j);
                 std::cout << "[ ]";
             }
             else
             {
-                cursorSet(101, 1 + i);
+                cursorSet(101, 1 + j);
                 std::cout << "[@]";
             }
 

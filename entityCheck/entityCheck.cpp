@@ -20,11 +20,11 @@ void entityCheck(Biome& biome, int x, int y)
         case 'M':
             combat(player::players, biome.getBiome());
             displayMap(biome.map, biome.getColor());
-            //monster stuff
             break;
         case 'V':
             village();
+            break;
     }
-
+    return;
 }
 
