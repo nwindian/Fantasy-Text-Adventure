@@ -16,7 +16,7 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
     moveOptions(x, y, biome, allowed);
     cin.clear();
     FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
-    int rest = 0;
+    double rest = 0;
     while (true)
     {
         char option = 'r';
@@ -27,7 +27,7 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
         }
         else
         {
-            ++rest;
+            rest += .1;
         }
         switch (option)
         {
@@ -120,14 +120,14 @@ void moving(int& x, int& y, int biome, Biome& map, Stamina& stamina, int biomeRe
                 }
                 return;
             case 'r':
-                if (rest > 9999)
+                if (rest > 3000)
                 {
                     cursorSet(0, 26);
                     cout << setw(50) <<  " ";
                     cursorSet(0, 27);
                     stamina.increase();
                     stamina.display();
-                    Sleep(450);
+                    rest = 0;
                 }
 
                 break;

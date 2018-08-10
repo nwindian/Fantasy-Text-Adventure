@@ -39,6 +39,7 @@ class Player_Class
         void setStrength(int strr);
         void setMagic(int magg);
         void setHealth(int deff);
+        void setName(std::string);
         int setDamage();
         std::string getName();
         void deductDamage(int);

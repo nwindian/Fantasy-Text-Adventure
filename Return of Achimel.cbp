@@ -101,6 +101,8 @@
 		<Unit filename="optionSelector/optionSelector.h" />
 		<Unit filename="playerView/playerView.cpp" />
 		<Unit filename="playerView/playerView.h" />
+		<Unit filename="player/player.cpp" />
+		<Unit filename="player/player.h" />
 		<Unit filename="startMap/startMap.cpp" />
 		<Unit filename="startMap/startMap.h" />
 		<Unit filename="title/title.cpp" />
