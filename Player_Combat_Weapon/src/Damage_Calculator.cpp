@@ -27,7 +27,7 @@ double check_type(std::string att, std::string def)
     return types[type];
 }
 
-int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class & move)
+int dmg_calc(Player_Class & player, Monster & enemy, Weapon_Class & weapon, Moves_Class  move)
 {
     double type = check_type(move.getType(), enemy.getType());
     return (((player.getStrength() + weapon.getDmg()) / 10) + move.getDamage()) * type;
