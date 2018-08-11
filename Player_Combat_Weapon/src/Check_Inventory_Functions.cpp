@@ -1,5 +1,5 @@
 #include <iostream>
-#include "rlutil.h"
+#include "../rlutil.h"
 #include "Check_Inventory_Functions.h"
 #include "Show_Health.h"
 
@@ -68,10 +68,7 @@ int getFromInventoryW(Player_Class &play)
     int moveCount = 0;
     int x = 30;
     int y = 1;
-    for(int i = 0; i < play.weaponInventory.size(); ++i)
-    {
-        std::cout << i+1 << ") " << play.weaponInventory[i].getName() << std::endl;
-    }
+    play.cycle_weapon();
     rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true)
     {
@@ -86,8 +83,8 @@ int getFromInventoryW(Player_Class &play)
             {
                 if (y == 1)
                 {
-                    moveCount = play.weaponInventory.size();
-                    y = play.weaponInventory.size();
+                    moveCount = play.Wget_size();
+                    y = play.Wget_size();
                 }
                 else
                 {
@@ -97,7 +94,7 @@ int getFromInventoryW(Player_Class &play)
             }
             else if (k == 's')
             {
-                if (y == play.weaponInventory.size())
+                if (y == play.Wget_size())
                 {
                     moveCount = 0;
                     y = 1;
@@ -131,10 +128,7 @@ int getFromInventoryF(Player_Class &play)
     int moveCount = 0;
     int x = 30;
     int y = 1;
-    for(int i = 0; i < play.foodInventory.size(); ++i)
-    {
-        std::cout << i+1 << ") " << play.foodInventory[i].getName() << std::endl;
-    }
+    play.cycle_food();
     rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true)
     {
@@ -149,8 +143,8 @@ int getFromInventoryF(Player_Class &play)
             {
                 if (y == 1)
                 {
-                    moveCount = play.foodInventory.size();
-                    y = play.foodInventory.size();
+                    moveCount = play.Fget_size();
+                    y = play.Fget_size();
                 }
                 else
                 {
@@ -160,7 +154,7 @@ int getFromInventoryF(Player_Class &play)
             }
             else if (k == 's')
             {
-                if (y == play.foodInventory.size())
+                if (y == play.Fget_size())
                 {
                     moveCount = 0;
                     y = 1;
@@ -192,10 +186,7 @@ int getFromInventoryA(Player_Class &play)
     int moveCount = 0;
     int x = 30;
     int y = 1;
-    for(int i = 0; i < play.armorInventory.size(); ++i)
-    {
-        std::cout << i+1 << ") " << play.armorInventory[i].getName() << std::endl;
-    }
+    play.cycle_armor();
     rlutil::locate(40,3); std::cout << "**Press b to go back or Enter to select." << std::endl;
     while (true)
     {
@@ -210,8 +201,8 @@ int getFromInventoryA(Player_Class &play)
             {
                 if (y == 1)
                 {
-                    moveCount = play.foodInventory.size();
-                    y = play.foodInventory.size();
+                    moveCount = play.Aget_size();
+                    y = play.Aget_size();
                 }
                 else
                 {
@@ -221,7 +212,7 @@ int getFromInventoryA(Player_Class &play)
             }
             else if (k == 's')
             {
-                if (y == play.armorInventory.size())
+                if (y == play.Aget_size())
                 {
                     moveCount = 0;
                     y = 1;

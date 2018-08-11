@@ -1,6 +1,5 @@
 #include <iostream>
-#include <windows.h>
-#include <rlutil.h>
+#include "rlutil.h"
 #include "Combat_Event_Prototype.h"
 #include "Player_Class.h"
 #include "Monster.hpp"
@@ -32,19 +31,19 @@ int main()
     //player.LevelUP(player);
 //    rlutil::cls();
     //cin.get();
-    player.armorInventory.push_back(armor);
-    player.armorInventory.push_back(armorr);
-    player.armorInventory.push_back(armorrr);
-    player.foodInventory.push_back(food);
-    player.foodInventory.push_back(fd);
-    player.foodInventory.push_back(fo);
-    player.moveList.push_back(move);
-    player.moveList.push_back(moves);
-    player.moveList.push_back(movess);
+    player.addArmor(armor);
+    player.addArmor(armorr);
+    player.addArmor(armorr);
+    player.addFood(food);
+    player.addFood(fd);
+    player.addFood(fo);
+    player.addMove(move);
+    player.addMove(moves);
+    player.addMove(movess);
     //player.moveList.push_back(movesss);
-    player.weaponInventory.push_back(sword);
-    player.weaponInventory.push_back(axe);
-    player.weaponInventory.push_back(God);
+    player.addWeapon(sword);
+    player.addWeapon(axe);
+    player.addWeapon(God);
    // player.LevelUP(player);
     combat(player,enemy);
     return 0;

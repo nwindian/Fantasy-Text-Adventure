@@ -7,7 +7,7 @@
 #include "Weapon_Class.h"
 #include "Player_Class.h"
 #include "Monster.hpp"
-#include "rlutil.h"
+#include "../rlutil.h"
 //#include "Weapon_objects.hpp"
 
 
@@ -258,4 +258,36 @@ Armor_Class Player_Class::getArmor()
 void Player_Class::setArmor(Armor_Class & arm)
 {
     armor = arm;
+}
+
+void Player_Class::cycle_armor()
+{
+    for(int i = 0; i < armorInventory.size(); ++i)
+    {
+        std::cout << i + 1 << ") " << armorInventory[i].getName() << std::endl;
+    }
+}
+
+void Player_Class::cycle_food()
+{
+    for(int i = 0; i < foodInventory.size(); ++i)
+    {
+        std::cout << i + 1 << ") " << foodInventory[i].getName() << std::endl;
+    }
+}
+
+void Player_Class::cycle_moves()
+{
+    for(int i = 0; i < moveList.size(); ++i)
+    {
+        std::cout << i + 1 << ") " << moveList[i].getName() << std::endl;
+    }
+}
+
+void Player_Class::cycle_weapon()
+{
+    for(int i = 0; i < weaponInventory.size(); ++i)
+    {
+        std::cout << i + 1 << ") " << weaponInventory[i].getName() << std::endl;
+    }
 }
