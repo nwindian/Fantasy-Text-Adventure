@@ -21,12 +21,12 @@ Food::Food()
     }
     else if (rand() % 10 > 8)
     {
-        recover = (player::players.getHealth() * 5) / 10;
+        recover = (player::players.getHealth() * 6) / 10;
         foodName = "steak";
     }
     else if (rand() % 10 > 8)
     {
-        recover = (player::players.getHealth() * 7) / 10;
+        recover = (player::players.getHealth() * 8) / 10;
         foodName = "ribs";
     }
     else
