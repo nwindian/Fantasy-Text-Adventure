@@ -2,12 +2,12 @@
 #include <limits>
 #include <conio.h>
 #include <vector>
-#include "Moves_Class.h"
-#include "Armor_Class.h"
-#include "Weapon_Class.h"
-#include "Player_Class.h"
-#include "Monster.hpp"
-#include "rlutil.h"
+#include "../include/Moves_Class.h"
+#include "../include/Armor_Class.h"
+#include "../include/Weapon_Class.h"
+#include "../include/Player_Class.h"
+#include "../include/Monster.hpp"
+#include "../include/rlutil.h"
 //#include "Weapon_objects.hpp"
 
 
