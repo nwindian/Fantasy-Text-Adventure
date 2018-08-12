@@ -2,6 +2,7 @@
 #include "../cursorSet/cursorSet.h"
 #include "../optionSelector/optionSelector.h"
 #include "../clearGaps/clearGaps.h"
+#include "../player/player.h"
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
@@ -124,17 +125,29 @@ void Cave::display()
     clearGaps();
 }
 
-void addLoot(int location)
+void Cave::addLoot(int location)
 {
    if (theCave[location].food)
    {
-
+        player::player.addFood()
    }
    else if (theCave[location].weapon)
    {
 
    }
    else if (theCave[location].armor)
+   {
+
+   }
+   else if (theCave[location].gold)
+   {
+
+   }
+   else if (theCave[location].scroll)
+   {
+
+   }
+   else
    {
 
    }
