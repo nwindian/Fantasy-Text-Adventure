@@ -514,7 +514,7 @@
 	<iostream>
 	<windows.h>
 
-1534102756 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
+1534104355 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
 	"../player/player.h"
 	<cstdlib>
@@ -771,7 +771,7 @@
 	"../include/Loading.h"
 	"../include/Moves_Class.h"
 
-1533966284 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1534105107 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	<fstream>
 	<map>
@@ -781,6 +781,7 @@
 	"../include/Damage_Calculator.h"
 	"../include/Moves_Class.h"
 	"../include/Armor_Class.h"
+	"../../player/player.h"
 
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\food_class.cpp
 	"../include/Food_Class.h"
@@ -1044,7 +1045,10 @@
 	<vector>
 	<map>
 
-1533966273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.cpp
+1534104975 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.cpp
 	"player.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
+	<map>
+
+1534105086 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\typefiller.cpp
 
