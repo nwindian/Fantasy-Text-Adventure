@@ -238,7 +238,7 @@
 	"../include/Moves_Class.h"
 	"../include/Player_Class.h"
 
-1534099473 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1534101467 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>
@@ -310,7 +310,7 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	"../include/Weapon_Class.h"
 
-1533966285 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
+1534101517 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\main.cpp
 	<iostream>
 	"rlutil.h"
 	"Combat_Event_Prototype.h"
@@ -320,17 +320,17 @@
 	"Moves_Class.h"
 	"Food_Class.h"
 
-1534100089 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
 	<vector>
-	"Moves_Class.h"
-	"Armor_Class.h"
-	"Weapon_Class.h"
-	"Player_Class.h"
-	"Monster.hpp"
-	"rlutil.h"
+	"../include/Moves_Class.h"
+	"../include/Armor_Class.h"
+	"../include/Weapon_Class.h"
+	"../include/Player_Class.h"
+	"../include/Monster.hpp"
+	"../include/rlutil.h"
 
 1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	<iostream>
@@ -397,11 +397,11 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\menu_functions.cpp
 	"../include/Menu_Function.h"
 
-1534100130 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
 	<iostream>
 	<iomanip>
 	"../include/Show_Health.h"
-	"rlutil.h"
+	"../include/rlutil.h"
 
 1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\show_health.h
 	<iostream>
@@ -451,10 +451,10 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
-	"../include/Chance_To_Run.h"
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
 	<stdlib.h>
 	<time.h>
+	"../include/Chance_To_Run.h"
 
 1533665309 _Run.h"
 

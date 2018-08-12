@@ -34,9 +34,8 @@ int main()
     player.addArmor(armor);
     player.addArmor(armorr);
     player.addArmor(armorr);
-    player.addFood(food);
-    player.addFood(fd);
-    player.addFood(fo);
+    player.addFood("chicklen" , 5);
+    player.addFood("steak" , 6);
     player.addMove(move);
     player.addMove(moves);
     player.addMove(movess);

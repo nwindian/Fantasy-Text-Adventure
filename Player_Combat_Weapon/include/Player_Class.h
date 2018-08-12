@@ -54,7 +54,7 @@ class Player_Class
         void setArmor(Armor_Class &);
         Armor_Class getArmor();
         //vector stuff / Mostly inline
-        void addFood(Food_Class& food){foodInventory.push_back(food);}
+        void addFood(std::string name, int val){Food_Class food(val, name); foodInventory.push_back(food);}
         void addWeapon(Weapon_Class& weap){weaponInventory.push_back(weap);}
         void addArmor(Armor_Class& arm){armorInventory.push_back(arm);}
         void addMove(Moves_Class& move){moveList.push_back(move);}
