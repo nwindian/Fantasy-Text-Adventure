@@ -1,37 +1,38 @@
 #include "Food.h"
+#include "../player/player.h"
 #include <cstdlib>
 
 Food::Food()
 {
     if (rand() % 10 > 5)
     {
-        //recover = (Joe.getHealth() * 25) / 100;
-        foodName = "is bread";
+        recover = (player::players.getHealth() * 2) / 10;
+        foodName = "bread";
     }
     else if (rand() % 10 > 6)
     {
-        //recover = (Joe.getHealth() * 30) / 100;
-        foodName = "are eggs";
+        recover = (player::players.getHealth() * 3) / 10;
+        foodName = "eggs";
     }
     else if (rand() % 10 > 7)
     {
-        //recover = (Joe.getHealth() * 40) / 100;
-        foodName = "is cooked chicken";
+        recover = (player::players.getHealth() * 4) / 10;
+        foodName = "chicken";
     }
     else if (rand() % 10 > 8)
     {
-        //recover = (Joe.getHealth() * 50) / 100;
-        foodName = "is cooked steak";
+        recover = (player::players.getHealth() * 5) / 10;
+        foodName = "steak";
     }
     else if (rand() % 10 > 8)
     {
-        //recover = (Joe.getHealth() * 75) / 100;
-        foodName = "are cooked ribs";
+        recover = (player::players.getHealth() * 7) / 10;
+        foodName = "ribs";
     }
     else
     {
-        //recover = (Joe.getHealth() * 20) / 100;
-        foodName = "are grapes";
+        recover = (player::players.getHealth() * 1) / 10;
+        foodName = "grapes";
     }
 }
 

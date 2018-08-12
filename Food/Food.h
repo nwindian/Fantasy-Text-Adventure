@@ -7,6 +7,7 @@ class Food
     public:
         Food();
         string getFoodName();
+        int getRecover() {return recover; }
         string foodName = " ";
     private:
         int recover = 0;

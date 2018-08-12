@@ -264,7 +264,7 @@
 	<memory>
 	<cstdlib>
 
-1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
+1534102293 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
 1533661571 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
@@ -287,11 +287,12 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
 
-1534099853 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1534102285 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
 	"../clearGaps/clearGaps.h"
+	"../player/player.h"
 	<iostream>
 	<iomanip>
 	<cstdlib>
@@ -328,8 +329,9 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.h
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
+1534102338 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
+	"../player/player.h"
 	<cstdlib>
 
 1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
@@ -822,7 +824,7 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	"../include/Weapon_Class.h"
 
-1534100301 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1534101571 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>

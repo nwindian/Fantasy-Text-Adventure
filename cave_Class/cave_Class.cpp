@@ -129,7 +129,7 @@ void Cave::addLoot(int location)
 {
    if (theCave[location].food)
    {
-        player::player.addFood()
+        player::players.addFood(theCave[location].loot, theCave[location].foodObj->getRecover());
    }
    else if (theCave[location].weapon)
    {
