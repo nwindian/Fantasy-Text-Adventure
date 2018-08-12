@@ -1,28 +1,23 @@
-<<<<<<< HEAD
-#include "../include/Combat_Event_Prototype.h"
-=======
 #include <iostream>
 #include <conio.h>
 #include <iomanip>
 #include <limits>
 #include <windows.h>
 #include <memory>
-#include "Upper_Bound.h"
-#include "Player_Class.h"
-#include "Monster.hpp"
-#include "Chance_Calc_Interface.h"
-#include "Damage_Calculator.h"
-#include "Chance_Calc_Interface.h"
-#include "Weapon_Class.h"
-#include "../rlutil.h"
-#include "Menu_Function.h"
-#include "Chance_To_Run.h"
-#include "Check_Inventory_Functions.h"
-#include "Show_Health.h"
-#include "Loading.h"
+#include "../include/Combat_Event_Prototype.h"
+#include "../include/Player_Class.h"
+#include "../include/Monster.hpp"
+#include "../include/Chance_Calc_Interface.h"
+#include "../include/Damage_Calculator.h"
+#include "../include/Chance_Calc_Interface.h"
+#include "../include/Weapon_Class.h"
+#include "../include/rlutil.h"
+#include "../include/Menu_Function.h"
+#include "../include/Chance_To_Run.h"
+#include "../include/Check_Inventory_Functions.h"
+#include "../include/Show_Health.h"
+#include "../include/Loading.h"
 
-
->>>>>>> Player/Combat/Weapons
 
 
 //Weapon_Class getWeapon(Player_Class & play)
@@ -230,25 +225,18 @@ bool combat(Player_Class & play,char Biome)
     std::unique_ptr<Weapon_Class> currentWeapon(new Weapon_Class);
     std::shared_ptr<Armor_Class> currentArmor(new Armor_Class);
     rlutil::setColor(6);
-<<<<<<< HEAD
-    if(play.weaponInventory.size() == 0)
+    if(play.Wget_size() == 0)
     {
         Weapon_Class defaultt(1,'N',"Fists");
-        play.weaponInventory.push_back(defaultt);
+        play.addWeapon(defaultt);
     }
-    if(play.armorInventory.size() == 0)
+    if(play.Aget_size() == 0)
     {
         Armor_Class defaultA(1,"Your Clothes" , "N");
-        play.armorInventory.push_back(defaultA);
+        play.addArmor(defaultA);
     }
-    std::cout << "1) Fists" << std::endl;
-    for (unsigned int i = 0; i < play.weaponInventory.size(); ++i)
-    {
-        std::cout << i + 2 << ") " << play.weaponInventory[i].getName() << std::endl;
-    }
-=======
+
     play.cycle_weapon();
->>>>>>> Player/Combat/Weapons
     //color
     rlutil::resetColor();
     while (true)

@@ -1,11 +1,8 @@
 #ifndef PLAYER_CLASS_H
 #define PLAYER_CLASS_H
-<<<<<<< HEAD
 #include <iostream>
 #include <limits>
 #include <conio.h>
-=======
->>>>>>> Player/Combat/Weapons
 #include <vector>
 #include "Weapon_Class.h"
 #include "Moves_Class.h"

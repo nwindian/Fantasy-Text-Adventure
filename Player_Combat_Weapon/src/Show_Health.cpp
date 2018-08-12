@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-
-#include "../include/Show_Health.h"
-
-=======
 #include <iostream>
 #include <iomanip>
-#include "Show_Health.h"
-#include "../rlutil.h"
->>>>>>> Player/Combat/Weapons
+#include "../include/Show_Health.h"
+#include "rlutil.h"
+
+
 
 void showHealth(Player_Class & player, Monster & enemy, int playHealth, int enemHealth)
 {

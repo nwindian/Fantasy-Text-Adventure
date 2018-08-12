@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#include "../include/Player_Class.h"
-=======
 #include <iostream>
 #include <limits>
 #include <conio.h>
@@ -10,8 +7,7 @@
 #include "Weapon_Class.h"
 #include "Player_Class.h"
 #include "Monster.hpp"
-#include "../rlutil.h"
->>>>>>> Player/Combat/Weapons
+#include "rlutil.h"
 //#include "Weapon_objects.hpp"
 
 
