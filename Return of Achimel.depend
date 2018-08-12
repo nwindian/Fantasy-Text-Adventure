@@ -573,7 +573,7 @@
 	"Stamina.h"
 	<iostream>
 
-1533966273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+1534105586 source:c:\users\jcoch\documents\github\fantasy-text-adventure\startmap\startmap.cpp
 	"startMap.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
@@ -583,6 +583,7 @@
 	"../cursorSet/cursorSet.h"
 	"../entityCheck/entityCheck.h"
 	"../title/title.h"
+	"../Player_Combat_Weapon/include/Damage_Calculator.h"
 	<iostream>
 	<iomanip>
 	<ctime>
@@ -592,7 +593,7 @@
 
 1533966273 c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.h
 
-1533966273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.cpp
+1534106136 source:c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.cpp
 	"title.h"
 	"../cursorSet/cursorSet.h"
 	"../player/player.h"
@@ -686,10 +687,11 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1534105269 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1534105586 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	<iostream>
 	<memory>
 	"Monster.hpp"
+	"Player_Class.h"
 
 1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
 	<iostream>
