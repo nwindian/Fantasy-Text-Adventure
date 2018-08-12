@@ -749,7 +749,7 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 
-1534100080 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1534103146 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -769,6 +769,7 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 	"../include/Loading.h"
+	"../include/Moves_Class.h"
 
 1533966284 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
@@ -1038,9 +1039,10 @@
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	<vector>
 
-1533966273 c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.h
+1534104167 c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	<vector>
+	<map>
 
 1533966273 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.cpp
 	"player.h"
