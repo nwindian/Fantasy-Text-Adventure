@@ -685,7 +685,7 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1533966284 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1534105269 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	<iostream>
 	<memory>
 	"Monster.hpp"
@@ -771,7 +771,7 @@
 	"../include/Loading.h"
 	"../include/Moves_Class.h"
 
-1534105107 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1534105269 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	<fstream>
 	<map>

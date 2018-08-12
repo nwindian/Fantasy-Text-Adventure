@@ -9,11 +9,8 @@
 #include "../include/Armor_Class.h"
 #include "../../player/player.h"
 
-
-double check_type(std::string att, std::string def)
+void fillTypes()
 {
-    //E - Earth | P - Poison | F - Fire | I - Ice | S - Steel | D - Demon | H - Holy | L - Electric | B - Blood | W - Water
-    std::string type = att + def;
     using namespace player;
     types["EE"] = 1.0;types["EP"] = 2.0; types["EF"] = 2.0; types["EI"] = .5; types["ES"] = 1.0; types["ED"] = 1.0; types["EH"] = 1.0; types["EL"] = 2.0; types["EB"] = 1.0; types["EW"] = .5;
     types["PE"] = .5; types["PP"] = 1.0; types["PF"] = 1.0; types["PI"] = 1.0; types["PS"] = .5; types["PD"] = 1.0; types["PH"] = 1.0; types["PL"] = 1.0; types["PB"] = 2.0; types["PW"] = 2.0;
@@ -25,6 +22,13 @@ double check_type(std::string att, std::string def)
     types["LE"] = .5; types["LP"] = 1.0; types["LF"] = 1.0; types["LI"] = 1.0; types["LS"] = .5; types["LD"] = 1.0; types["LH"] = 1.0; types["LL"] = 1.0; types["LB"] = 2.0; types["LW"] = 2.0;
     types["BE"] = 1.0; types["BP"] = .5; types["BF"] = 1.0; types["BI"] = 1.0; types["BS"] = 1.0; types["BD"] = 1.0; types["BH"] = .5; types["BL"] = .5; types["BB"] = 1.0; types["BW"] = 1.0;
     types["WE"] = 2.0; types["WP"] = .5; types["WF"] = 2.0; types["WI"] = 1.0; types["WS"] = 1.0; types["WD"] = 1.0; types["WH"] = 1.0; types["WL"] = .5; types["WB"] = 1.0; types["WW"] = 1.0;
+
+}
+double check_type(std::string att, std::string def)
+{
+    //E - Earth | P - Poison | F - Fire | I - Ice | S - Steel | D - Demon | H - Holy | L - Electric | B - Blood | W - Water
+    std::string type = att + def;
+    using namespace player;
     double dmg = player::types[type];
     return dmg;
 }
