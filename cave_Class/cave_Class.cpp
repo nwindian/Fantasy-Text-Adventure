@@ -53,6 +53,7 @@ void Cave::display()
                     clearGaps();
                     cursorSet(0, 25);
                     std::cout << "Loot has been put into your inventory. ";
+                    addLoot(location);
                     theCave[location].loot = "nothing";
                     item = false;
                     x = 39;
@@ -121,4 +122,20 @@ void Cave::display()
     std::cout << "You have reached the end of the cave";
     Sleep(700);
     clearGaps();
+}
+
+void addLoot(int location)
+{
+   if (theCave[location].food)
+   {
+
+   }
+   else if (theCave[location].weapon)
+   {
+
+   }
+   else if (theCave[location].armor)
+   {
+
+   }
 }

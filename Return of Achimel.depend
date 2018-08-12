@@ -258,7 +258,7 @@
 	<cstdlib>
 	<ctime>
 
-1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.h
+1534099853 c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.h
 	"../Food/Food.h"
 	<string>
 	<memory>
@@ -287,7 +287,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
 
-1533918182 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1534099853 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
@@ -311,7 +311,7 @@
 	<iostream>
 	<windows.h>
 
-1533916707 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -343,7 +343,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.h
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
+1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moving\moving.cpp
 	"moving.h"
 	"../moveOptions/moveOptions.h"
 	"../Stamina/Stamina.h"
@@ -389,7 +389,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.h
 
-1533916707 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
+1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.cpp
 	"village.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
@@ -422,7 +422,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
 
-1533675545 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
+1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
 	"title.h"
 	"../cursorSet/cursorSet.h"
 	"../player/player.h"
@@ -791,11 +791,12 @@
 1533670779 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	"../include/Weapon_Class.h"
 
-1533671628 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1534099438 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>
 	<vector>
+	"Weapon_Class.h"
 	"Moves_Class.h"
 	"Armor_Class.h"
 	"Food_Class.h"
@@ -815,7 +816,7 @@
 	<iostream>
 	"Loot_Class.h"
 
-1533661075 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\loot_class.h
+1533919350 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\loot_class.h
 
 1533668634 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\monster.hpp
 	<iostream>
@@ -864,12 +865,12 @@
 
 1533668634 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_to_run.h
 
-1533668634 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
+1534098732 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\chance_calc_interface.h
 	"Player_Class.h"
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1533661075 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1534098732 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	<iostream>
 	<memory>
 	"Monster.hpp"
@@ -920,7 +921,7 @@
 1533674064 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	"../include/Combat_Event_Prototype.h"
 
-1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1534098732 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	<fstream>
 	<map>
@@ -964,11 +965,11 @@
 1533671628 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	"../include/Player_Class.h"
 
-1533675533 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
+1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
 	"player.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
 
-1533675483 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
+1533919320 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	<vector>
 

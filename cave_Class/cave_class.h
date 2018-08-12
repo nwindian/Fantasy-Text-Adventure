@@ -115,6 +115,7 @@ class Cave
     public:
         Cave();
         void display();
+        void addLoot(int);
 };
 
 #endif // CAVE_CLASS
