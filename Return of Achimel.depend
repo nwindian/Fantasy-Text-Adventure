@@ -457,7 +457,7 @@
 	<memory>
 	<cstdlib>
 
-1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.h
+1534102756 c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cave\cave.cpp
@@ -481,11 +481,12 @@
 
 1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
 
-1534100727 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1534102756 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
 	"../clearGaps/clearGaps.h"
+	"../player/player.h"
 	<iostream>
 	<iomanip>
 	<cstdlib>
@@ -513,8 +514,9 @@
 	<iostream>
 	<windows.h>
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
+1534102756 source:c:\users\jcoch\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
+	"../player/player.h"
 	<cstdlib>
 
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
@@ -620,7 +622,7 @@
 	"../displayMap/displayMap.h"
 	"../player/player.h"
 
-1534099473 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1534101467 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>
@@ -736,10 +738,10 @@
 	"../include/Moves_Class.h"
 	"../include/Player_Class.h"
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
-	"../include/Chance_To_Run.h"
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_to_run.cpp
 	<stdlib.h>
 	<time.h>
+	"../include/Chance_To_Run.h"
 
 1534099554 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\check_inventory_functions.cpp
 	<iostream>
@@ -797,23 +799,23 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	"../include/Moves_Class.h"
 
-1534100723 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
 	<vector>
-	"Moves_Class.h"
-	"Armor_Class.h"
-	"Weapon_Class.h"
-	"Player_Class.h"
-	"Monster.hpp"
-	"rlutil.h"
+	"../include/Moves_Class.h"
+	"../include/Armor_Class.h"
+	"../include/Weapon_Class.h"
+	"../include/Player_Class.h"
+	"../include/Monster.hpp"
+	"../include/rlutil.h"
 
-1534100723 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
+1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
 	<iostream>
 	<iomanip>
 	"../include/Show_Health.h"
-	"rlutil.h"
+	"../include/rlutil.h"
 
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\sword_class.cpp
 	"../include/Sword_Class.h"

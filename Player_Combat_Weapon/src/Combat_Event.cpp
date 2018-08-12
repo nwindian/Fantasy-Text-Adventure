@@ -17,6 +17,7 @@
 #include "../include/Check_Inventory_Functions.h"
 #include "../include/Show_Health.h"
 #include "../include/Loading.h"
+#include "../include/Moves_Class.h"
 
 
 
@@ -234,6 +235,11 @@ bool combat(Player_Class & play,char Biome)
     {
         Armor_Class defaultA(1,"Your Clothes" , "N");
         play.addArmor(defaultA);
+    }
+    if(play.Mget_size() == 0)
+    {
+        Moves_Class defaultM("Punch", 2, 99, "E");
+        play.addMove(defaultM);
     }
 
     play.cycle_weapon();
