@@ -7,6 +7,7 @@
 #include "../cursorSet/cursorSet.h"
 #include "../entityCheck/entityCheck.h"
 #include "../title/title.h"
+#include "../Player_Combat_Weapon/include/Damage_Calculator.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -15,6 +16,7 @@
 
 void startMap()
 {
+    fillTypes();
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO lpCursor;
 	lpCursor.bVisible = false;

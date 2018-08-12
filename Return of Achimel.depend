@@ -287,7 +287,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.h
 
-1534102285 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
+1534104081 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave_class\cave_class.cpp
 	"cave_class.h"
 	"../cursorSet/cursorSet.h"
 	"../optionSelector/optionSelector.h"
@@ -329,7 +329,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\village\village.h
 
-1534102338 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
+1534103412 source:c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.cpp
 	"Food.h"
 	"../player/player.h"
 	<cstdlib>
@@ -907,10 +907,11 @@
 	"Moves_Class.h"
 	"Monster.hpp"
 
-1534098732 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
+1534105520 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\damage_calculator.h
 	<iostream>
 	<memory>
 	"Monster.hpp"
+	"Player_Class.h"
 
 1533668634 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\menu_function.h
 	<iostream>
@@ -955,7 +956,7 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 
-1534100301 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1534103201 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -975,8 +976,9 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 	"../include/Loading.h"
+	"../include/Moves_Class.h"
 
-1534098732 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
+1534105371 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\damage_calculator.cpp
 	<iostream>
 	<fstream>
 	<map>
@@ -986,6 +988,7 @@
 	"../include/Damage_Calculator.h"
 	"../include/Moves_Class.h"
 	"../include/Armor_Class.h"
+	"../../player/player.h"
 
 1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\food_class.cpp
 	"../include/Food_Class.h"
@@ -1032,13 +1035,15 @@
 	"../include/Monster.hpp"
 	"../include/rlutil.h"
 
-1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
+1534105186 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.cpp
 	"player.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
+	<map>
 
-1533919320 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
+1534104477 c:\users\jmfos\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	<vector>
+	<map>
 
 1534104167 c:\users\jcoch\documents\github\fantasy-text-adventure\player\player.h
 	"../Player_Combat_Weapon/include/Player_Class.h"
