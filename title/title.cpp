@@ -32,7 +32,7 @@ void title()
                 system("CLS");
                 std::string name;
                 std::cout << "Enter player name: ";
-                std::cin >> name;
+                getline(std::cin, name);
                 player::players.setName(name);
                 return;
             }
