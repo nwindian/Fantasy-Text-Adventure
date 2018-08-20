@@ -22,7 +22,7 @@ class Player_Class
         Armor_Class armor;
         char resistance;
         int health;
-        int exp_To_lvl = 100;
+        int exp_to_lvl = 100;
         int current_exp = 0;
         int strength, speed, magic, thirst, level;
         std::string name;
@@ -38,21 +38,26 @@ class Player_Class
         //To display level during level up
         void displayLevel(Player_Class &, int str, int spd, int def, int mag, int lvl);
         //getters and setters
-        int getStrength();
-        int getSpeed();
-        int getHealth();
-        int getMagic();
-        int getLevel();
+        const int getStrength();
+        const int getSpeed();
+        const int getHealth();
+        const int getMagic();
+        const int getLevel();
+        const int getCExp();
+        const int getMaxExp();
+        const std::string getName();
         void setSpeed(int spdd);
         void setStrength(int strr);
         void setMagic(int magg);
         void setHealth(int deff);
         void setName(std::string);
+        void setCExp(int);
+        void setMaxExp();
         int setDamage();
-        std::string getName();
         void deductDamage(int);
         void setArmor(Armor_Class &);
         Armor_Class getArmor();
+        void updateXP();
         //vector stuff / Mostly inline
         void addFood(std::string name, int val){Food_Class food(val, name); foodInventory.push_back(food);}
         void addWeapon(Weapon_Class& weap){weaponInventory.push_back(weap);}

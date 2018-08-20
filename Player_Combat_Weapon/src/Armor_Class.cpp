@@ -26,11 +26,11 @@ void Armor_Class::setArmor(int arm)
     armor = arm;
 }
 
-std::string Armor_Class::getType()
+const std::string Armor_Class::getType()
 {
     return type;
 }
-std::string Armor_Class::getName()
+const std::string Armor_Class::getName()
 {
     return name;
 }

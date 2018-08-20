@@ -50,7 +50,7 @@ Player_Class::Player_Class(std::string namee)
     thirst = 0;
     level = 1;
 }
-std::string Player_Class::getName()
+const std::string Player_Class::getName()
 {
     return name;
 }
@@ -70,26 +70,35 @@ void Player_Class::LevelUP(Player_Class & player)
     Player_Class::setLevel(++level);
     std::cout << Player_Class::getName() << " is now level " << Player_Class::getLevel() << "! " << endl;
     Player_Class::displayLevel(player, player.getStrength(),player.getSpeed(),player.getHealth(),player.getMagic(),player.getLevel());
+    Player_Class::updateXP();
     //checkMoveList(player);
  }
 //Getters and Setters
-int Player_Class::getHealth()
+const int Player_Class::getCExp()
+{
+    return current_exp;
+}
+const int Player_Class::getMaxExp()
+{
+    return exp_to_lvl;
+}
+const int Player_Class::getHealth()
 {
     return health;
 }
-int Player_Class::getLevel()
+const int Player_Class::getLevel()
 {
     return level;
 }
-int Player_Class::getMagic()
+const int Player_Class::getMagic()
 {
     return magic;
 }
-int Player_Class::getStrength()
+const int Player_Class::getStrength()
 {
     return strength;
 }
-int Player_Class::getSpeed()
+const int Player_Class::getSpeed()
 {
     return speed;
 }
@@ -109,6 +118,14 @@ void Player_Class::setMagic(int magg)
 {
     magic = magg;
 }
+void Player_Class::setCExp(int xp)
+{
+    current_exp = xp;
+}
+void Player_Class::setMaxExp()
+{
+    exp_to_lvl = exp_to_lvl + 50;
+}
 //Set the total damage for the level
 int Player_Class::setDamage()
 {
@@ -123,7 +140,7 @@ void Player_Class::displayLevel( Player_Class & player, int str, int spd, int de
 {
     int x = 93;
     int y = 5;
-    int counter = 0;
+    unsigned int counter = 0;
     //Prints current stats
     rlutil::setColor(3);
     rlutil::locate(0,0); std::cout << "Awesome Adventurer: " << player.getName();
@@ -293,5 +310,14 @@ void Player_Class::cycle_weapon()
     for(int i = 0; i < weaponInventory.size(); ++i)
     {
         std::cout << i + 1 << ") " << weaponInventory[i].getName() << std::endl;
+    }
+}
+
+void Player_Class::updateXP()
+{
+    if(Player_Class::current_exp >= Player_Class::exp_to_lvl)
+    {
+        Player_Class::setCExp(Player_Class::exp_to_lvl - Player_Class::current_exp);
+        Player_Class::setMaxExp();
     }
 }
