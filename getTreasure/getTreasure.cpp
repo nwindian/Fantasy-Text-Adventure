@@ -1,47 +1,43 @@
 #include "getTreasure.h"
-#include <string>
+#include "../gold/gold.h"
+#include "../clearGaps/clearGaps.h"
+#include "../cursorSet/cursorSet.h"
+#include "../optionSelector/optionSelector.h"
+#include <iostream>
 #include <cstdlib>
-using std::string;
+#include <ctime>
+
 void getTreasure()
 {
-    string loot;
-    int goldCount = 0;
-    int num = rand() % 1121;
-    if (num > 599)
+    clearGaps();
+    cursorSet(0, 25);
+    std::cout << "You discovered a treasure chest!" << std::endl;
+    std::cout << "Would you like to open it?" << std::endl;
+    std::cout << "    Yes" << std::endl;
+    std::cout << "    No" << std::endl;
+    if (!optionSelector(2, 0, 27))
     {
-        if (num < 840)
+        clearGaps();
+        cursorSet(0, 25);
+        srand(time(0));
+        int num = 0; //rand() % 4;
+        switch (num)
         {
-            //foodObj = std::unique_ptr<Food>(new Food());
-            //loot = foodObj->foodName;
-        }
-        else if (num < 960)
-        {
-
-            //goldNum = (rand() % 20 + 30);
-            loot = "is gold";
-        }
-        else if (num < 1000)
-        {
-
-            loot = "is a weapon";
-        }
-        else if (num < 1080)
-        {
-
-            loot = "is a scroll";
-        }
-        else if (num == 1120)
-        {
-            //caveIn
-        }
-        else
-        {
-
-            loot = "is armor";
+            case 0:
+                gold();
+                break;
+            case 1:
+                //treasureWeapon();
+                break;
+            case 2:
+                //treasureScroll();
+                break;
+            case 3:
+                //treasureArmor();
+                break;
         }
     }
-    else
-    {
-        loot = "nothing";
-    }
+    clearGaps();
+    return;
 }
+

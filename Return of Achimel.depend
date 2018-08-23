@@ -299,7 +299,7 @@
 	<conio.h>
 	<windows.h>
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
+1535044665 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
 	"cursorSet.h"
 	<windows.h>
 
@@ -312,7 +312,7 @@
 	<iostream>
 	<windows.h>
 
-1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1535043339 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -334,10 +334,15 @@
 	"../player/player.h"
 	<cstdlib>
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+1535044722 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
 	"getTreasure.h"
-	<string>
+	"../gold/gold.h"
+	"../clearGaps/clearGaps.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	<iostream>
 	<cstdlib>
+	<ctime>
 
 1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\moveoptions\moveoptions.cpp
 	"moveOptions.h"
@@ -425,7 +430,7 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\cleargaps\cleargaps.h
 
-1533919320 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
+1535045762 source:c:\users\jmfos\documents\github\fantasy-text-adventure\title\title.cpp
 	"title.h"
 	"../cursorSet/cursorSet.h"
 	"../player/player.h"
@@ -831,7 +836,7 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	"../include/Weapon_Class.h"
 
-1534101571 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1535042774 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>
@@ -848,7 +853,7 @@
 	<iostream>
 	<string>
 
-1533668634 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
+1535042774 c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\include\armor_class.h
 	<iostream>
 	<string>
 
@@ -937,7 +942,7 @@
 	<iostream>
 	"rlutil.h"
 
-1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
+1535042774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\armor_class.cpp
 	"../include/Armor_Class.h"
 
 1534100301 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\chance_calculator.cpp
@@ -1011,7 +1016,7 @@
 1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	"../include/Moves_Class.h"
 
-1534100913 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
+1535042774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\show_health.cpp
 	<iostream>
 	<iomanip>
 	"../include/Show_Health.h"
@@ -1026,7 +1031,7 @@
 1533668634 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\weapon_class.cpp
 	"../include/Weapon_Class.h"
 
-1534100913 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1535042774 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
@@ -1059,4 +1064,12 @@
 	<map>
 
 1534105086 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\typefiller.cpp
+
+1535044088 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.cpp
+	"gold.h"
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1535044139 c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.h
 

@@ -30,8 +30,21 @@ void title()
             if (getch() == 13)
             {
                 system("CLS");
+
                 std::string name;
-                std::cout << "Enter player name: ";
+                cursorSet(20, 10);
+                std::cout << "    _   __                                                  __                   ";
+                cursorSet(20, 11);
+                std::cout << "   / | / /___ _____ ___  ___     __  ______  __  _______   / /_  ___  _________  ";
+                cursorSet(20, 12);
+                std::cout << "  /  |/ / __ `/ __ `__ \\/ _ \\   / / / / __ \\/ / / / ___/  / __ \\/ _ \\/ ___/ __ \\ ";
+                cursorSet(20, 13);
+                std::cout << " / /|  / /_/ / / / / / /  __/  / /_/ / /_/ / /_/ / /     / / / /  __/ /  / /_/ / ";
+                cursorSet(20, 14);
+                std::cout << "/_/ |_/\\__,_/_/ /_/ /_/\\___/   \\__, /\\____/\\__,_/_/     /_/ /_/\\___/_/   \\____/  ";
+                cursorSet(20, 15);
+                std::cout << "                              /____/                                             ";
+                cursorSet(60, 17);
                 getline(std::cin, name);
                 player::players.setName(name);
                 return;
@@ -45,8 +58,21 @@ void title()
             if (getch() == 13)
             {
                 system("CLS");
+                cursorSet(20, 10);
                 std::string name;
-                std::cout << "Enter player name: ";
+                cursorSet(20, 10);
+                std::cout << "    _   __                                                  __                   ";
+                cursorSet(20, 11);
+                std::cout << "   / | / /___ _____ ___  ___     __  ______  __  _______   / /_  ___  _________  ";
+                cursorSet(20, 12);
+                std::cout << "  /  |/ / __ `/ __ `__ \\/ _ \\   / / / / __ \\/ / / / ___/  / __ \\/ _ \\/ ___/ __ \\ ";
+                cursorSet(20, 13);
+                std::cout << " / /|  / /_/ / / / / / /  __/  / /_/ / /_/ / /_/ / /     / / / /  __/ /  / /_/ / ";
+                cursorSet(20, 14);
+                std::cout << "/_/ |_/\\__,_/_/ /_/ /_/\\___/   \\__, /\\____/\\__,_/_/     /_/ /_/\\___/_/   \\____/  ";
+                cursorSet(20, 15);
+                std::cout << "                              /____/                                             ";
+                cursorSet(60, 17);
                 std::cin >> name;
                 player::players.setName(name);
                 return;

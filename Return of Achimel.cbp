@@ -91,6 +91,8 @@
 		<Unit filename="entityCheck/entityCheck.h" />
 		<Unit filename="getTreasure/getTreasure.cpp" />
 		<Unit filename="getTreasure/getTreasure.h" />
+		<Unit filename="gold/gold.cpp" />
+		<Unit filename="gold/gold.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mapSizes/mapSizes.h" />
 		<Unit filename="moveOptions/moveOptions.cpp" />

@@ -18,7 +18,10 @@ void entityCheck(Biome& biome, int x, int y)
             getTreasure();
             break;
         case 'M':
-            combat(player::players, biome.getBiome());
+            if (combat(player::players, biome.getBiome()))
+            {
+                biome.entityMap[y][x].type = '\'';
+            }
             displayMap(biome.map, biome.getColor());
             break;
         case 'V':
