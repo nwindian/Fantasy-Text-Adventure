@@ -509,7 +509,7 @@
 	<iostream>
 	<iomanip>
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
+1535125537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\cursorset\cursorset.cpp
 	"cursorSet.h"
 	<windows.h>
 
@@ -525,10 +525,15 @@
 	"../player/player.h"
 	<cstdlib>
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+1535125537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
 	"getTreasure.h"
-	<string>
+	"../gold/gold.h"
+	"../clearGaps/clearGaps.h"
+	"../cursorSet/cursorSet.h"
+	"../optionSelector/optionSelector.h"
+	<iostream>
 	<cstdlib>
+	<ctime>
 
 1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\gettreasure\gettreasure.h
 
@@ -598,7 +603,7 @@
 
 1533966273 c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.h
 
-1534106136 source:c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.cpp
+1535125537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\title\title.cpp
 	"title.h"
 	"../cursorSet/cursorSet.h"
 	"../player/player.h"
@@ -618,7 +623,7 @@
 
 1533966273 c:\users\jcoch\documents\github\fantasy-text-adventure\village\village.h
 
-1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1535125537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -629,7 +634,7 @@
 	"../displayMap/displayMap.h"
 	"../player/player.h"
 
-1534787797 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
+1535126550 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\player_class.h
 	<iostream>
 	<limits>
 	<conio.h>
@@ -661,7 +666,7 @@
 	<iostream>
 	"Loot_Class.h"
 
-1533966272 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
+1535130283 c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\include\combat_event_prototype.h
 	<iostream>
 	<conio.h>
 	<iomanip>
@@ -757,13 +762,14 @@
 	"../include/Check_Inventory_Functions.h"
 	"../include/Show_Health.h"
 
-1534103146 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
+1535130161 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\combat_event.cpp
 	<iostream>
 	<conio.h>
 	<iomanip>
 	<limits>
 	<windows.h>
 	<memory>
+	<math.h>
 	"../include/Combat_Event_Prototype.h"
 	"../include/Player_Class.h"
 	"../include/Monster.hpp"
@@ -809,7 +815,7 @@
 1533966272 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\moves_class.cpp
 	"../include/Moves_Class.h"
 
-1534100863 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
+1535129712 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\player_class.cpp
 	<iostream>
 	<limits>
 	<conio.h>
@@ -1072,4 +1078,15 @@
 	<ctime>
 
 1535044139 c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.h
+
+1535125537 c:\users\jcoch\documents\github\fantasy-text-adventure\gold\gold.h
+
+1535125537 source:c:\users\jcoch\documents\github\fantasy-text-adventure\gold\gold.cpp
+	"gold.h"
+	"../cursorSet/cursorSet.h"
+	"../clearGaps/clearGaps.h"
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	<ctime>
 
