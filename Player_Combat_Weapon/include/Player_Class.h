@@ -22,14 +22,15 @@ class Player_Class
         Armor_Class armor;
         char resistance;
         int health;
-        int exp_to_lvl = 100;
-        int current_exp = 0;
+        int exp_to_lvl;
+        int current_exp;
         int strength, speed, magic, thirst, level;
         std::string name;
+        int gold;
     public:
         Player_Class();
         Player_Class(std::string);
-        Player_Class(std::string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell);
+        Player_Class(std::string namee,int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell, int , int, int);
         void setLevel(int);
         void LevelUP(Player_Class &);
         //holds moves and adds moves when you level up
@@ -58,6 +59,8 @@ class Player_Class
         void setArmor(Armor_Class &);
         Armor_Class getArmor();
         void updateXP();
+        void addGold(int);
+        void subtractGold(int);
         //vector stuff / Mostly inline
         void addFood(std::string name, int val){Food_Class food(val, name); foodInventory.push_back(food);}
         void addWeapon(Weapon_Class& weap){weaponInventory.push_back(weap);}

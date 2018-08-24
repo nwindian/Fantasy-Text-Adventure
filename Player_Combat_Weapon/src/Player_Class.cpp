@@ -26,10 +26,12 @@ Player_Class::Player_Class()
     magic = 0;
     thirst = 0;
     level = 1;
+    current_exp = 0;
+    exp_to_lvl = 50;
 }
 //Overloaded struct for Player class
 
-Player_Class::Player_Class(std::string namee, int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell)
+Player_Class::Player_Class(std::string namee, int strengthh, int speedd, int defensee, int magicc, int thirstt, int levell, int currExp, int futExp, int goldd)
 {
     name = namee;
     strength = strengthh;
@@ -38,6 +40,9 @@ Player_Class::Player_Class(std::string namee, int strengthh, int speedd, int def
     magic = magicc;
     thirst = thirstt;
     level = levell;
+    current_exp = currExp;
+    exp_to_lvl = futExp;
+    gold = goldd;
 
 }
 Player_Class::Player_Class(std::string namee)
@@ -49,6 +54,9 @@ Player_Class::Player_Class(std::string namee)
     magic = 0;
     thirst = 0;
     level = 1;
+    current_exp = 0;
+    exp_to_lvl = 50;
+    gold = 0;
 }
 const std::string Player_Class::getName()
 {
@@ -320,4 +328,13 @@ void Player_Class::updateXP()
         Player_Class::setCExp(Player_Class::exp_to_lvl - Player_Class::current_exp);
         Player_Class::setMaxExp();
     }
+}
+
+void Player_Class::addGold(int goldd)
+{
+    gold = goldd;
+}
+void Player_Class::subtractGold(int goldd)
+{
+    gold = goldd;
 }

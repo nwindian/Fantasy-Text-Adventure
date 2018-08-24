@@ -4,6 +4,7 @@
 #include <limits>
 #include <windows.h>
 #include <memory>
+#include <math.h>
 #include "../include/Combat_Event_Prototype.h"
 #include "../include/Player_Class.h"
 #include "../include/Monster.hpp"
@@ -19,44 +20,13 @@
 #include "../include/Loading.h"
 #include "../include/Moves_Class.h"
 
-
-
-//Weapon_Class getWeapon(Player_Class & play)
-//{
-//    rlutil::setColor(6);
-//    std::cout << "Choose a weapon my Player:" << std::endl;
-//    bool repeat = false;
-//    unsigned int choice;
-//    int count = 0;
-//    for (unsigned int i = 0; i < play.weaponInventory.size(); ++i)
-//    {
-//        if (count == 5)
-//        {
-//            std::cout << std::endl;
-//            count = 0;
-//        }
-//        else
-//        {
-//            std::cout << i+1 << ": " << play.weaponInventory[i].getName() << " || ";
-//        }
-//    }
-//    std::cout << std::endl;
-//    while(repeat == false)
-//    {
-//        std::cin >> choice;
-//        if (std::cin.fail() || choice < 1 || choice > play.weaponInventory.size())
-//        {
-//            std::cin.clear();
-//            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-//            std::cout << "Out of range boi" << std::endl;
-//        }
-//        else
-//        {
-//            repeat = true;
-//        }
-//    }
-//    return play.weaponInventory[choice - 1];
-//}
+void getExpFromBattle(Player_Class & player, Monster & enemy)
+{
+    int max = player.getMaxExp();
+    int lvl = enemy.getLevel();
+    //sqrt(player.getMaxExp()) + enemy.getLevel();
+    player.setCExp((sqrt((player.getMaxExp())) + enemy.getLevel()));
+}
 //To check who is faster
 bool whosQuicker(Player_Class & frnd, Monster & enem)
 {
@@ -204,7 +174,7 @@ bool combat(Player_Class & play,char Biome)
 {
     //std::unique_ptr<Monster> = spawnMonster(Biome);
     bool ifwin = false;
-    Monster enem("Fish", 1, 10,2,1000,0,2,2, "W");
+    Monster enem("Fish", 1, 1,2,1000,0,2,2, "W");
     rlutil::setColor(2);
     rlutil::saveDefaultColor();
     int x = 40;
@@ -387,9 +357,13 @@ bool combat(Player_Class & play,char Biome)
                         }
                         if (currentEHealth < 1)
                         {
+                            rlutil::locate(1,10);
                             std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
                             repeatFromB = false;
                             loading_Six();
+                            std::cout << play.getCExp();
+                            getExpFromBattle(play,enem);
+                            std::cout << play.getCExp();
                             return true;
                         }
                         else
@@ -443,7 +417,14 @@ bool combat(Player_Class & play,char Biome)
                             updateHealth(play,enem,currentHealth,currentEHealth);
                             if (currentEHealth < 1)
                             {
+                                rlutil::locate(1,10);
+                                std::cout << play.getCExp();
                                 std::cout << "You have defeated " << enem.getName() << "!!" << std::endl;
+                                getExpFromBattle(play, enem);
+                                std::cout << play.getCExp();
+                                play.updateXP();
+                                updateHealth(play,enem,currentHealth,currentEHealth);
+                                rlutil::msleep(5000);
                                 repeatFromB = false;
                                 loading_Six();
                                 return true;
@@ -561,8 +542,9 @@ bool combat(Player_Class & play,char Biome)
                     loading_Six();
                     std::cout << "You may be a wimp, but you sure are fast!";
                     rlutil::msleep(800);
-                    repeatFromB = false;
-                    repeatFromRun = false;
+                    return false;
+                    //repeatFromB = false;
+                    //repeatFromRun = false;
                 }
                 else
                 {

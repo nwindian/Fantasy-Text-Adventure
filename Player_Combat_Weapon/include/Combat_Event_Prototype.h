@@ -24,4 +24,5 @@ int playerBP(Player_Class & , Monster &, int);
 bool combat(Player_Class &, char);
 void monsterBP(Monster & , Player_Class &, int&, int&, std::shared_ptr<Armor_Class>);
 std::unique_ptr<Monster> spawnMonster(char);
+void getExpFromBattle(Player_Class &, Monster &);
 #endif // COMBAT_EVENT_PROTOTYPE
