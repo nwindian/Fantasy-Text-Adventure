@@ -27,13 +27,13 @@ void getTreasure()
                 gold();
                 break;
             case 1:
-                //treasureWeapon();
+                //weapon();
                 break;
             case 2:
-                //treasureScroll();
+                //scroll();
                 break;
             case 3:
-                //treasureArmor();
+                //armor();
                 break;
         }
     }
