@@ -89,6 +89,8 @@
 		<Unit filename="cursorSet/cursorSet.h" />
 		<Unit filename="displayMap/displayMap.cpp" />
 		<Unit filename="displayMap/displayMap.h" />
+		<Unit filename="displayPlayerStats/displayPlayerStats.cpp" />
+		<Unit filename="displayPlayerStats/displayPlayerStats.h" />
 		<Unit filename="entityCheck/entityCheck.cpp" />
 		<Unit filename="entityCheck/entityCheck.h" />
 		<Unit filename="getTreasure/getTreasure.cpp" />
