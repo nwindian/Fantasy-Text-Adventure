@@ -1,10 +1,13 @@
+#include "displayMap.h"
 #include "../mapSizes/mapSizes.h"
 #include "../cursorSet/cursorSet.h"
 #include "../mapSizes/mapSizes.h"
+#include "../displayPlayerStats/displayPlayerStats.h"
 #include <iostream>
 #include <windows.h>
 void displayMap(char** map, int color)
 {
+    displayPlayerStats();
     cursorSet(0, 0);
     switch(color)
     {

@@ -1,5 +1,6 @@
 #include "Stamina.h"
 #include <iostream>
+#include <windows.h>
 
 bool Stamina::check()
 {
@@ -36,6 +37,7 @@ void Stamina::decrease()
 
 void Stamina::display()
 {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
     std::cout << "Stamina\n";
     for (int i = 0; i < 5; ++i)
     {

@@ -250,7 +250,7 @@
 	<iomanip>
 	<conio.h>
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+1535127788 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
 	"Biome_Class.h"
 	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
@@ -305,10 +305,12 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\cursorset\cursorset.h
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+1535129884 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displaymap\displaymap.cpp
+	"displayMap.h"
 	"../mapSizes/mapSizes.h"
 	"../cursorSet/cursorSet.h"
 	"../mapSizes/mapSizes.h"
+	"../displayPlayerStats/displayPlayerStats.h"
 	<iostream>
 	<windows.h>
 
@@ -335,7 +337,7 @@
 	"../player/player.h"
 	<cstdlib>
 
-1535126240 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+1535127825 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
 	"getTreasure.h"
 	"../gold/gold.h"
 	"../clearGaps/clearGaps.h"
@@ -365,12 +367,13 @@
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\stamina\stamina.h
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.cpp
+1535129848 source:c:\users\jmfos\documents\github\fantasy-text-adventure\playerview\playerview.cpp
 	"playerView.h"
 	"../cursorSet/cursorSet.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
 	"../charOutput/charOutput.h"
+	"../displayPlayerStats/displayPlayerStats.h"
 	<iostream>
 	<windows.h>
 
@@ -1083,4 +1086,14 @@
 
 1535127421 c:\users\jmfos\documents\github\fantasy-text-adventure\addmonster\addmonster.h
 	"../Biome_Class/Biome_Class.h"
+
+1535129424 c:\users\jmfos\documents\github\fantasy-text-adventure\displayplayerstats\displayplayerstats.h
+
+1535129760 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displayplayerstats\displayplayerstats.cpp
+	"displayPlayerStats.h"
+	"../Player_Combat_Weapon/include/Player_Class.h"
+	"../player/player.h"
+	"../cursorSet/cursorSet.h"
+	<iostream>
+	<windows.h>
 
