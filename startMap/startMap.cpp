@@ -28,9 +28,14 @@ void startMap()
     int y = 0;
     int biome = 0;
     int biomeRestrict[3] = {0};
-
     Stamina stamina;
     Biome maps[] = {Biome(0, 'F', 2), Biome(-1, 'T', 11), Biome(1, 'D', 14), Biome(0, 'M', 8)};
+    maps[0].entityMap[24][maps[1].biomeGate].type = 'G';
+    maps[1].entityMap[0][maps[1].biomeGate].type = 'G';
+    maps[0].entityMap[maps[2].biomeGate][49].type = 'G';
+    maps[2].entityMap[maps[2].biomeGate][0].type = 'G';
+    maps[0].entityMap[maps[3].biomeGate][0].type = 'G';
+    maps[3].entityMap[maps[3].biomeGate][49].type = 'G';
     playerView(maps[biome], x, y, stamina);
     displayMap(maps[biome].map, 2);
 
@@ -48,11 +53,17 @@ void startMap()
                         if (biomeRestrict[0] != 1)
                         {
                             cursorSet(0, 25);
-                            //if (y < )
-                            std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the south.";
-                            Sleep(1000);
+                            if (y < maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the south.";
+                            }
+                            else if (y > maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the north.";
+                            }
+                            Sleep(2000);
                             cursorSet(0, 25);
-                            std::cout << std::setw(50) << " ";
+                            std::cout << std::setw(90) << " ";
                             --x;
                             stamina.increase();
                         }
@@ -70,10 +81,17 @@ void startMap()
                         if (biomeRestrict[1] != 1)
                         {
                             cursorSet(0, 25);
-                            std::cout << "Story stuff, you shall not pass!";
-                            Sleep(1000);
+                            if (x < maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the Tundra. You see a gate in the east.";
+                            }
+                            else if (x > maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the Tundra. You see a gate in the west.";
+                            }
+                            Sleep(2000);
                             cursorSet(0, 25);
-                            std::cout << std::setw(50) << " ";
+                            std::cout << std::setw(90) << " ";
                             --y;
                             stamina.increase();
                         }
@@ -91,10 +109,17 @@ void startMap()
                         if (biomeRestrict[2] != 1)
                         {
                             cursorSet(0, 25);
-                            std::cout << "Story stuff, you shall not pass!";
-                            Sleep(1000);
+                            if (y < maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the Mountains. You see a gate in the south.";
+                            }
+                            else if (y > maps[biome].biomeGate)
+                            {
+                                std::cout << "You stumble upon a great wall between you and the Mountains. You see a gate in the north.";
+                            }
+                            Sleep(2000);
                             cursorSet(0, 25);
-                            std::cout << std::setw(50) << " ";
+                            std::cout << std::setw(90) << " ";
                             ++x;
                             stamina.increase();
                         }
