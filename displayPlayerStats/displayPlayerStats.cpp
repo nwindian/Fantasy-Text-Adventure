@@ -21,5 +21,6 @@ void displayPlayerStats()
     cursorSet(100, 4);
     std::cout << "Experience: " << players.getCExp() << "/" << players.getMaxExp();
     cursorSet(100, 5);
+    return;
 
 }

@@ -28,6 +28,7 @@ void startMap()
     int y = 0;
     int biome = 0;
     int biomeRestrict[3] = {0};
+
     Stamina stamina;
     Biome maps[] = {Biome(0, 'F', 2), Biome(-1, 'T', 11), Biome(1, 'D', 14), Biome(0, 'M', 8)};
     playerView(maps[biome], x, y, stamina);
@@ -47,7 +48,8 @@ void startMap()
                         if (biomeRestrict[0] != 1)
                         {
                             cursorSet(0, 25);
-                            std::cout << "Story stuff, you shall not pass!";
+                            //if (y < )
+                            std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the south.";
                             Sleep(1000);
                             cursorSet(0, 25);
                             std::cout << std::setw(50) << " ";
