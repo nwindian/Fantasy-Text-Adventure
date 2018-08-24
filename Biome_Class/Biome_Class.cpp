@@ -131,7 +131,14 @@ void Biome::entityMapPop(int Size)
                     }
                 entityMap[y][x].type = types[num];
             }
-
+        }
+    }
+    //remove for fog
+    for (int i = 0; i < MAPSIZEY; ++i)
+    {
+        for (int j = 0; j < MAPSIZEX; ++j)
+        {
+            map[i][j] = entityMap[i][j].type;
         }
     }
 }

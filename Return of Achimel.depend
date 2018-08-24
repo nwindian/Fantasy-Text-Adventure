@@ -312,7 +312,7 @@
 	<iostream>
 	<windows.h>
 
-1535043339 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
+1535127462 source:c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.cpp
 	"entityCheck.h"
 	"../Biome_Class/Biome_Class.h"
 	"../getTreasure/getTreasure.h"
@@ -322,6 +322,7 @@
 	"../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
 	"../displayMap/displayMap.h"
 	"../player/player.h"
+	"../addMonster/addMonster.h"
 
 1533661140 c:\users\jmfos\documents\github\fantasy-text-adventure\entitycheck\entitycheck.h
 
@@ -334,7 +335,7 @@
 	"../player/player.h"
 	<cstdlib>
 
-1535044722 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
+1535126240 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gettreasure\gettreasure.cpp
 	"getTreasure.h"
 	"../gold/gold.h"
 	"../clearGaps/clearGaps.h"
@@ -1065,11 +1066,21 @@
 
 1534105086 source:c:\users\jcoch\documents\github\fantasy-text-adventure\player_combat_weapon\src\typefiller.cpp
 
-1535044088 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.cpp
+1535126156 source:c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.cpp
 	"gold.h"
+	"../cursorSet/cursorSet.h"
+	"../clearGaps/clearGaps.h"
 	<iostream>
+	<windows.h>
 	<cstdlib>
 	<ctime>
 
 1535044139 c:\users\jmfos\documents\github\fantasy-text-adventure\gold\gold.h
+
+1535127452 source:c:\users\jmfos\documents\github\fantasy-text-adventure\addmonster\addmonster.cpp
+	"addMonster.h"
+	"../Biome_Class/Biome_Class.h"
+
+1535127421 c:\users\jmfos\documents\github\fantasy-text-adventure\addmonster\addmonster.h
+	"../Biome_Class/Biome_Class.h"
 

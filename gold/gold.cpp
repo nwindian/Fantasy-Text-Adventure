@@ -14,7 +14,7 @@ void gold()
     std::cout << goldCount;
     std::cout << " gold has been added to your inventory";
     //addGold(goldCount);
-    Sleep(600);
+    Sleep(800);
     clearGaps();
     return;
 

@@ -7,6 +7,7 @@
 #include "../Player_Combat_Weapon/include/Combat_Event_Prototype.h"
 #include "../displayMap/displayMap.h"
 #include "../player/player.h"
+#include "../addMonster/addMonster.h"
 void entityCheck(Biome& biome, int x, int y)
 {
     switch (biome.getEntity(y, x))
@@ -16,11 +17,13 @@ void entityCheck(Biome& biome, int x, int y)
             break;
         case 'T':
             getTreasure();
+            biome.entityMap[y][x].type = '\'';
             break;
         case 'M':
             if (combat(player::players, biome.getBiome()))
             {
                 biome.entityMap[y][x].type = '\'';
+                addMonster(biome);
             }
             displayMap(biome.map, biome.getColor());
             break;

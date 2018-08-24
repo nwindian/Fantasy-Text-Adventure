@@ -75,6 +75,8 @@
 		<Unit filename="Player_Combat_Weapon/src/Weapon_Class.cpp" />
 		<Unit filename="Stamina/Stamina.cpp" />
 		<Unit filename="Stamina/Stamina.h" />
+		<Unit filename="addMonster/addMonster.cpp" />
+		<Unit filename="addMonster/addMonster.h" />
 		<Unit filename="cave/cave.cpp" />
 		<Unit filename="cave/cave.h" />
 		<Unit filename="cave_Class/cave_Class.cpp" />
