@@ -7,7 +7,7 @@
 
 Biome::Biome() : heat(0), biome('F'), color(2)
 {
-
+    biomeGate = rand() % 25;
     map = new char*[MAPSIZEY];
     entityMap = new Entities*[MAPSIZEY];
     for (int i = 0; i < MAPSIZEY; ++i)
@@ -53,6 +53,7 @@ Biome::Biome() : heat(0), biome('F'), color(2)
 
 Biome::Biome(int temp, char type, int c) : heat(temp), biome(type), color(c)
 {
+    biomeGate = rand() % 25;
     map = new char*[MAPSIZEY];
     entityMap = new Entities*[MAPSIZEY];
     for (int i = 0; i < MAPSIZEY; ++i)

@@ -28,6 +28,7 @@ class Biome
         char** map;
         Entities** entityMap;
         std::vector<Cave> caves;
+        int biomeGate = 0;
         char getEntity(int, int);
         void entityMapPop(int);
         char getBiome() { return biome; }
