@@ -45,6 +45,7 @@
 		<Unit filename="Player_Combat_Weapon/include/Combat_Event_Prototype.h" />
 		<Unit filename="Player_Combat_Weapon/include/Damage_Calculator.h" />
 		<Unit filename="Player_Combat_Weapon/include/Food_Class.h" />
+		<Unit filename="Player_Combat_Weapon/include/Get_Random_Equipment.h" />
 		<Unit filename="Player_Combat_Weapon/include/Loading.h" />
 		<Unit filename="Player_Combat_Weapon/include/Loot_Class.h" />
 		<Unit filename="Player_Combat_Weapon/include/Menu_Function.h" />
@@ -64,6 +65,7 @@
 		<Unit filename="Player_Combat_Weapon/src/Combat_Event.cpp" />
 		<Unit filename="Player_Combat_Weapon/src/Damage_Calculator.cpp" />
 		<Unit filename="Player_Combat_Weapon/src/Food_Class.cpp" />
+		<Unit filename="Player_Combat_Weapon/src/Get_Random_Equipment.cpp" />
 		<Unit filename="Player_Combat_Weapon/src/Loading.cpp" />
 		<Unit filename="Player_Combat_Weapon/src/Loot_Class.cpp" />
 		<Unit filename="Player_Combat_Weapon/src/Menu_Functions.cpp" />
