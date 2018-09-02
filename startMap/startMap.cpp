@@ -50,11 +50,11 @@ void startMap()
                         if (biomeRestrict[0] != 1)
                         {
                             cursorSet(0, 25);
-                            if (y < maps[biome].biomeGate)
+                            if (y < maps[2].biomeGatey)
                             {
                                 std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the south.";
                             }
-                            else if (y > maps[biome].biomeGate)
+                            else if (y > maps[2].biomeGatey)
                             {
                                 std::cout << "You stumble upon a great wall between you and the desert. You see a gate in the north.";
                             }
@@ -78,11 +78,11 @@ void startMap()
                         if (biomeRestrict[1] != 1)
                         {
                             cursorSet(0, 25);
-                            if (x < maps[biome].biomeGate)
+                            if (x < maps[1].biomeGatex)
                             {
                                 std::cout << "You stumble upon a great wall between you and the Tundra. You see a gate in the east.";
                             }
-                            else if (x > maps[biome].biomeGate)
+                            else if (x > maps[1].biomeGatex)
                             {
                                 std::cout << "You stumble upon a great wall between you and the Tundra. You see a gate in the west.";
                             }
@@ -106,11 +106,11 @@ void startMap()
                         if (biomeRestrict[2] != 1)
                         {
                             cursorSet(0, 25);
-                            if (y < maps[biome].biomeGate)
+                            if (y < maps[3].biomeGatey)
                             {
                                 std::cout << "You stumble upon a great wall between you and the Mountains. You see a gate in the south.";
                             }
-                            else if (y > maps[biome].biomeGate)
+                            else if (y > maps[3].biomeGatey)
                             {
                                 std::cout << "You stumble upon a great wall between you and the Mountains. You see a gate in the north.";
                             }

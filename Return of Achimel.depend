@@ -250,7 +250,7 @@
 	<iomanip>
 	<conio.h>
 
-1535850237 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+1535853273 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
 	"Biome_Class.h"
 	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
@@ -267,7 +267,7 @@
 1534102293 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
-1535849299 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+1535852266 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
 	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
 	<vector>
@@ -383,7 +383,7 @@
 	<iostream>
 	<windows.h>
 
-1535848210 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+1535853273 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
 	"startMap.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
@@ -1108,7 +1108,7 @@
 
 1535129424 c:\users\jmfos\documents\github\fantasy-text-adventure\displayplayerstats\displayplayerstats.h
 
-1535130614 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displayplayerstats\displayplayerstats.cpp
+1535850715 source:c:\users\jmfos\documents\github\fantasy-text-adventure\displayplayerstats\displayplayerstats.cpp
 	"displayPlayerStats.h"
 	"../Player_Combat_Weapon/include/Player_Class.h"
 	"../player/player.h"
@@ -1126,7 +1126,9 @@
 1535847304 c:\users\jmfos\documents\github\fantasy-text-adventure\setgate\setgate.h
 	"../Biome_Class/Biome_Class.h"
 
-1535849860 source:c:\users\jmfos\documents\github\fantasy-text-adventure\setgate\setgate.cpp
+1535852751 source:c:\users\jmfos\documents\github\fantasy-text-adventure\setgate\setgate.cpp
 	"setGate.h"
 	"../Biome_Class/Biome_Class.h"
+
+1535850747 source:c:\users\jmfos\documents\github\fantasy-text-adventure\player_combat_weapon\src\get_random_equipment.cpp
 

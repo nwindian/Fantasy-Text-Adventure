@@ -7,7 +7,8 @@
 
 Biome::Biome() : heat(0), biome('F'), color(2)
 {
-    biomeGate = rand() % 25;
+    biomeGatey = rand() % 25 + 1;
+    biomeGatex = rand() % 50 + 1;
     map = new char*[MAPSIZEY];
     entityMap = new Entities*[MAPSIZEY];
     for (int i = 0; i < MAPSIZEY; ++i)
@@ -53,7 +54,8 @@ Biome::Biome() : heat(0), biome('F'), color(2)
 
 Biome::Biome(int temp, char type, int c) : heat(temp), biome(type), color(c)
 {
-    biomeGate = rand() % 25;
+    biomeGatey = rand() % 25 + 1;
+    biomeGatex = rand() % 50 + 1;
     map = new char*[MAPSIZEY];
     entityMap = new Entities*[MAPSIZEY];
     for (int i = 0; i < MAPSIZEY; ++i)
@@ -108,7 +110,7 @@ void Biome::entityMapPop(int Size)
     entityMap[14][24].type = '_';
     entityMap[13][24].type = 'I';
     char types[] = {'C', 'T', 'V', 'M', '\''};
-    int total = 4, counts[] = {Size, (rand() % 10 + 20), 3, 1};
+    int total = 4, counts[] = {Size, (rand() % 10 + 20), 3, 50};
     for (int i = 0; i < total; ++i)
     {
         for (int j = 0; j < counts[i];)
@@ -136,14 +138,6 @@ void Biome::entityMapPop(int Size)
                     entityMap[y][x].caveNumber = j;
                 }
             }
-        }
-    }
-    //remove for fog
-    for (int i = 0; i < MAPSIZEY; ++i)
-    {
-        for (int j = 0; j < MAPSIZEX; ++j)
-        {
-            map[i][j] = entityMap[i][j].type;
         }
     }
 }

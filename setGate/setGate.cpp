@@ -10,26 +10,16 @@ void setGate(Biome maps[])
     //Forest Gates
     {
         //Tundra
-        maps[0].entityMap[24][maps[1].biomeGate].type = 'G';
+        maps[0].entityMap[24][maps[1].biomeGatex].type = 'G';
         //Desert
-        maps[0].entityMap[maps[2].biomeGate][49].type = 'G';
+        maps[0].entityMap[maps[2].biomeGatey][49].type = 'G';
         //Mountain
-        maps[0].entityMap[maps[3].biomeGate][0].type = 'G';
+        maps[0].entityMap[maps[3].biomeGatey][0].type = 'G';
     }
     //Tundra
-    maps[1].entityMap[0][maps[1].biomeGate].type = 'G';
+    maps[1].entityMap[0][maps[1].biomeGatex].type = 'G';
     //Desert
-    maps[2].entityMap[maps[2].biomeGate][0].type = 'G';
+    maps[2].entityMap[maps[2].biomeGatey][0].type = 'G';
     //Mountain
-    maps[3].entityMap[maps[3].biomeGate][49].type = 'G';
-    for (int k = 0; k < 4; ++k)
-    {
-        for (int i = 0; i < MAPSIZEY; ++i)
-        {
-            for (int j = 0; j < MAPSIZEX; ++j)
-            {
-                maps[k].map[i][j] = maps[k].entityMap[i][j].type;
-            }
-        }
-    }
+    maps[3].entityMap[maps[3].biomeGatey][49].type = 'G';
 }
