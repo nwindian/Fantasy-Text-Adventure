@@ -18,6 +18,8 @@ class Weapon_Class : public Loot_Class
         char getType() const;
         std::string getName() const;
         void setDmg(int);
+        void setType(char);
+        void setName(std::string);
 
     protected:
         int dmg;

@@ -4,7 +4,7 @@
 #include "../include/Show_Health.h"
 
 
-
+//Function to choose between Food/Weapon/Armor inventory
 int getInventory(Player_Class & player, Monster & enemy, int h, int e)
 {
     int moveCount = 0;
@@ -62,7 +62,7 @@ int getInventory(Player_Class & player, Monster & enemy, int h, int e)
         }
     }
 }
-
+//Get weapon from weapon vector. Only runs if Player returns a Weapon value
 int getFromInventoryW(Player_Class &play)
 {
     bool repeatFromB = true;
@@ -120,9 +120,7 @@ int getFromInventoryW(Player_Class &play)
         }
     }
 }
-
-
-
+//Get inventory from food vector. Only runs if player returns food value
 int getFromInventoryF(Player_Class &play)
 {
     bool repeatFromB = true;
@@ -180,7 +178,7 @@ int getFromInventoryF(Player_Class &play)
         }
     }
 }
-
+//Function to get Armor from Armor Inventory. Only runs if Player returns Armor value.
 int getFromInventoryA(Player_Class &play)
 {
     bool repeatFromB = true;

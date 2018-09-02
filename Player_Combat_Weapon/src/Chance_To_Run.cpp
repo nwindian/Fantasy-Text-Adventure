@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "../include/Chance_To_Run.h"
+//Chance Calculator for escaping battle
 bool Chance_To_Run()
 {
     int random;

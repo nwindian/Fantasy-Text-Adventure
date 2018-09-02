@@ -16,6 +16,15 @@ Weapon_Class::Weapon_Class(int d, char t, std::string n)
     name = n;
 }
 
+Weapon_Class::setType(char Wtype)
+{
+    type = WtypeOf;
+}
+
+Weapon_Class::setName(string wName)
+{
+    name = wName;
+}
 Weapon_Class::Weapon_Class(const Weapon_Class& obj)
 {
     dmg = obj.getDmg();

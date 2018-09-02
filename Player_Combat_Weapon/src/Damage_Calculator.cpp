@@ -12,6 +12,7 @@
 void fillTypes()
 {
     using namespace player;
+    //Map for types
     types["EE"] = 1.0;types["EP"] = 2.0; types["EF"] = 2.0; types["EI"] = .5; types["ES"] = 1.0; types["ED"] = 1.0; types["EH"] = 1.0; types["EL"] = 2.0; types["EB"] = 1.0; types["EW"] = .5;
     types["PE"] = .5; types["PP"] = 1.0; types["PF"] = 1.0; types["PI"] = 1.0; types["PS"] = .5; types["PD"] = 1.0; types["PH"] = 1.0; types["PL"] = 1.0; types["PB"] = 2.0; types["PW"] = 2.0;
     types["FE"] = .5; types["FP"] = 1.0; types["FF"] = 1.0; types["FI"] = 2.0; types["FS"] = 2.0; types["FD"] = 1.0; types["FH"] = 2.0; types["FL"] = 1.0; types["FB"] = 1.0; types["FW"] = .5;

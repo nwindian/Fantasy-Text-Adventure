@@ -6,6 +6,7 @@
 #include "../include/Player_Class.h"
 bool chance(Player_Class & player,Moves_Class & mov);
 bool chanceM(Monster &);
+//Chance Calculator for Player move
 bool chance(Player_Class & player,Moves_Class  mov)
 {
     srand(time(NULL));
@@ -16,7 +17,7 @@ bool chance(Player_Class & player,Moves_Class  mov)
     }
     return true;
 }
-
+//Chance Calculator for Enemy move
 bool chanceM(Monster & enemy)
 {
     srand(time(NULL));
