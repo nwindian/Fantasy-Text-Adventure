@@ -22,7 +22,7 @@ void cave(Biome& biome, int y, int x)
         {
             case 0:
                 {
-                    int num = biome.entityMap[y][x].number;
+                    int num = biome.entityMap[y][x].caveNumber;
                     biome.caves[num].display();
                     displayMap(biome.map, biome.getColor());
                     return;

@@ -108,7 +108,7 @@ void Biome::entityMapPop(int Size)
     entityMap[14][24].type = '_';
     entityMap[13][24].type = 'I';
     char types[] = {'C', 'T', 'V', 'M', '\''};
-    int total = 4, counts[] = {Size, (rand() % 10 + 20), 3, 50};
+    int total = 4, counts[] = {Size, (rand() % 10 + 20), 3, 1};
     for (int i = 0; i < total; ++i)
     {
         for (int j = 0; j < counts[i];)
@@ -131,6 +131,10 @@ void Biome::entityMapPop(int Size)
                         ++j;
                     }
                 entityMap[y][x].type = types[num];
+                if (num == 0)
+                {
+                    entityMap[y][x].caveNumber = j;
+                }
             }
         }
     }

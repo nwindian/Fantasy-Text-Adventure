@@ -15,8 +15,13 @@ void addMonster(Biome& biome)
                     biome.entityMap[y][x-1].type != 'M')
                 {
                     biome.entityMap[y][x].type = 'M';
+                    if (biome.map[y][x] == '\'')
+                    {
+                        biome.map[y][x] = 'M';
+                    }
                     return;
                 }
         }
+
     } while(true);
 }

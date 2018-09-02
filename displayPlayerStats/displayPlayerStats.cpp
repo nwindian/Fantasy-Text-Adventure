@@ -11,7 +11,7 @@ void displayPlayerStats()
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
     cursorSet(100, 0);
-    std::cout << "Heath: " << players.getHealth() << "/100"; //<< players.getMaxHealth();
+    std::cout << "Health: " << players.getHealth() << "/10"; //<< players.getMaxHealth();
     cursorSet(100, 1);
     std::cout << "Strength: " << players.getStrength();
     cursorSet(100, 2);

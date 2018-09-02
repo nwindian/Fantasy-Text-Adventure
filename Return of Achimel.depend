@@ -250,7 +250,7 @@
 	<iomanip>
 	<conio.h>
 
-1535131860 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
+1535850237 source:c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.cpp
 	"Biome_Class.h"
 	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
@@ -267,12 +267,12 @@
 1534102293 c:\users\jmfos\documents\github\fantasy-text-adventure\food\food.h
 	<string>
 
-1535131238 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
+1535849299 c:\users\jmfos\documents\github\fantasy-text-adventure\biome_class\biome_class.h
 	"../mapSizes/mapSizes.h"
 	"../cave_Class/cave_class.h"
 	<vector>
 
-1533661140 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
+1535848047 source:c:\users\jmfos\documents\github\fantasy-text-adventure\cave\cave.cpp
 	"cave.h"
 	"../Biome_Class/Biome_Class.h"
 	"../displayMap/displayMap.h"
@@ -383,7 +383,7 @@
 	<iostream>
 	<windows.h>
 
-1535132217 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
+1535848210 source:c:\users\jmfos\documents\github\fantasy-text-adventure\startmap\startmap.cpp
 	"startMap.h"
 	"../Stamina/Stamina.h"
 	"../Biome_Class/Biome_Class.h"
@@ -394,6 +394,7 @@
 	"../entityCheck/entityCheck.h"
 	"../title/title.h"
 	"../Player_Combat_Weapon/include/Damage_Calculator.h"
+	"../setGate/setGate.h"
 	<iostream>
 	<iomanip>
 	<ctime>
@@ -1098,7 +1099,7 @@
 	<cstdlib>
 	<ctime>
 
-1535127452 source:c:\users\jmfos\documents\github\fantasy-text-adventure\addmonster\addmonster.cpp
+1535850661 source:c:\users\jmfos\documents\github\fantasy-text-adventure\addmonster\addmonster.cpp
 	"addMonster.h"
 	"../Biome_Class/Biome_Class.h"
 
@@ -1114,4 +1115,18 @@
 	"../cursorSet/cursorSet.h"
 	<iostream>
 	<windows.h>
+
+1535847304 source:c:\users\jmfos\documents\github\fantasy-text-adventure\setgates\setgate.cpp
+	"setGate.h"
+	"../Biome_Class/Biome_Class.h"
+
+1535847304 c:\users\jmfos\documents\github\fantasy-text-adventure\setgates\setgate.h
+	"../Biome_Class/Biome_Class.h"
+
+1535847304 c:\users\jmfos\documents\github\fantasy-text-adventure\setgate\setgate.h
+	"../Biome_Class/Biome_Class.h"
+
+1535849860 source:c:\users\jmfos\documents\github\fantasy-text-adventure\setgate\setgate.cpp
+	"setGate.h"
+	"../Biome_Class/Biome_Class.h"
 

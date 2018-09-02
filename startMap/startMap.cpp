@@ -8,6 +8,7 @@
 #include "../entityCheck/entityCheck.h"
 #include "../title/title.h"
 #include "../Player_Combat_Weapon/include/Damage_Calculator.h"
+#include "../setGate/setGate.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -29,13 +30,9 @@ void startMap()
     int biome = 0;
     int biomeRestrict[3] = {0};
     Stamina stamina;
+    // 0 Forest middle - 1 Tundra bottom - 2 Desert right - 3 Mountain left
     Biome maps[] = {Biome(0, 'F', 2), Biome(-1, 'T', 11), Biome(1, 'D', 14), Biome(0, 'M', 8)};
-    maps[0].entityMap[24][maps[1].biomeGate].type = 'G';
-    maps[1].entityMap[0][maps[1].biomeGate].type = 'G';
-    maps[0].entityMap[maps[2].biomeGate][49].type = 'G';
-    maps[2].entityMap[maps[2].biomeGate][0].type = 'G';
-    maps[0].entityMap[maps[3].biomeGate][0].type = 'G';
-    maps[3].entityMap[maps[3].biomeGate][49].type = 'G';
+    setGate(maps);
     playerView(maps[biome], x, y, stamina);
     displayMap(maps[biome].map, 2);
 

@@ -12,17 +12,16 @@ class Biome
         struct Entities
         {
             char type = '\'';
-            int number = 0;
-            Entities() : type('\''), number(0)
+            int caveNumber = 0;
+            Entities() : type('\'') , caveNumber(0)
             {
             }
-            Entities(char i, int j) : type(i), number(j)
+            Entities(char i, int j) : type(i) , caveNumber (j)
             {
             }
         };
 
     public:
-        static int caveCount;
         Biome();
         Biome(int, char, int);
         char** map;

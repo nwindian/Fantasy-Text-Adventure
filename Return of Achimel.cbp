@@ -109,6 +109,9 @@
 		<Unit filename="playerView/playerView.h" />
 		<Unit filename="player/player.cpp" />
 		<Unit filename="player/player.h" />
+		<Unit filename="setGate/setGate.cpp" />
+		<Unit filename="setGate/setGate.h" />
+		<Unit filename="setGates/setGate.h" />
 		<Unit filename="startMap/startMap.cpp" />
 		<Unit filename="startMap/startMap.h" />
 		<Unit filename="title/title.cpp" />
