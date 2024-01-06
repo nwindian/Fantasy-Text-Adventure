@@ -1,4 +1,4 @@
-#include "Stamina.h"
+#include "../include/Stamina.h"
 #include <iostream>
 
 bool Stamina::check()

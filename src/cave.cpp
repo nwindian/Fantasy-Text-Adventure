@@ -1,9 +1,9 @@
-#include "cave.h"
-#include "../Biome_Class/Biome_Class.h"
-#include "../displayMap/displayMap.h"
-#include "../cursorSet/cursorSet.h"
-#include "../optionSelector/optionSelector.h"
-#include "../clearGaps/clearGaps.h"
+#include "../include/cave.h"
+#include "../include/Biome_Class.h"
+#include "../include/displayMap.h"
+#include "../include/cursorSet.h"
+#include "../include/optionSelector.h"
+#include "../include/clearGaps.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>

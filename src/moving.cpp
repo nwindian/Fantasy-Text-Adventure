@@ -1,7 +1,7 @@
-#include "moving.h"
-#include "../moveOptions/moveOptions.h"
-#include "../Stamina/Stamina.h"
-#include "../cursorSet/cursorSet.h"
+#include "../include/moving.h"
+#include "../include/moveOptions.h"
+#include "../include/Stamina.h"
+#include "../include/cursorSet.h"
 #include <iostream>
 #include <conio.h>
 #include <windows.h>

@@ -1,4 +1,4 @@
-#include "../cursorSet/cursorSet.h"
+#include "../include/cursorSet.h"
 #include <iostream>
 #include <iomanip>
 #include <conio.h>

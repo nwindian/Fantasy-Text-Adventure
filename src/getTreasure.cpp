@@ -1,4 +1,4 @@
-#include "getTreasure.h"
+#include "../include/getTreasure.h"
 #include <string>
 #include <cstdlib>
 using std::string;

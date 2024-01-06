@@ -1,7 +1,7 @@
-#include "village.h"
-#include "../cursorSet/cursorSet.h"
-#include "../optionSelector/optionSelector.h"
-#include "../clearGaps/clearGaps.h"
+#include "../include/village.h"
+#include "../include/cursorSet.h"
+#include "../include/optionSelector.h"
+#include "../include/clearGaps.h"
 #include <iostream>
 #include <iomanip>
 #include <conio.h>

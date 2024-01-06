@@ -1,4 +1,4 @@
-#include "cursorSet.h"
+#include "../include/cursorSet.h"
 #include <windows.h>
 void cursorSet(int num1, int num2)
 {
