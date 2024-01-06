@@ -1,6 +1,6 @@
-#include "Biome_Class.h"
-#include "../mapSizes/mapSizes.h"
-#include "../cave_Class/cave_class.h"
+#include "../include/Biome_Class.h"
+#include "../include/mapSizes.h"
+#include "../include/cave_class.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

@@ -1,5 +1,5 @@
-#include "clearGaps.h"
-#include "../cursorSet/cursorSet.h"
+#include "../include/clearGaps.h"
+#include "../include/cursorSet.h"
 #include <iostream>
 #include <iomanip>
 

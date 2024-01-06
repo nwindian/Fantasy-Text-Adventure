@@ -1,6 +1,6 @@
-#include "title.h"
-#include "../cursorSet/cursorSet.h"
-#include "../player/player.h"
+#include "../include/title.h"
+#include "../include/cursorSet.h"
+#include "../include/player.h"
 #include <iostream>
 #include <windows.h>
 #include <conio.h>

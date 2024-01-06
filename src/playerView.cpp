@@ -1,8 +1,8 @@
-#include "playerView.h"
-#include "../cursorSet/cursorSet.h"
-#include "../Stamina/Stamina.h"
-#include "../Biome_Class/Biome_Class.h"
-#include "../charOutput/charOutput.h"
+#include "../include/playerView.h"
+#include "../include/cursorSet.h"
+#include "../include/Stamina.h"
+#include "../include/Biome_Class.h"
+#include "../include/charOutput.h"
 #include <iostream>
 #include <windows.h>
 using std::cout;

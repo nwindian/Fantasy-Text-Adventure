@@ -1,5 +1,5 @@
-#include "startMap/startMap.h"
-#include "mapSizes/mapSizes.h"
+#include "include/startMap.h"
+#include "include/mapSizes.h"
 
 const int MAPSIZEY = 25;
 const int MAPSIZEX = (2 * MAPSIZEY);

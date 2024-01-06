@@ -1,6 +1,6 @@
-#include "../mapSizes/mapSizes.h"
-#include "../cursorSet/cursorSet.h"
-#include "../mapSizes/mapSizes.h"
+#include "../include/mapSizes.h"
+#include "../include/cursorSet.h"
+#include "../include/mapSizes.h"
 #include <iostream>
 #include <windows.h>
 void displayMap(char** map, int color)

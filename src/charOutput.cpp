@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <../include/windows.h>
 
 void charOutput(char ch, int color)
 {
